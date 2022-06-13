@@ -9,7 +9,7 @@ For using conda on the clusters, we recommend [Miniconda](https://docs.conda.io/
 
 To install Miniconda, select one of the download links on that page, right-click the link, and select copy link.
 
-![copy link screenshot](/images/copylink.png)
+![copy link screenshot](images/copylink.png)
 
 Then paste that link into the terminal to download the installer script: (replace `PASTE_LINK_HERE` with the link you copied) 
 ```bash
