@@ -32,7 +32,18 @@ The following prompts will ask you if the default installation location (typical
 
 # Creating a conda environment
 
-Now 
+Now that you've installed conda let's create an environment. 
+The following command tells conda to create an environment called "climate" that pulls from the conda-forge channel with the packages matplotlib and numpy: 
+```bash
+conda create -n climate -c conda-forge matplotlib numpy
+```
+
+Once this environment is created, it can be activated using the following command:
+```bash
+conda activate climate
+```
+
+Conda is a powerful tool with many different ways it can be used, to learn more check out the [conda user guide](https://docs.conda.io/projects/conda/en/latest/user-guide/index.html).
 
 # Using a conda environment with Open OnDemand
 
@@ -52,6 +63,6 @@ Then navigate to the Jupyter Notebook App on [https://r2-gui.boisestate.edu](htt
 
 ![Navigate to the Jupyter Notebook App](images/ood-notebook.png)
 
-Once your Jupyter session starts, select the kernel you just made (It will be listed under the name you put in `PYTHON ENV NAME`):
+Once your Jupyter session starts, select the kernel you just made (It will be listed under the name you put in `PYTHON ENV NAME` the example below shows a kernel named "climate"):
 
 ![Select the right Jupyter kernel](images/jupyter-kernel.png)
