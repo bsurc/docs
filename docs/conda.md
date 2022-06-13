@@ -49,7 +49,9 @@ python -m ipykernel install --user --name ENVIRONMENT_NAME --display-name "PYTHO
 ```
 
 Then navigate to the Jupyter Notebook App on [https://r2-gui.boisestate.edu](https://r2-gui.boisestate.edu):
-![Navigate to the Jupyter Notebook App](ood-notebook.png)
+
+![Navigate to the Jupyter Notebook App](images/ood-notebook.png)
 
 Once your Jupyter session starts, select the kernel you just made (It will be listed under the name you put in `PYTHON ENV NAME`):
-![Select the right Jupyter kernel](jupyter-kernel.png)
+
+![Select the right Jupyter kernel](images/jupyter-kernel.png)
