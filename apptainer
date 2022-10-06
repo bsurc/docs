@@ -1,0 +1,16 @@
+Bootstrap: docker
+From: alpine:edge
+
+%post
+
+apk add \
+  py3-pip \
+  python3
+
+pip install --no-cache mkdocs
+
+%runscript
+
+mkdocs serve
+
+
