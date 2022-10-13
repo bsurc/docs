@@ -1,17 +1,8 @@
-# Welcome to MkDocs
+# Boise State Research Computing
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+This repository holds user-facing documentation for users of Boise State's
+Research Computing resources.  This includes the _R2_ and _Borah_ clusters, as
+well as storage, virtual machines, and personnel.
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+See [Boise State Research Computing](https://www.boisestate.edu/rcs) for more
+information.
