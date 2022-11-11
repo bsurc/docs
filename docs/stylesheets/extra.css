@@ -1,3 +1,5 @@
 [data-md-color-scheme="bsu"] {
   --md-primary-fg-color:        #0033A0;
+  --md-primary-fg-color--light: #0033A0;
+  --md-primary-fg-color--dark:  #0033A0;
 }

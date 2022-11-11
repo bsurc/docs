@@ -6,4 +6,13 @@ theme:
   logo: images/boisestate-B-1color-orange-rgb.png
   favicon: images/boisestate-B-1color-orange-rgb.png
   palette:
+  - media: "(prefers-color-scheme: light)"
     scheme: bsu
+    toggle:
+      icon: material/brightness-7
+      name: Switch to dark mode
+  - media: "(prefers-color-scheme: dark)"
+    scheme: bsu
+    toggle:
+      icon: material/brightness-4
+      name: Switch to light mode
