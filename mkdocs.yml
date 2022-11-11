@@ -4,5 +4,6 @@ extra_css:
 theme:
   name: material
   logo: docs/images/boisestate-B-2color-rgb.png
+  favicon: docs/images/boisestate-B-2color-rgb.png
   palette:
     scheme: bsu
