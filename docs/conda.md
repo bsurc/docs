@@ -45,7 +45,7 @@ conda activate climate
 
 Conda is a powerful tool with many different ways it can be used, to learn more check out the [conda user guide](https://docs.conda.io/projects/conda/en/latest/user-guide/index.html).
 
-## Using a conda environment for use with Open OnDemand
+## Using a conda environment with Open OnDemand
 
 [Open OnDemand](https://openondemand.org/) is a tool which provides users with a graphical interface to the cluster. Currently Open OnDemand is only available for R2: [https://r2-gui.boisestate.edu](https://r2-gui.boisestate.edu)
 
