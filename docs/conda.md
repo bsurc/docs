@@ -3,12 +3,12 @@
 When using Python, you may find you need to use various libraries (e.g., numpy for numerical analysis or matplotlib for plotting). 
 Installing and managing these different libraries and their dependencies can be problematic, especially when you run into conflicts.
 Conda is a package manager that helps you create and naviagate "environments" to help automatically handle these conflicts. 
-To learn more, we recommend this [conda tutorial](https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/).
+To learn more, we recommend this [introduction to conda](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html) or this [conda tutorial](https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/).
 
 ## Installing conda
 
 For using conda on the clusters, we recommend [Miniconda](https://docs.conda.io/en/latest/miniconda.html#linux-installers).
-To install Miniconda, select one of the download links on that page, right-click the link, and select copy link.
+To install Miniconda, select one of the download links on that page (for R2 and Borah choose Linux 64-bit architecture), right-click the link, and select copy link.
 
 ![copy link screenshot](images/copylink.png)
 
@@ -32,7 +32,7 @@ The following prompts will ask you if the default installation location (typical
 
 # Creating a conda environment
 
-Now that you've installed conda let's create an environment. 
+Now that you've installed conda, let's create an environment.
 The following command tells conda to create an environment called "climate" that pulls from the conda-forge channel with the packages matplotlib and numpy: 
 ```bash
 conda create -n climate -c conda-forge matplotlib numpy
@@ -45,11 +45,11 @@ conda activate climate
 
 Conda is a powerful tool with many different ways it can be used, to learn more check out the [conda user guide](https://docs.conda.io/projects/conda/en/latest/user-guide/index.html).
 
-# Using a conda environment with Open OnDemand
+# Using a conda environment for use with Open OnDemand
 
-Currently Open OnDemand is only available for R2: [https://r2-gui.boisestate.edu](https://r2-gui.boisestate.edu)
+[Open OnDemand](https://openondemand.org/) is a tool which provides users with a graphical interface to the cluster. Currently Open OnDemand is only available for R2: [https://r2-gui.boisestate.edu](https://r2-gui.boisestate.edu)
 
-In order to use your conda environment in a Jupyter Notebook through Open OnDemand, you'll need to install some additional packages. With the conda environment you want to use active, install `jupyter` and `ipykernel`:
+In order to use your conda environment in a Jupyter Notebook through Open OnDemand, you'll need to install some additional packages. With the conda environment you want to use activated, install `jupyter` and `ipykernel`:
 ```bash
 conda install jupyter ipykernel
 ```
