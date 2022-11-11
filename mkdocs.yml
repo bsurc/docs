@@ -3,5 +3,6 @@ extra_css:
   - stylesheets/extra.css
 theme:
   name: material
+  logo: doc/images/boisestate-B-2color-rgb.png
   palette:
     scheme: bsu
