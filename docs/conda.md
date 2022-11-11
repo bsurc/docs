@@ -2,7 +2,7 @@
 
 When using Python, you may find you need to use various libraries (e.g., numpy for numerical analysis or matplotlib for plotting).
 Installing and managing these different libraries and their dependencies can be problematic, especially when you run into conflicts.
-Conda is a package manager that helps you create and naviagate "environments" to help automatically handle these conflicts.
+Conda is a package manager that helps you create and navigate "environments" to help automatically handle these conflicts.
 Conda environments can help you keep the python package versions needed for your different projects separate, which helps resolve dependency conflicts.
 It is good practice to *not* install packages in your base environment but instead to create separate environments.
 To learn more, we recommend this [introduction to conda](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html) or this [conda tutorial](https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/).
@@ -58,22 +58,22 @@ Conda/Mamba are powerful tools with many different ways they can be used, to lea
 
 ## Creating a conda environment to work with the GPU
 
-Many python packages distribute builds which can make use of the gpu through cuda.
-In order to build a conda environment which can use the gpu, we'll need to load these modules so that conda will detect cuda to download the correct python package build.
+Many python packages distribute builds which can make use of the GPU through CUDA.
+In order to build a conda environment which can use the GPU, we'll need to load these modules so that conda will detect CUDA to download the correct python package build.
 Conda does this detection through [virtual packages](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-virtual.html), and you can see what virtual packages conda sees by running `conda info`.
 
-First, check out a gpu node to prevent the conda environment creation step from getting killed on the login node and load cuda module.
-You can see all the available cuda modules by running `module av cud`.
-For machine learning applications (e.g., tensorflow or pytorch) you will want to use one of the "cudnn" modules, for other applications you may only need cuda toolkit.
+First, check out a GPU node to prevent the conda environment creation step from getting killed on the login node and load CUDA module.
+You can see all the available CUDA modules by running `module av cud`.
+For machine learning applications (e.g., tensorflow or pytorch) you will want to use one of the "cudnn" modules, for other applications you may only need CUDA toolkit.
 ```bash
 gpu-session
 module load cudnn8.0-cuda11.0/8.0.5.39
 ```
 
 Next, create your new environment using a create command as shown above.
-You can verifythat the package you've installed in the environment is built with gpu support by running `conda list` with the environment active.
-An appropriate build will often have "gpu" or the cuda version in the build tag.
-For example the following output is from a pytorch environment built with cuda11.2 support: 
+You can verify that the package you've installed in the environment is built with GPU support by running `conda list` with the environment active.
+An appropriate build will often have "gpu" or the CUDA version in the build tag.
+For example the following output is from a pytorch environment built with CUDA11.2 support: 
 ![pytorch cuda](images/pytorch-cuda.png)
 
 
