@@ -21,12 +21,12 @@ something like Windows or Mac. This bare bones environment is called, as said ea
 the “terminal” or “console.” The shell is a combination scripting language and command line interface that allows a user to
 accomplish a wide variety of tasks without needing to have the overhead of a more conventional graphical desktop interface. The
 user can run commands directly in the shell or write them into scripts that are easily executable by the shell. There are
-different flavors of shell available, but the one that matters here is the “Bourne Again Shell,” or as it’s commonly known, Bash.|
-Bash is installed by default on many Linux installations, including the campus clusters, and is in general the most widely used  |
-shell today. The differences between it and other shells are irrelevant to this guide (though it should be noted for Mac users   |
-that the default shell on Mac is zsh, so there may be minor differences between the Mac terminal environment and the cluster     |
-terminal environment), so they won’t be gone over.                                                                               |
-                                                                                                                                 |
+different flavors of shell available, but the one that matters here is the “Bourne Again Shell,” or as it’s commonly known, Bash.
+Bash is installed by default on many Linux installations, including the campus clusters, and is in general the most widely used  
+shell today. The differences between it and other shells are irrelevant to this guide (though it should be noted for Mac users   
+that the default shell on Mac is zsh, so there may be minor differences between the Mac terminal environment and the cluster     
+terminal environment), so they won’t be gone over.                                                                               
+                                                                                                                                 
 Much like Windows or Mac, Linux uses a tree-like hierarchical structure to store files. The highest level directory (analogous to
 the standard C:\ drive top level directory on Windows or the respective / directory on Mac) is simply /, with all other system 
 and user files being below that.
