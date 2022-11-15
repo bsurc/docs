@@ -2,7 +2,7 @@
 ## **What is a compute cluster**?
 
 A compute cluster, also known as a "supercomputer," is a set of computers that all work together to form one functional system.
-The cluster has many individual computers in it (called compute nodes) that are all set up to run computational jobs on. Each
+The cluster has many individual computers in it (called compute nodes) that are all set up to run computational jobs. Each
 node can run independently or can pool resources with other nodes to increase computing capacity. These computers are all linked
 to a central controller computer with similar hardware to a compute node that runs software like the cluster's job scheduler. 
 
