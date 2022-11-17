@@ -18,11 +18,11 @@ The first of these parameters is the queue parameter. Specified by the line <cod
 
 | Queue | Node Type | Hardware Used | Total nodes in queue(s) (some nodes counted in multiple queues) | Time limit | Preemption Behavior |
 | :---  | :---      | :---          | :---                                                            | :---       | :---                |
-| defq  | CPU       | CPUs          | 22                                                              | 30 days    | Does not preempt, cannot be preempted.               | 
+| defq  | CPU       | CPUs          | 22                                                              | 30 days    | Does not preempt, cannot be preempted.              | 
 | shortq| CPU/GPU   | CPUs          | 33                                                              | 12 hours   | Does not preempt, can be preempted if job is running on condo nodes.             |
 | gpuq  | GPU       | GPUs          | 5                                                               | 30 days    | Does not preempt, cannot be preempted.              |
 | eduq  | CPU       | CPUs          | 8                                                               | 30 days    | Does not preempt, cannot be preempted.              |
-| Condo queues (piret, leaf, adaptlab, peregrine) | CPU      | CPUs      | 6                                                                   | 30 days        | Preempts shortq jobs current running on them, cannot be preempted.       |
+| Condo queues (piret, leaf, adaptlab, peregrine) | CPU      | CPUs      | 6                          | 30 days    | Preempts shortq jobs current running on them, cannot be preempted.       |
 
 The following are the queues available on Borah, and their respective behaviors:
 
