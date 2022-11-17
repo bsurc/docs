@@ -1,6 +1,6 @@
 # **The Linux Operating System**
 
-### Linux Basics asdf
+### Linux Basics
 For many people, using a compute cluster is their first exposure to the Linux operating system. This can produce some shellshock
 (quite literally, as the Linux command line is referred to as the “shell”) as it can be vastly different from the Windows or Mac
 operating systems that most people are used to.
