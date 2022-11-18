@@ -6,7 +6,7 @@ Above all, the Research Computing team is here to help YOU, the researcher, make
 
 ### **How can I test my code?**
 
-Use <code>dev-session, gpu-session, and/or debug-session</code> for code testing/compiling/optimizing. This refers to 1 and 2; avoid accidentally running parallel code or a parallel compile on the head node by using the sessions we’ve built for this purpose. You should test code before running it, especially if your job is running with MPI across multiple nodes. If your code is faulty and doesn’t utilize MPI correctly (by not being configured to use multiple nodes right), then your job can “use” nodes while actually keeping them idle, wasting the resources by keeping other users from utilizing them.
+Use `dev-session`, `gpu-session`, and/or `debug-session` for code testing/compiling/optimizing. This refers to 1 and 2; avoid accidentally running parallel code or a parallel compile on the head node by using the sessions we’ve built for this purpose. You should test code before running it, especially if your job is running with MPI across multiple nodes. If your code is faulty and doesn’t utilize MPI correctly (by not being configured to use multiple nodes right), then your job can “use” nodes while actually keeping them idle, wasting the resources by keeping other users from utilizing them.
 
 ### **What should I do to have good cluster etiquette toward other users?**
 
