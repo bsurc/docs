@@ -1,4 +1,4 @@
-# **Appendix A: FAQ**
+# Appendix A: FAQ
 
 ### **What should I do if I need help?**
 
@@ -12,7 +12,7 @@ Use `dev-session`, `gpu-session`, and/or `debug-session` for code testing/compil
 
 Primarily, you should make sure that your jobs aren’t over-utilizing the resources available to the detriment of other users. Make sure that your jobs are actually utilizing the resources you’ve requested, don’t request more resources than you need, don’t request large portions (over 8 nodes) of the clusters for jobs that are likely to run for more than a few days, etc.
 
-Also, don’t use the <code>--exclusive</code> use parameter unless necessary. This parameter will block others from using an entire node, so make sure your job actually needs an entire node to itself. If in doubt, consult Research Computing.
+Also, don’t use the `--exclusive` use parameter unless necessary. This parameter will block others from using an entire node, so make sure your job actually needs an entire node to itself. If in doubt, consult Research Computing.
 
 ### **How do you ensure fair access for everyone to the compute resources? Can someone monopolize the clusters?**
 
