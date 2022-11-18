@@ -2,7 +2,7 @@
 When on the Boise State campus, the campus clusters can be accessed from most wired computers or from the secured Eduroam Wi-Fi network.
 If you are off campus, a VPN connection must be used. The Boise State VPN is a virtual network connection that allows users to be on the
 internal network from off campus. More info on it can be found here: 
-[<ins>vpn-services</ins>](https://www.boisestate.edu/oit-network/vpn-services/). The VPN is only accessible to current employees and 
+[vpn-services](https://www.boisestate.edu/oit-network/vpn-services/). The VPN is only accessible to current employees and 
 student employees of Boise State, so if you need VPN access, please have your faculty advisor/PI contact the help desk to request VPN 
 access on your behalf.
 
@@ -12,14 +12,14 @@ as you type your password.
 
 ### Windows:
 
-**1.** Go to [<ins>download.html</ins>](https://mobaxterm.mobatek.net/download.html) and download the “Home” edition of MobaXTerm.
+**1.** Go to [download.html](https://mobaxterm.mobatek.net/download.html) and download the “Home” edition of MobaXTerm.
 This software is an emulator for a Linux shell that will allow you to utilize a Linux shell on Windows. There’s a tutorial available
-for this software on the [<ins>MobaXterm</ins>](https://mobaxterm.mobatek.net/demo.html).
+for this software on the [MobaXterm](https://mobaxterm.mobatek.net/demo.html).
 
 **2.** Install the software.
 
-**3.** Open the software and type <code>ssh -XC (your R2 username)@r2-login.boisestate.edu</code> for R2 or <code>ssh -XC 
-(your Borah username)@borah-login.boisestate.edu</code> for Borah. Keep in mind the above note about the VPN/Onyx.
+**3.** Open the software and type `ssh -XC (your R2 username)@r2-login.boisestate.edu` for R2 or `ssh -XC 
+(your Borah username)@borah-login.boisestate.edu` for Borah. Keep in mind the above note about the VPN/Onyx.
 
 **4.** Enter the password provided to you by Research Computing.
 
