@@ -1,6 +1,6 @@
-# **Getting an Account**
+# Getting an Account
 Connecting to R2 or Borah requires an account for that cluster provided by Research Computing. To request an account, please email
-[<ins>researchcomputing@boisestate.edu</ins>](researchcomputing@boisestate.edu) with the following information: 
+researchcomputing@boisestate.edu with the following information: 
 
   - Name of requestor                          
   - Cluster you are requesting an account on   
@@ -13,7 +13,7 @@ Boise State campus, the campus clusters can be accessed from most wired computer
 are off campus, a VPN connection must be used. The Boise State VPN is a virtual network connection that allows users to be on the 
 internal network from off campus. More info on it can be found here:
   
-[<ins>vpn-services</ins>](https://www.boisestate.edu/oit-network/vpn-services/). The VPN is only accessible to current employees
+[vpn-services](https://www.boisestate.edu/oit-network/vpn-services/). The VPN is only accessible to current employees
 and student employees of Boise State, so if you need VPN access, please have your faculty advisor/PI contact the help desk to
 request VPN access on your behalf.
 
