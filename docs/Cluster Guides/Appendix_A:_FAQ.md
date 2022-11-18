@@ -2,7 +2,7 @@
 
 ### **What should I do if I need help?**
 
-Above all, the Research Computing team is here to help YOU, the researcher, make advances in your field. There are multiple decades worth of programming, system administration, scientific computing, and other technical experience between everyone on the RC team, so don’t be afraid to reach out and tap into this.
+Above all, the Research Computing team is here to help YOU, the researcher, make advances in your field. There are multiple decades worth of programming, system administration, scientific computing, and other technical experience between everyone on the RC team, so don’t be afraid to reach out and tap into this. Calling, emailing, and inperson vists can all be utilized and info of the following can be found at the bottom of this page. 
 
 ### **How can I test my code?**
 
@@ -16,11 +16,7 @@ Also, don’t use the `--exclusive` use parameter unless necessary. This paramet
 
 ### **How do you ensure fair access for everyone to the compute resources? Can someone monopolize the clusters?**
 
-The clusters run jobs based on a queue system provided by the software Slurm. Jobs are submitted on a cluster to this scheduling software, assessed for priority, and then run on that cluster in order of priority. Priority is decided based on a few factors, such as how many jobs the user has run during that month on that cluster, how much time is requested for the job, how many cores and nodes are requested, and how long the job has waited. Individual user priority is reset at the start of every month.
-
-### **How much of the clusters can I use at a time?**
-
-On R2, usage is capped at 8 nodes per user at a time. On Borah, usage is capped at a maximum of 20% of total cluster resources per user at a time.
+The clusters run jobs based on a queue system provided by the software [Slurm](https://slurm.schedmd.com/documentation.html). Jobs are submitted on a cluster to this scheduling software, assessed for priority, and then run on that cluster in order of priority. Priority is decided based on a few factors, such as how many jobs the user has run during that month on that cluster, how much time is requested for the job, how many cores and nodes are requested, and how long the job has waited. Individual user priority is reset at the start of every month.
 
 ### **Can I use the cluster for purposes other than education/research?**
 
@@ -32,4 +28,9 @@ For security reasons, only admins on the campus clusters are allowed sudo access
 
 ### **What about cybersecurity on the clusters?**
 
-Adhere to standard cybersecurity protocols. You have been granted a cluster account in trust, so standard security rules apply (like, for example, never give out your password).
+Adhere to standard cybersecurity protocols([Information Technology Policy](https://www.boisestate.edu/policy/information-technology/information-technology-resource-use/)). You have been granted a cluster account in trust, so standard security rules apply (like, for example, never give out your password). Use of Boise State University computing resources must be consistent with Boise State's educational goals, as well as comply with local, state and federal laws, and university policies. Use of the system constitutes consent to monitoring for compliance with local, state and federal laws, and university policies.
+
+## Contact Info:
+
+|RESEARCH COMPUTING SUPPORT| researchcomputing@boisestate.edu|(208) 426-3904| Riverfront Hall, Suite 319, 1987 W Cesar Chavez Ln, Boise, ID 83725 |
+| :---                     | :---                            | :---         | :---                                                                | 
