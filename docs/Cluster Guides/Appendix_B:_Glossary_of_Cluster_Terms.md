@@ -1,4 +1,4 @@
-# **Appendix B: Glossary of Cluster Terms**
+# Appendix B: Glossary of Cluster Terms
 
 **CPU, or “central processing unit”** – A computer component responsible for running the necessary functions of the computer like programs, the operating system, etc. Could be called the “brain” of the computer.
 
