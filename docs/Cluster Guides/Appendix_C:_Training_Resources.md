@@ -1,10 +1,10 @@
-# **Appendix C: Training Resources**
+# Appendix C: Training Resources
 
 The resources listed below provide a variety of tutorials and how-to information for topics useful to using high performance computing clusters.
 
 ## **Miscellaneous Guides & Videos**
 
-- [<ins>Cluster Introduction to Job Scheduling and Compiling</ins>](https://boisestate.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=689083fe-bde2-4db2-a171-acdf0005c48d) (video) – Research Computing’s HPC Engineer gives demo to classroom. Please login to the R2 cluster prior to starting the video so you can follow along.  NOTE: Please substitute <code>**#SBATCH -p defq**</code> in place of <code>**#SBATCH -p classroom**</code> for your partition.
+- [<ins>Cluster Introduction to Job Scheduling and Compiling</ins>](https://boisestate.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=689083fe-bde2-4db2-a171-acdf0005c48d) (video) – Research Computing’s HPC Engineer gives demo to classroom. Please login to the R2 cluster prior to starting the video so you can follow along.  NOTE: Please substitute **`#SBATCH -p defq`** in place of **`#SBATCH -p classroom`** for your partition.
 
 ## **2021 Research Computing Days Workshop/Tutorial Recordings**
 
