@@ -129,3 +129,8 @@ one you’re creating. This opens the file in command mode.
 
 Like I said, downright esoteric, but it works great once you get used to it. Being able to just open a Vim window and start
 writing or making changes right there is much faster than most anything else.
+
+## Contact Info:
+
+|RESEARCH COMPUTING SUPPORT| researchcomputing@boisestate.edu|(208) 426-3904| Riverfront Hall, Suite 319, 1987 W Cesar Chavez Ln, Boise, ID 83725 |
+| :---                     | :---                            | :---         | :---                                                                | 
