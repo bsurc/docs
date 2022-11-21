@@ -16,3 +16,8 @@ Relevant commands for the module system:
 `module purge` – unloads all currently loaded modules.
 
 In addition to the module system, software will sometimes be built within your own home or scratch space for ease of use. When we at Research Computing receive your software request, we’ll work with you to build a solution that will meet your needs.
+
+## Contact Info:
+
+|RESEARCH COMPUTING SUPPORT| researchcomputing@boisestate.edu|(208) 426-3904| Riverfront Hall, Suite 319, 1987 W Cesar Chavez Ln, Boise, ID 83725 |
+| :---                     | :---                            | :---         | :---                                                                | 
