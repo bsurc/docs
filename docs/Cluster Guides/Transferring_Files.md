@@ -66,3 +66,8 @@ For more information, visit Globus’s documentation contents page [https://docs
 
 ## **Rclone**
 Coming soon.
+
+## Contact Info:
+
+|RESEARCH COMPUTING SUPPORT| researchcomputing@boisestate.edu|(208) 426-3904| Riverfront Hall, Suite 319, 1987 W Cesar Chavez Ln, Boise, ID 83725 |
+| :---                     | :---                            | :---         | :---                                                                | 
