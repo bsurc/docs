@@ -18,3 +18,8 @@ orders of magnitude. Parallel computing is applicable to many different fields, 
 [environmental science](https://www.boisestate.edu/news/2019/09/05/how-a-study-of-idahos-drylands-could-impact-future-nasa-studies/), and
 [genetics](https://www.boisestate.edu/news/2021/03/04/research-highlight-computing-the-tree-of-life/) - researchers
 all across campus have had success utilizing our resources to improve the efficiency of their research. 
+
+## Contact Info:
+
+|RESEARCH COMPUTING SUPPORT| researchcomputing@boisestate.edu|(208) 426-3904| Riverfront Hall, Suite 319, 1987 W Cesar Chavez Ln, Boise, ID 83725 |
+| :---                     | :---                            | :---         | :---                                                                | 
