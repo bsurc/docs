@@ -17,3 +17,6 @@ The resources listed below provide a variety of tutorials and how-to information
 - [Data Management Basics](https://boisestate.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2e736f55-ebe2-46c3-816c-acfd00e89879)
 - [GPU Programming](https://boisestate.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6984ff57-18db-4658-a8f9-acfd00e8e9e9) — Comparing OpenACC, OpenMP and CUDA (C/C++ and gcc experience suggested)
 - [Poster Session](https://boisestate.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e9b7159b-b213-4465-8820-acfd00e9b303)
+
+## **HPC Training**
+- [Training Tutorials](https://docs.google.com/document/d/1WNGomJh-S289bdo7t1J4Cz7EjphW5PX47i02xCwbqIY/edit?usp=sharing)
