@@ -13,3 +13,8 @@
 **OS, or “operating system”** – A piece of software that allows someone to interface with a computer. Windows, Mac, and Linux are all examples of operating systems.
 
 **Condo node** – A compute node in a compute cluster purchased by a research lab for their own use. Can be used by others through a certain job queue, but the lab that bought the node will always have priority.
+
+## Contact Info:
+
+|RESEARCH COMPUTING SUPPORT| researchcomputing@boisestate.edu|(208) 426-3904| Riverfront Hall, Suite 319, 1987 W Cesar Chavez Ln, Boise, ID 83725 |
+| :---                     | :---                            | :---         | :---                                                                | 
