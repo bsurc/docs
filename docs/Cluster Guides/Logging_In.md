@@ -29,3 +29,8 @@ for this software on the [MobaXterm](https://mobaxterm.mobatek.net/demo.html).
 
 As Mac and Linux both already have terminals built in, the same instructions as above sans the downloading and installing of MobaXTerm
 can be used to connect from either of those operating systems.
+
+## Contact Info:
+
+|RESEARCH COMPUTING SUPPORT| researchcomputing@boisestate.edu|(208) 426-3904| Riverfront Hall, Suite 319, 1987 W Cesar Chavez Ln, Boise, ID 83725 |
+| :---                     | :---                            | :---         | :---                                                                | 
