@@ -20,3 +20,8 @@ The resources listed below provide a variety of tutorials and how-to information
 
 ## **HPC Training**
 - [Training Tutorials](https://docs.google.com/document/d/1WNGomJh-S289bdo7t1J4Cz7EjphW5PX47i02xCwbqIY/edit?usp=sharing)
+
+## Contact Info:
+
+|RESEARCH COMPUTING SUPPORT| researchcomputing@boisestate.edu|(208) 426-3904| Riverfront Hall, Suite 319, 1987 W Cesar Chavez Ln, Boise, ID 83725 |
+| :---                     | :---                            | :---         | :---                                                                | 
