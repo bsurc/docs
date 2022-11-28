@@ -3,6 +3,7 @@ theme:
   name: material
   logo: images/boisestate-B-1color-orange-rgb.png
   favicon: images/boisestate-B-1color-orange-rgb.png
+  custom_dir: docs/overrides
   palette:
   - scheme: default
     toggle:
@@ -16,6 +17,6 @@ extra_css:
   - stylesheets/extra.css
 extra:
   social:
-    - icon: fontawesome/solid/paper-plane
+    - icon: fontawesome/envelope
       link: mailto:researchcomputing@boisestate.edu
       name: researchcomputing@boisestate.edu
