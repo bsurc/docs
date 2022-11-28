@@ -39,3 +39,7 @@ extra:
     - icon: fontawesome/solid/envelope
       link: mailto:researchcomputing@boisestate.edu
       name: researchcomputing@boisestate.edu
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
