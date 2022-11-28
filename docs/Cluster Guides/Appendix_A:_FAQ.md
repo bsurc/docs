@@ -30,7 +30,3 @@ For security reasons, only admins on the campus clusters are allowed sudo access
 
 By using university cluster resources, you agree to adhere to the university's [information technology resource use policy](https://www.boisestate.edu/policy/information-technology/information-technology-resource-use/). You have been granted a cluster account in trust, so standard security rules apply (like, for example, never give out your password). Use of Boise State University computing resources must be consistent with Boise State's educational goals, as well as comply with local, state and federal laws, and university policies. Use of the system constitutes consent to monitoring for compliance with local, state and federal laws, and university policies.
 
-## Contact Info:
-
-|RESEARCH COMPUTING SUPPORT| researchcomputing@boisestate.edu|(208) 426-3904| Riverfront Hall, Suite 319, 1987 W Cesar Chavez Ln, Boise, ID 83725 |
-| :---                     | :---                            | :---         | :---                                                                | 
