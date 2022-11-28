@@ -19,7 +19,3 @@ The resources listed below provide a variety of tutorials and how-to information
 - [Poster Session](https://boisestate.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e9b7159b-b213-4465-8820-acfd00e9b303)
 
 
-## Contact Info:
-
-|RESEARCH COMPUTING SUPPORT| researchcomputing@boisestate.edu|(208) 426-3904| Riverfront Hall, Suite 319, 1987 W Cesar Chavez Ln, Boise, ID 83725 |
-| :---                     | :---                            | :---         | :---                                                                | 
