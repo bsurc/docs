@@ -94,25 +94,22 @@ mpirun -np 28 ./mandelbrot
 
 As another example, here’s a full sbatch script for a CUDA job running a Mandelbrot fractal generator on a single GPU node:
 
-`#!/bin/bash`
-
-`#SBATCH -J CUDA_TEST # job name`
-
-`#SBATCH -o log_slurm.o%j # output and error file name (%j expands to jobID)`
-
-`#SBATCH -n 1 # total number of tasks requested`
-
-`#SBATCH -N 1 # number of nodes you want to run on`
-
-`#SBATCH -p gpuq # queue (partition) -- defq, eduq, gpuq, shortq`
-
-`#SBATCH -t 12:00:00 # run time (hh:mm:ss) - 12.0 hours in this example.`
+``` bash title="slurm_cumandy.sh"
+#!/bin/bash
+#SBATCH -J CUDA_TEST # job name
+#SBATCH -o log_slurm.o%j # output and error file name (%j expands to jobID)
+#SBATCH -n 1 # total number of tasks requested
+#SBATCH -N 1 # number of nodes you want to run on
+#SBATCH -p gpuq # queue (partition) -- defq, eduq, gpuq, shortq
+#SBATCH --gres=gpu:1 # request one gpu
+#SBATCH -t 12:00:00 # run time (hh:mm:ss) - 12.0 hours in this example.
 
 module load slurm
-
 module load cuda10.0
 
-`# Execute the program./cudaMandy`
+# Execute the program
+./cudaMandy
+```
 
 The first parts of these scripts are the parameters we discussed above. 
 Below those begin the shell commands; the first of these, the module load commands, are just loading certain modules into the environment. 
@@ -120,22 +117,22 @@ These modules are the Slurm scheduler (slurm), the gcc compiler (gcc), an MPI fr
 Note that Slurm is necessary in both (and in all) sbatch scripts as this loads the job scheduler. 
 gcc is also required for many programs to run correctly – mpich and CUDA are job dependent, however. 
 In the first example, the `mpirun -np 28 ./mandelbrot` command invokes the loaded mpich MPI interface and runs the program with it across 28 cores. 
-In the second example, the ./cudaMandy command runs a program with CUDA that generates the fractal using a GPU on a GPU node. 
+In the second example, the `./cudaMandy` command runs a program with CUDA that generates the fractal using a GPU on a GPU node. 
 In your own scripts, the section with commands like the mpirun is where you would, for example, run your parallel R or Python script that’s meant to utilize the computing resources. 
 This is also where you’d invoke commands from programs like GROMACS, BLAST, or whatever software you’re using.
 
-These other commands will, in essence, differ from job to job. 
+These other commands will differ from job to job. 
 As can be seen, these scripts are somewhat nuanced, so contact Research Computing if you need any help putting them together.
 
-Once your script is ready, use the command sbatch (job script filename) to run the job. 
-You will get an output message saying Submitted batch job (job number), which tells you that your job was successfully submitted.
+Once your script is ready, use the command `sbatch (job script filename)` to run the job. 
+You will get an output message saying `Submitted batch job (job number)`, which tells you that your job was successfully submitted.
 
 ## Other Useful Slurm Commands
 
 `scancel (job number)` cancels a job based on its number; you can, for obvious reasons, only cancel jobs that you’ve submitted. 
-squeue shows the current Slurm queue and all jobs in it. 
-Jobs that have something like r2-cpu-01 (on R2) or cpu102 (on Borah) at their far right are jobs that are currently running. 
-If a job has something like (Resources) or (Priority) on the far right, then it’s currently sitting in the queue waiting to be run. 
-(Resources) means that the job has priority over other jobs in the queue and is just waiting on node(s) to become available, while (Priority) means that there are other jobs in the queue with a higher priority that must be run before that job will run.
+`squeue` shows the current Slurm queue and all jobs in it. 
+Jobs that have something like `r2-cpu-01` (on R2) or `cpu102` (on Borah) at their far right are jobs that are currently running. 
+If a job has something like `(Resources)` or `(Priority)` on the far right, then it’s currently sitting in the queue waiting to be run. 
+`(Resources)` means that the job has priority over other jobs in the queue and is just waiting on node(s) to become available, while `(Priority)` means that there are other jobs in the queue with a higher priority that must be run before that job will run.
 
-The command `scontrol` also allows for detailed job information to be viewed, and can be used with scontrol show job (job number).
+The command `scontrol` also allows for detailed job information to be viewed, and can be used with `scontrol show job (job number)`.
