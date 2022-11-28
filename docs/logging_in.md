@@ -22,7 +22,6 @@ There’s a tutorial available on the [MobaXterm demo page](https://mobaxterm.mo
 !!! info
 
     Remember: if you are off campus, you need to be connected to the VPN in order to access R2 and Borah.
-
 4. Enter the password provided to you by Research Computing.
 
 5. You will now be connected to the cluster. 
@@ -30,4 +29,4 @@ If it’s your first time connecting, use the `passwd` command to change your pa
 
 ### Mac and Linux
 
-As Mac and Linux both have built-in terminals, the same instructions as above skipping steps 1 and 2 can be used to connect from either of those operating systems.
+As Mac and Linux both have built-in terminals, the same instructions as above (skipping steps 1 and 2) can be used to connect from either of those operating systems.
