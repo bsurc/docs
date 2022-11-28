@@ -17,6 +17,6 @@ extra_css:
   - stylesheets/extra.css
 extra:
   social:
-    - icon: fontawesome/envelope
+    - icon: fontawesome/solid/envelope
       link: mailto:researchcomputing@boisestate.edu
       name: researchcomputing@boisestate.edu
