@@ -22,7 +22,7 @@ theme:
   name: material
   logo: images/boisestate-B-1color-orange-rgb.png
   favicon: images/boisestate-B-1color-orange-rgb.png
-  custom_dir: docs/overrides
+  #custom_dir: docs/overrides
   palette:
   - scheme: default
     toggle:
@@ -39,6 +39,7 @@ extra:
     - icon: fontawesome/solid/envelope
       link: mailto:researchcomputing@boisestate.edu
       name: researchcomputing@boisestate.edu
+  copyright: <b>Research Computing</b><br>Riverfront Hall, Suite 319, 1987 W Cesar Chavez Ln, Boise, ID 83725 
 markdown_extensions:
   - admonition
   - pymdownx.details
