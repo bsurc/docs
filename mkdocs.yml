@@ -7,12 +7,13 @@ nav:
     - 'transferring_files.md'
     - 'storing_data.md'
     - 'loading_software.md'
-    - 'using_software.md'
-    - 'conda.md'
     - 'scheduling.md'
     - 'interactive_sessions.md'
     - 'open_ondemand.md'
     - 'faq.md'
+    - 'Software Specific Guides':
+      - 'conda.md'
+      - 'using_software.md'
   - 'Computing Resources':
     - 'training.md'
     - 'linux.md'
