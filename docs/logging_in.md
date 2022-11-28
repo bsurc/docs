@@ -19,9 +19,9 @@ There’s a tutorial available on the [MobaXterm demo page](https://mobaxterm.mo
 2. Install the software.
 
 3. Open the software and type `ssh -XC (your R2 username)@r2-login.boisestate.edu` for R2 or `ssh -XC (your Borah username)@borah-login.boisestate.edu` for Borah. 
-    !!! info
+  !!! info
 
-        Remember: if you are off campus, you need to be connected to the VPN in order to access R2 and Borah.
+      Remember: if you are off campus, you need to be connected to the VPN in order to access R2 and Borah.
 
 4. Enter the password provided to you by Research Computing.
 
