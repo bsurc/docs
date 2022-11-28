@@ -1,4 +1,22 @@
 site_name: Boise State Research Computing
+nav:
+  - Home: 'index.md'
+  - 'Cluster Guide':
+    - 'getting_an_account.md'
+    - 'logging_in.md'
+    - 'transferring_files.md'
+    - 'storing_data.md'
+    - 'loading_software.md'
+    - 'using_software.md'
+    - 'conda.md'
+    - 'scheduling.md'
+    - 'interactive_sessions.md'
+    - 'open_ondemand.md'
+    - 'faq.md'
+  - 'Computing Resources':
+    - 'training.md'
+    - 'linux.md'
+    - 'glossary.md'
 theme:
   name: material
   logo: images/boisestate-B-1color-orange-rgb.png
