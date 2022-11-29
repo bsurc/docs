@@ -22,10 +22,11 @@ There are a wide variety of different sbatch parameters that can be specified, b
 
 The first of these parameters is the queue, also known as partition, parameter. 
 Specified by the line `#SBATCH -p (partition name)` in the sbatch script, this parameter tells Slurm which queue (or partition) the job should be run in. 
+You can view the queues available to you using the `sinfo` command.
 
 !!! warning
 
-    “Preemptable” means that jobs submitted to this queue can be stopped and requeued if a higher priority job needs the resources. 
+    “Preemptable” means that jobs submitted to this queue can be stopped and requeued if a higher priority job needs the resources. If the software you are using makes use of checkpointing, i.e., writing out intermediate data so the job doesn't need to restart from the beginning, you can make the best use of these queues.
 
 The following are the queues available on R2:
 
@@ -38,7 +39,7 @@ The following are the queues available on R2:
 
 !!! info "R2 hardware specifications"
 
-    CPU nodes have 28 cores per node and GPU nodes have 2 gpus per node.
+    Each CPU node has two Intel Xeon E5-2680 v4 14 core 2.4GHz processors, for a total of 28 cores per node, with 192GB of memory. Each GPU node has 2 gpus per node.
 
 The following are the queues available on Borah:
 
