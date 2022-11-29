@@ -102,7 +102,7 @@ This opens the file in command mode.
 
 4. Press ++escape++ while in insert mode to reenter command mode.
 
-5. To save and close while in command mode, either hold ++shift++ and press ++Z++ twice, or type `:wq`
+5. To save and close while in command mode, either hold ++shift++ and press ++z++ twice, or type `:wq`
 
 6. To close without saving while in command mode, type `:q!`
 
