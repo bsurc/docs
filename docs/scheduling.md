@@ -18,31 +18,56 @@ An sbatch script contains two components: a set of sbatch parameters and the com
 The first of these tells Slurm some of the parameters about how the job should be run, the second tells it what to run. 
 There are a wide variety of different sbatch parameters that can be specified, but only a few are relevant in most cases.
 
-## Queues
+## Queues 
 
-The first of these parameters is the queue parameter. 
+The first of these parameters is the queue, also known as partition, parameter. 
 Specified by the line `#SBATCH -p (partition name)` in the sbatch script, this parameter tells Slurm which queue (or partition) the job should be run in. 
-The following are the queues available on R2, and their respective behaviors:
 
-| Queue                                           | Node Type | Hardware Used | Total nodes in queue(s) (some nodes counted in multiple queues) | Time limit | Preemption Behavior                                                  |
-| :---                                            | :---      | :---          | :---                                                            | :---       | :---                                                                 |
-| defq                                            | CPU       | CPUs          | 22                                                              | 30 days    | Does not preempt, cannot be preempted.                               | 
-| shortq                                          | CPU/GPU   | CPUs          | 33                                                              | 12 hours   | Does not preempt, can be preempted if job is running on condo nodes. |
-| gpuq                                            | GPU       | GPUs          | 5                                                               | 30 days    | Does not preempt, cannot be preempted.                               |
-| eduq                                            | CPU       | CPUs          | 8                                                               | 30 days    | Does not preempt, cannot be preempted.                               |
-| Condo queues (piret, leaf, adaptlab, peregrine) | CPU       | CPUs          | 6                                                               | 30 days    | Preempts shortq jobs current running on them, cannot be preempted.   |
+!!! warning
 
-The following are the queues available on Borah, and their respective behaviors:
+    “Preemptable” means that jobs submitted to this queue can be stopped and requeued if a higher priority job needs the resources. 
 
-| Queue  | Node Type                       | Hardware Used | Total nodes in queue(s) (some nodes counted in multiple queues) | Time limit | Preemption Behavior                    |
-| :---   | :---                            | :---          | :---                                                            | :---       | :---                                   |
-| bsudfq | CPU                             | CPUs          | 40                                                              | 30 days    | Does not preempt, cannot be preempted. | 
-| gpu    | GPU                             | GPUs          | 4                                                               | 30 days    | Does not preempt, cannot be preempted. |
-| bigmem | High memory CPU (768 GB of RAM) | CPUs          | 1                                                               | 30 days    | Does not preempt, cannot be preempted. |
+The following are the queues available on R2:
 
-Note that to “preempt” means that a job running on that node will be cancelled and replaced by another. 
-As a part of the purchasing agreement for condo nodes, the purchasing lab agrees to allow other users outside of the lab to have access to the node’s resources when they aren’t in use by the lab. 
-However, when a job is submitted to the condo node’s queue by the purchasing lab, any jobs running on the condo node that aren’t from that lab are immediately cancelled to maintain priority for the job being run by the purchasing lab.
+| Queue     | Node Type | Max Nodes/User | Time limit (days) | Preemptable? | Total nodes |
+| :---      | :---      | :---           | :---              | :---         | :---        |
+| defq      | CPU       | 8              | infinite          | No           | 21          | 
+| shortq    | CPU       | 35             | 2                 | Yes          | 35          | 
+| gpuq      | GPU       | 2              | infinite          | No           | 4           |
+| shortgpuq | GPU       | 5              | 7                 | Yes          | 5           |
+
+!!! info "R2 hardware specifications"
+
+    CPU nodes have 28 cores per node and GPU nodes have 2 gpus per node.
+
+The following are the queues available on Borah:
+
+| Queue    | Node Type | Max Nodes/User | Time limit (days) | Preemptable? | Total nodes |
+| :---     | :---      | :---           | :---              | :---         | :---        |
+| bsudfq   | CPU       | 8              | inifinite         | No           | 40          |
+| short    | CPU       | 72             | 2                 | Yes          | 72          |
+| gpu      | GPU       | 2              | infinite          | No           | 4           |
+| shortgpu | GPU       | 5              | 7                 | Yes          | 5           |
+| bigmem   | CPU (768 GB of RAM)| 1     | infinite          | No           | 1           |
+
+!!! info "Borah hardware specifications"
+
+    CPU nodes have 48 cores per node and GPU nodes have 2 gpus per node.
+
+!!! note "Note about shortgpu queue"
+
+    The shortgpu partition contains 8 NVidia V100 gpus and 8 NVidia Quadro RTX8000 gpus. If you would like to run on a specific gpu type, you can add the following to your slurm scripts:
+    for one RTX8000:
+
+    `--gres=gpu:RTX8000:1`
+
+    for one V100:
+
+    `--gres=gpu:V100:1`
+
+    and for one gpu regardless of type:
+
+    `--gres=gpu:1`
 
 ## Nodes and Cores
 
