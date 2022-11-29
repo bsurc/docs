@@ -19,6 +19,7 @@ Mac and Linux both have built-in terminals, just search "terminal".
 
 ## Connecting to the cluster
 Once you have installed or located your terminal, you can connect to the cluster as follows:
+
 1. Open the terminal and type `ssh -XC (your R2 username)@r2-login.boisestate.edu` for R2 or `ssh -XC (your Borah username)@borah-login.boisestate.edu` for Borah. 
 
     !!! note "Reminder"
@@ -28,7 +29,7 @@ Once you have installed or located your terminal, you can connect to the cluster
 2. Enter the password provided to you by Research Computing.
 
     !!! info
-    
+
         Your password will not be shown as you type it, so it’s normal to see an empty prompt even though you are entering characters.
 
 3. You will now be connected to the cluster. 
