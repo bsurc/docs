@@ -39,7 +39,7 @@ The following are the queues available on R2:
 
 !!! info "R2 hardware specifications"
 
-    Each CPU node has two Intel Xeon E5-2680 v4 14 core 2.4GHz processors, for a total of 28 cores per node, with 192GB of memory. Each GPU node has 2 gpus per node.
+    Each CPU and GPU node has two Intel Xeon E5-2680 v4 14 core 2.4GHz processors, for a total of 28 cores per node. CPU nodes have 192GB and GPU nodes have 256GB of memory. Additionally, each GPU node has 2 NVIDIA Tesla NVLink P100 GPUs.
 
 The following are the queues available on Borah:
 
@@ -53,7 +53,7 @@ The following are the queues available on Borah:
 
 !!! info "Borah hardware specifications"
 
-    CPU nodes have 48 cores per node and GPU nodes have 2 gpus per node.
+    Each CPU and GPU node has two Intel Xeon Gold 6252 2.1G 24 core processors, for a total of 48 cores per node. CPU nodes have 192GB and GPU nodes have 384GB of memory. Additionally, each GPU node has 2 NVIDIA Tesla V100 GPUs.
 
 !!! note "Note about shortgpu queue"
 
