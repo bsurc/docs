@@ -65,9 +65,68 @@ If your data is on an OIT Research Share, please contact Research Computing so w
 For more information, visit Globus’s documentation contents page [https://docs.globus.org/how-to/](https://docs.globus.org/how-to/) or email researchcomputing@boisestate.edu.
 
 ## **Rclone**
-Coming soon.
+
+### [R2 Documentation](https://rclone.org/docs/)
+
+Below is an index of all commands in rclone. Run **rclone command --help** to see the help for that command.
+
+| Command                                                                                   | Description                                                        |
+| :---                                                                                      | :---                                                               |
+| [rclone](https://rclone.org/commands/rclone/)                                             | Show help for rclone commands, flags and backends.                 |
+| [rcloneabout](https://rclone.org/commands/rclone_about/)                                  | Get quota information from the remote.                             |
+| [rclone authorize](https://rclone.org/commands/rclone_authorize/)                         | Remote authorization.                                              |
+| [rclone backend](https://rclone.org/commands/rclone_backend/)                             | Run a backend-specific command.                                    | 
+| [rclone bisync](https://rclone.org/commands/rclone_bisync/)                               | Perform bidirectional synchronization between two paths.           |
+| [rclone cat](https://rclone.org/commands/rclone_cat/)                                     | Concatenates any files and sends them to stdout.                   | 
+| [rclone check](https://rclone.org/commands/rclone_check/)                                 | Checks the files in the source and destination match.              |
+| [rclone checksum](https://rclone.org/commands/rclone_checksum/)                           | Checks the files in the source against a SUM file.                 |
+| [rclone cleanup](https://rclone.org/commands/rclone_cleanup/)                             | Clean up the remote if possible.                                   |
+| [rclone completion](https://rclone.org/commands/rclone_completion/)                       | Generate the autocompletion script for the specified shell         |     
+| [rclone completion bash](https://rclone.org/commands/rclone_completion/)                  | Generate the autocompletion script for bash                        |
+| [rclone completion fish](https://rclone.org/commands/rclone_completion_fish/)             | Generate the autocompletion script for fish                        |
+| [rclone completion powershell](https://rclone.org/commands/rclone_completion_powershell/) | Generate the autocompletion script for powershell                  |
+| [rclone completion zsh](https://rclone.org/commands/rclone_completion_zsh/)               | Generate the autocompletion script for zsh                         |
+| [rclone config](https://rclone.org/commands/rclone_config/)                               | Enter an interactive configuration session.                        |
+| [rclone config create](https://rclone.org/commands/rclone_config_create/)                 | Create a new remote with name, type and options.                   |
+| [rclone config disconnect](https://rclone.org/commands/rclone_config_disconnect/)         | Disconnects user from remote                                       |
+| [rclone config dump](https://rclone.org/commands/rclone_config_dump/)                     | Dump the config file as JSON.                                      | 
+| [rclone config edit](https://rclone.org/commands/rclone_config_edit/)                     | Enter an interactive configuration session.                        |
+| [rclone config file](https://rclone.org/commands/rclone_config_file/)                     | Show path of configuration file in use.                            |
+| [rclone config password](https://rclone.org/commands/rclone_config_password/)             | Update password in an existing remote.                             | 
+| [rclone config paths](https://rclone.org/commands/rclone_config_paths/)                   | Show paths used for configuration, cache, temp etc.                |
+| [rclone config providers](https://rclone.org/commands/rclone_config_providers/)           | List in JSON format all the providers and options.                 |
+| [rclone config reconnect](https://rclone.org/commands/rclone_config_reconnect/)           | Re-authenticates user with remote.                                 |
+| [rclone config show](https://rclone.org/commands/rclone_config_show/)                     | Print (decrypted) config file, or the config for a single remote.  |
+| [rclone config touch](https://rclone.org/commands/rclone_config_touch/)                   | Ensure configuration file exists.                                  |
+| [rclone config update](https://rclone.org/commands/rclone_config_update/)                 | Update options in an existing remote.                              |
+| [rclone config userinfo](https://rclone.org/commands/rclone_config_userinfo/)             | Prints info about logged in user of remote.                        |
+| [rclone copy](https://rclone.org/commands/rclone_copy/)                                   | Copy files from source to dest, skipping identical files.          |
+| [rclone copyto](https://rclone.org/commands/rclone_copyto/)                               | Copy files from source to dest, skipping identical files.          |
+| [rclone copyurl](https://rclone.org/commands/rclone_copyurl/)                             | Copy url content to dest.                                          |
+| [rclone cryptcheck](https://rclone.org/commands/rclone_cryptcheck/)                       | Cryptcheck checks the integrity of a crypted remote.               |
+| [rclone cryptdecode](https://rclone.org/commands/rclone_cryptdecode/)                     | Cryptdecode returns unencrypted file names.                        |
+| [rclone dedupe](https://rclone.org/commands/rclone_dedupe/)                               | Interactively find duplicate filenames and delete/rename them.     |
+| [rclone delete](https://rclone.org/commands/rclone_delete/)                               | Remove the files in path.                                          |
+| [rclone deletefile](https://rclone.org/commands/rclone_deletefile/)                       | Remove a single file from remote.                                  |
+| [rclone genautocomplete](https://rclone.org/commands/rclone_genautocomplete/)             | Output completion script for a given shell.                        |
+| [rclone genautocomplete bash](https://rclone.org/commands/rclone_genautocomplete_bash/)   | Output bash completion script for rclone.                          |
+| [rclone genautocomplete fish](https://rclone.org/commands/rclone_genautocomplete_fish/)   | Output fish completion script for rclone.                          |
+| [rclone genautocomplete zsh](https://rclone.org/commands/rclone_genautocomplete_zsh/)     | Output zsh completion script for rclone.                           |
+| [rclone gendocs](https://rclone.org/commands/rclone_gendocs/)                             | Output markdown docs for rclone to the directory supplied.         |
+| [rclone hashsum](https://rclone.org/commands/rclone_hashsum/)                             | Produces a hashsum file for all the objects in the path.           |
+| [rclone link](https://rclone.org/commands/rclone_link/)                                   | Generate public link to file/folder.                               |
+| [rclone listremotes](https://rclone.org/commands/rclone_listremotes/)                     | List all the remotes in the config file.                           |
+| [rclone ls](https://rclone.org/commands/rclone_ls/)                                       | List the objects in the path with size and path.                   |
+| [rclone lsd](https://rclone.org/commands/rclone_lsd/)                                     | List all directories/containers/buckets in the path.               |
+| [rclone lsf](https://rclone.org/commands/rclone_lsf/)                                     | List directories and objects in remote:path formatted for parsing. |
+| [rclone lsjson](https://rclone.org/commands/rclone_lsjson/)                               | List directories and objects in the path in JSON format.           |
+| [rclone lsl](https://rclone.org/commands/rclone_lsl/)                                     | List the objects in path with modification time, size and path.    |
+| [rclone md5sum](https://rclone.org/commands/rclone_md5sum/)                               | Produces an md5sum file for all the objects in the path.           |
+| [rclone mkdir](https://rclone.org/commands/rclone_mkdir/)                                 | Make the path if it doesn't already exist.                         |
+| [rclone mount](https://rclone.org/commands/rclone_mount/)                                 | Mount the remote as file system on a mountpoint.                   |
+| [rclone move](https://rclone.org/commands/rclone_move/)                                   | Move files from source to dest.                                    |
 
 ## Contact Info:
 
-|RESEARCH COMPUTING SUPPORT| researchcomputing@boisestate.edu|(208) 426-3904| Riverfront Hall, Suite 319, 1987 W Cesar Chavez Ln, Boise, ID 83725 |
-| :---                     | :---                            | :---         | :---                                                                | 
+| RESEARCH COMPUTING SUPPORT| researchcomputing@boisestate.edu| (208) 426-3904| Riverfront Hall, Suite 319, 1987 W Cesar Chavez Ln, Boise, ID 83725 |
+| :---                      | :---                            | :---          | :---                                                                | 
