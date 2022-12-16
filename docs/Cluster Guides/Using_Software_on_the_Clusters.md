@@ -67,7 +67,61 @@ The first line should be verbatim in all scripts. The second line has the -p par
 
 c is your cluster variable
 
-Replace **myParallelAlgorithmFcn** with the name of the script you want to run (note your file will have a .m suffic but do not include that here). Even 
+Replace **myParallelAlgorithmFcn** with the name of the script you want to run (note your file will have a .m suffic but do not include that here). Even if your script is not a function, you will need to define it as a function which can easily be done by placing a **function** definition at the beginning of your script and adding **end** as the last line. 
+
+Keep 1 and {} for the next set of parameters. This corresponds to your program's number of outputs but doesn't matter in this context because Matlab jobs run through Slurm don't display output. You should always save your results to a .mat or .txt file. The next parameter is how many cores you want to use. Keep Pool but the next numbers (54 in the example) is the number of cores you want to use minus two. For instance, a 54 here will actually use 56 cores because Matlab doesn't count the master thread that runs your process and the launching thread that Slurm uses to launch your job. Matlab will automatically figure out how many nodes you need for the number of cores you select. Because Boise State runs a shared cluster, the more resources you request, the more likely you are to have a longer wait time before your job can be run.
+
+The last file you have to concern yourself with is the sbatch file that you need to use to properly submit the job to our scheduler. This is **wrapSlur.batch**. You should not need to modify anything in this script except if you change the name of the wrapping script, you will need to change it here. **sbatch wrapSlurm.batch** will submit your job to the cluster.
+
+### RUNNING MATLAB WITH SLURM - GPU nodes
+Running Matlab scripts on GPU nodes can be considerably more complex. Each GPU node has 2 GPUs. If you are staying on one node, you can use **parfor** statements like you would expect. If you are using more than one node, you must use **spmd blocks**. Example files are in **/cm/shared/examples/Matlab2019/GPU/**
+
+GPU work on Matlab uses a Slurm file like all work on Matlab does. The file **stockPrice.m** is customized for a multinode job. The following lines are important:
+
+```bash
+setSchedulerMessageHandler(@disp) % Required by Matlab
+c.AdditionalProperties.GpusPerNode=2; % This line will automatically put you job in gpuq
+c.AdditionalProperties.AdditionalsubmitArgs = '--nodes=2 --ntasks-per-node=2'; % This is typically for multinode work only. 
+If you wanted only one node, replace the nodes=2 with nodes=1 parpool(c,4); % Note the 4 refers to GPUs, not CPU cores. For one node, you could put 2 or 1 here if that is all you need. 
+```
+
+The next two lines are only needed if you are running on multiple GPU nodes. Scripts that need to run on other nodes need to be listed but this line is not necessary if you are only using one node (2GPUs orless).
+
+```bash
+poolobj = gcp;
+addAttachedFiles(poolobj, {'runSimulationOnOneGpu.m', 'simulateStockPrice.m'})
+```
+
+like before, you would use the sbatch command to submit your job to the cluster.
+
+There are other ways to do this, but these are the ways that have been tested on our clusters. 
+
+### DEEP LEARNING WITH MATLAB AND GPUs
+Note: Matlab's **gpuArray** is bounded by the memory in 1 GPU (12 Gigabytes).
+
+if you are running deep learning training with Matlab, you typically define training options with a line like the following:
+
+```bash
+options = trainingOptions('sgdm', ...
+  'LearnRateSchedule', 'piecewise', ...
+  'LearnRateDropFactor', 0.2, ...
+  'LearnRateDropPeriod', 5, ...
+  'MaxEpochs' , 20, ...
+  'MiniBatchSize', 64, ...
+  'ExecutionEnvironment', 'gpu', ...
+  'Plots', 'training-progress')
+```
+
+The ExecutionEnvironment line is particularly important here. Matlab only supports using all the GPUs on one node or even one GPU only for certain solvers (e.g. sgdm). ExecutionEnvironment can be set to multi-gpu but your mileage will vary depending on the capabilities of Matlab with certain solvers.
+
+Matlab has many capabilities, some helpful links are listed below and you can always email Research Computing at:
+researchcomputing@boisestate.edu
+- [Parallel Computing Coding Examples](http://www.mathworks.com/products/parallel-computing/code-examples.html)
+- [Parallel Computing Documentation](http://www.mathworks.com/help/distcomp/index.html)
+- [Parallel Computing Overview](http://www.mathworks.com/products/parallel-computing/index.html)
+- [Parallel Computing Tutorials](http://www.mathworks.com/products/parallel-computing/tutorials.html)
+- [Parallel Computing Videos](http://www.mathworks.com/products/parallel-computing/videos.html)
+- [Parallel Computing Webinars](http://www.mathworks.com/products/parallel-computing/webinars.html)
 
 - [Gaussian](https://www.boisestate.edu/rcs/cluster-guides/using-software-on-the-clusters/gaussian/)
 
