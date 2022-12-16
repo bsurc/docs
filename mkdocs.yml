@@ -22,7 +22,6 @@ theme:
   name: material
   logo: images/boisestate-B-1color-orange-rgb.png
   favicon: images/boisestate-B-1color-orange-rgb.png
-  custom_dir: docs/overrides
   palette:
   - scheme: default
     toggle:
