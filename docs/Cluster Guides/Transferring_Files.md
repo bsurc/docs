@@ -66,7 +66,9 @@ For more information, visit Globus’s documentation contents page [https://docs
 
 ## **Rclone**
 
-### [R2 Documentation](https://rclone.org/docs/)
+### [RClone Installation](https://rclone.org/install/)
+
+### [RClone Documentation](https://rclone.org/docs/)
 
 Below is an index of all commands in rclone. Run **rclone command --help** to see the help for that command.
 
