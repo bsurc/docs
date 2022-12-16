@@ -45,7 +45,7 @@ When you do this, you will give your endpoint a name and search for that endpoin
 While we give some basic instructions below, please email researchcomputing@boisestate.edu if you want to use Globus to share data on your computer with an outside collaborator.
 
 ### Log in to Globus Using Your Boise State Credentials
-1. Go to [www.globus.org](www.globus.org)
+1. Go to [www.globus.org](https://www.globus.org)
 
 2. Click Login (upper right)
 
