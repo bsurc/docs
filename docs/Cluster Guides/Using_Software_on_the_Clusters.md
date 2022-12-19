@@ -4,7 +4,7 @@ There are a number of different software packages available on R2 and Borah. Bel
 
 ## Singularity
 ### Singularity
-Software is sometimes containerized for ease of ease of installation and use on the clusters, typically when there are numerous dependencies needed for the software. A container is a self-sufficient package containing an entire Linux operating system with the required software and dependencies installed inside of it. On the campus clusters, the software used to make these containers is called Singularity. If a singularity container is being built for your workflow, instructions on its use will be provided. 
+Software is sometimes containerized for ease of installation and use on the clusters, typically when there are numerous dependencies needed for the software. A container is a self-sufficient package containing an entire Linux operating system with the required software and dependencies installed inside of it. On the campus clusters, the software used to make these containers is called Singularity. If a singularity container is being built for your workflow, instructions on its use will be provided. 
 
 ## MOOSE
 ### MOOSE
@@ -12,7 +12,7 @@ Getting started with MOOSE on Borah
 
 **1.** Login to Borah and type **module load petsc**. This statement must also be in your sbatch file when you run Moose. 
 
-**2.** Navigate to the directory you want to install Moose in. Your scratch directory you want to install Moose in. Your scratch directory is a common place to put it as Moose and data files can grow to be very large. Then, run the following commands on the command line:
+**2.** Navigate to the directory you want to install Moose in. Your scratch directory is a common place to put it as Moose and data files can grow to be very large. Then, run the following commands on the command line:
 
 **3.** **mkdir projects**
 
@@ -55,7 +55,7 @@ This will copy Matlab support files to a hidden local directory to allow Matlab 
 - **exit**
 
 ### RUNNING MATLAB ON OUR CLUSTERS WITH SLURM - CPU nodes
-The preferred way to run Matlab is with a wrapper script and then running that through a Slurm script. In **/cm/shared/examples/Matlab2019/CPU**, there are example files you can copy to run your  own Matlab programs. **wrapper.m** is very short and should follow the template below. 
+The preferred way to run Matlab is with a wrapper script and then running that through a Slurm script. In **/cm/shared/examples/Matlab2019/CPU**, there are example files you can copy to run your own Matlab programs. **wrapper.m** is very short and should follow the template below. 
 
 ```bash
 c=parcluster;
@@ -63,7 +63,7 @@ c.AdditionalProperties.AdditionalSubmitArgs= ' -p shortq ';
 job=batch(c, 'myParallelAlgorithmFcn', 1, {}, 'Pool", 54, 'CurrentFolder', '.'); 
 ```
 
-The first line should be verbatim in all scripts. The second line has the -p parameter like is used in Slurm files. This should be set to whichever queue you want to run in. The third line runs Matlab's **batch** command which has several parameters.
+The first line should be verbatim in all scripts. The second line has the -p parameter similar to the Slurm files. This should be set to whichever queue you want to run in. The third line runs Matlab's **batch** command which has several parameters.
 
 c is your cluster variable
 
@@ -123,7 +123,27 @@ researchcomputing@boisestate.edu
 - [Parallel Computing Videos](http://www.mathworks.com/products/parallel-computing/videos.html)
 - [Parallel Computing Webinars](http://www.mathworks.com/products/parallel-computing/webinars.html)
 
-- [Gaussian](https://www.boisestate.edu/rcs/cluster-guides/using-software-on-the-clusters/gaussian/)
+## Gaussian
+### Gaussian
+Getting started with Gaussian on Borah
+
+**1.** You must be a member of the gaussian group to be able to run Gaussian on Borah. You can type the **id** command to see what groups you are in. If you are not in theGaussian group, please contact researchcomputing@boisestate.edu for assistance.
+
+**2.** You will need to add the following lines to your .bashrc file using a text editor like vim:export
+```bash
+g16root=/cm/shared/apps/gaussian16
+export GAUSS_SCRDIR=/bsuscratch/gaussian
+. $g16root/g16/bsd/g16.profile
+```
+
+Let us now if you need assistance with this step
+
+**3.** Nodes on Borah have 48 cores so to run Gaussian at its best, include the following lines in your Slurm job submission file:**#SBATCH -N 1 #SBATCH -n 48**
+
+**4.** In your Slurm job submission file, typically Gaussian is run with a command looking like the following:**g16 input.gwf** Add **-p=48** so you would have:
+**g16 -p=48 input.gwf
+
+**5.** If you also want to continue working on R2, all of these instructions still apply but change all instances of 48 to 28 because nodes on R2 have 28 cores. 
 
 ## Contact Info:
 
