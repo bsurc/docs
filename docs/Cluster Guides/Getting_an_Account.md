@@ -14,6 +14,9 @@ are off campus, a VPN connection must be used. The Boise State VPN is a virtual 
 internal network from off campus. More info on it can be found here: [vpn-services](https://www.boisestate.edu/oit-network/vpn-services/). The VPN is only accessible to current employees and student employees of Boise State, so if you need VPN access, please have your faculty advisor/PI contact the help desk to
 request VPN access on your behalf.
 
+## In Progress
+[HPC Account Request](https://boisestateproduction.service-now.com/bsu_sp?id=sc_cat_item&sys_id=7a5d092b1b788014ebb48663cc4bcbd1)
+
 ## Contact Info:
 
 |RESEARCH COMPUTING SUPPORT| researchcomputing@boisestate.edu|(208) 426-3904| Riverfront Hall, Suite 319, 1987 W Cesar Chavez Ln, Boise, ID 83725 |
