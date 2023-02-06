@@ -9,7 +9,9 @@ First, load any of the available Julia modules.
 You can see the available modules using `module avail -i julia` and load the module using `module load julia/<version number here>`.
 With the Julia module loaded, open a Julia terminal:
 ```bash
-julia
+$ module load julia
+$ julia
+julia> 
 ```
 And in the Julia terminal install the IJulia kernel:
 ```julia
