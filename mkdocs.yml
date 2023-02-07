@@ -14,6 +14,7 @@ nav:
     - 'Software Specific Guides':
       - 'conda.md'
       - 'using_software.md'
+      - 'julia.md'
   - 'Computing Resources':
     - 'training.md'
     - 'linux.md'
