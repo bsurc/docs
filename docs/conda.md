@@ -105,9 +105,9 @@ python mypythonscript.py
 Currently Open OnDemand is only available for R2: [https://r2-gui.boisestate.edu](https://r2-gui.boisestate.edu)
 
 In order to use your conda environment in a Jupyter Notebook through Open OnDemand, you'll need to install some additional packages.
-With the conda environment you want to use activated, install `jupyter` and `ipykernel`:
+*With the conda environment you want to use activated*, install `ipykernel`:
 ```bash
-conda install jupyter ipykernel
+conda install ipykernel
 ```
 
 Then run ipykernel to create the custom Jupyter kernel: (replace `ENVIRONMENT_NAME` with the environment name and `PYTHON ENV NAME` with the name you will select for the kernel)
