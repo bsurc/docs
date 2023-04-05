@@ -6,15 +6,19 @@ Below is a list of good practices.
 ## Specify your environment
 
 On which system (e.g. Borah, R2, Falcon) are you running?  
+
 Is this code you compiled? 
+
 Which modules were loaded? 
+
 Are you using a conda environment?
+
 Telling us the environment in which you see the issue saves us a lot of time.
 
 ## Include actual commands and error messages
 
 We cover this below, but it’s so important it needs to be mentioned at the top, too: include the actual commands you run and the actual error messages (also Slurm error and output).
-Copy and paste.
+You can simply copy and paste the commands and output into your email.
 
 ## Give a descriptive subject
 
@@ -57,7 +61,8 @@ It is also helpful to provide your Borah/Falcon/R2 username.
 
 ## New problem, new email
 
-Please do not send support requests by replying to old tickets, which probably concern unrelated issues.
+Please do not send support requests by replying to old tickets, which probably contain unrelated issues. 
+Please start a new email for each issue you encounter.
 
 ## The XY problem
 
@@ -67,12 +72,12 @@ Often we know the solution but sometimes we don't know the problem.
 
 In short (quoting from the previous website):
 
-    User wants to do X.
-    User doesn't know how to do X, but thinks it can be done via Y.
-    User doesn't know how to do Y either.
-    User asks for help with Y.
-    Others try to help user with Y, but are confused because Y seems like a strange problem to want to solve.
-    Finally, the issue is solved by doing X without Y.
+> User wants to do X.
+> User doesn't know how to do X, but thinks it can be done via Y.
+> User doesn't know how to do Y either.
+> User asks for help with Y.
+> Others try to help user with Y, but are confused because Y seems like a strange problem to want to solve.
+> Finally, the issue is solved by doing X without Y.
 
 To avoid the XY problem, if you struggle with Y but really what you are after is X, please also tell us about X.
 Tell us what you really want to achieve.
@@ -100,7 +105,6 @@ Often when isolating the problem, the problem and solution crystallize before ev
 ## If you can't create an example, explain what you've done
 
 Explain the steps and commands you've given before the problem and all output and errors that are produced.
-If the amount of data is large (more than 1MB) you can use FUNET FileSender or a-flip to deliver files.
 Be specific, see above.
 
-Apdapted from ["How to write good support requests"](https://docs.csc.fi/support/support-howto) from the CSC – IT CENTER FOR SCIENCE LTD.
+Adapted from ["How to write good support requests"](https://docs.csc.fi/support/support-howto) from the CSC – IT CENTER FOR SCIENCE LTD.
