@@ -73,10 +73,15 @@ Often we know the solution but sometimes we don't know the problem.
 In short (quoting from the previous website):
 
 > User wants to do X.
+>
 > User doesn't know how to do X, but thinks it can be done via Y.
+>
 > User doesn't know how to do Y either.
+>
 > User asks for help with Y.
+>
 > Others try to help user with Y, but are confused because Y seems like a strange problem to want to solve.
+>
 > Finally, the issue is solved by doing X without Y.
 
 To avoid the XY problem, if you struggle with Y but really what you are after is X, please also tell us about X.
