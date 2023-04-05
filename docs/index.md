@@ -5,6 +5,9 @@ This includes the _R2_ and _Borah_ clusters, as well as storage, virtual machine
 
 See [Boise State Research Computing](https://www.boisestate.edu/rcs) for more information.
 
+If you have additional questions after looking through these docs, please don't hesitate to reach out to [researchcomputing@boisestate.edu](mailto:researchcomputing@boisestate.edu). 
+[How to ask for help effectively](asking_questions.md).
+
 ## What is a compute cluster?
 
 A compute cluster, also known as a "supercomputer," is a set of computers that all work together to form one functional system.
