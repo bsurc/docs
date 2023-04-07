@@ -45,3 +45,5 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.keys
+  - toc:
+    permalink: true
