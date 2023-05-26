@@ -47,7 +47,7 @@ y = 6;
 Print[x*y]
 ```
 ## Step 6: Save the Mathematica Script
-Save your script as `myscript.m.`. This can be donw by pushing ```Esc, :, wq```
+Save your script as `myscript.m.`. This can be done by pushing ```Esc, :, wq```
 
 ## Step 7: Run the Script
 ```math -script myscript.m```
