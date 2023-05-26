@@ -68,6 +68,19 @@ ABySS will create several output files. The main output is a FASTA file containi
 ls -l my_assembly*
 ```
 
-## Additional Information
+## Further Learning
 
-ABySS has many other parameters that users can adjust to better suit their data and needs. For those who want to explore beyond this basic usage, refer to the [ABySS user manual](https://www.bcgsc.ca/abyss).
+ABySS is a de novo, parallel, paired-end sequence assembler that is designed for short reads. It can handle very large data sets and was one of the first assemblers to demonstrate the use of the de Bruijn graph technique. 
+
+1. **Official Documentation**: The official [ABySS Documentation](https://www.bcgsc.ca/abyss) is a comprehensive resource that covers all aspects of the assembler.
+
+2. **GitHub Repository**: The [ABySS GitHub Repository](https://github.com/bcgsc/abyss) provides the latest version of ABySS, including source code, release notes, and additional documentation.
+
+3. **Research Papers**: The original paper introducing ABySS, "De novo assembly of the ABySS", was published in 2009 and provides detailed information about the techniques used in the assembler. Many other papers have since cited and expanded upon this work. These can be found in scientific databases like PubMed.
+
+4. **Online Forums and Communities**: Online resources such as [SeqAnswers](http://seqanswers.com/) and [Biostars](https://www.biostars.org/) often have threads discussing issues, solutions, and best practices related to ABySS and other bioinformatics tools.
+
+5. **Workshops and Conferences**: There are many workshops, webinars, and conferences related to bioinformatics that may provide training or sessions specific to ABySS or genome assembly in general. These may be offered by universities, research institutions, or companies in the bioinformatics field.
+
+Remember, like any tool, the key to mastering ABySS is practice. Use it regularly and don't be afraid to experiment and troubleshoot when issues arise.
+
