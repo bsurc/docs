@@ -2,6 +2,7 @@
 
 Open OnDemand is a web portal that provides a graphical user interface (GUI) to a supercomputer cluster.
 This open-source project is developed and maintained by the Ohio Supercomputer Center (OSC); you can learn more at  [https://openondemand.org/](https://openondemand.org/).
+
 You can access the Open OnDemand portal for Borah at [https://borah-ondemand.boisestate.edu](https://borah-ondemand.boisestate.edu).
 (You'll need to be on VPN and log in with your Borah username and password.)
 
@@ -20,6 +21,16 @@ The services available can be accessed through the tabs at the top of the page.
 The file explorer tab provides a graphical explorer where you can upload, download, move, copy, delete, and create files and directories. 
 There is even a graphical text editor to modify files:
 ![The file dropdown to access the text editor](images/ood-file-edit.png "The file dropdown to access the text editor")
+
+## Job Composer and Active Job Display
+
+![Borah OnDemand dashboard with Jobs tab highlighted](images/ood-dash-jobs.png "Borah OnDemand dashboard with Jobs tab highlighted")
+
+The Jobs tab gives access to the Active job display which will allow you to see all the current jobs submitted to the cluster--similar to the `squeue` command.
+
+The Job Composer will let you create and submit a slurm job from a template.
+
+![Job Composer view showing job templates](images/ood-job-composer.png "Job Composer view showing job templates")
 
 ## Shell Access
 
