@@ -47,16 +47,37 @@ Perhaps the most useful service on Borah OnDemand are the interactive apps, show
 
     You may see additional apps if you are an authorized user of proprietary licensed software.
 
-After selecting an interactive app, you will be taken to the "My Interactive Sessions" page.
+After selecting and launching an interactive app, you will be taken to the "My Interactive Sessions" page.
 This page will display cards for each current session with links to open the app in a new tab.
 Cards for expired or failed sessions will also be shown.
 You can also get to the "My Interactive Sessions" page by clicking the two pages icon to the right of the "Interactive Apps" tab on the top of the screen:
 ![Borah OnDemand showing the My Interactive Sessions page with the icon highlighted](images/ood-sessions.png "Borah OnDemand showing the My Interactive Sessions page with the icon highlighted")
+Please note there may be some wait time if all available resources are in use.
+Once the job status (shown in the upper right of the session card) changes from "Starting" or "Queued" in blue to "Running" in green, you can click the "Launch" button at the bottom of the card to open the app in a new tab.
 
 ### Desktop
 
+![Borah OnDemand desktop](images/ood-desktop.png "Borah OnDemand desktop")
+OnDemand provides a remote desktop on a compute node, which can be used to run interactive graphical applications.
+Most applications will still need to be accessed through the module system, so you'll need to load the module and call the program through the terminal.
+The terminal icon is shown here in the taskbar at the bottom of the desktop:
+![Borah OnDemand desktop taskbar showing the terminal icon highlighted](images/ood-desktop-terminal.png "Borah OnDemand desktop taskbar showing the terminal icon highlighted")
+
+After opening the terminal application on the desktop, here is an example of the commands to open MATLAB:
+```bash
+module load matlab
+matlab
+```
+And the resulting MATLAB GUI will open in a new window as shown here:
+![Borah OnDemand desktop with MATLAB GUI open](images/ood-desktop-matlab.png "Borah OnDemand desktop with MATLAB GUI open")
+
 ### Jupyter Notebook
 
-[python conda environment](conda.md#using-a-conda-environment-with-open-ondemand)
+Borah OnDemand also provides access to Jupyter Notebooks.
+Jupyter notebooks can be used to run python, Julia, or R code alongside markdown text and images.
+After launching the Jupyter Notebook interactive app and clicking "Connect to Jupyter" once your session is ready, you will be presented with a landing page in your home directory.
+From here you can select an existing notebook to work in or you can use the "New" button to create a new notebook in an existing kernel:
+![Jupyter notebook landing page showing 'New' menu](images/ood-jupyter-landing.png "Jupyter notebook landing page showing 'New' menu")
 
-[Julia environment](julia.md)
+For more information about how to create a custom Jupyter kernel from a conda environment, please read the [using a conda environment with Open OnDemand](conda.md#using-a-conda-environment-with-open-ondemand) section.
+And to use Julia in a Jupyter notebook, please read [Adding the Julia Kernel to OnDemand](julia.md)
