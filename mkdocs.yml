@@ -1,4 +1,24 @@
 site_name: Boise State Research Computing
+nav:
+  - Home: 'index.md'
+  - 'Cluster Guide':
+    - 'getting_an_account.md'
+    - 'logging_in.md'
+    - 'transferring_files.md'
+    - 'storing_data.md'
+    - 'loading_software.md'
+    - 'scheduling.md'
+    - 'interactive_sessions.md'
+    - 'open_ondemand.md'
+    - 'faq.md'
+    - 'Software Specific Guides':
+      - 'conda.md'
+      - 'using_software.md'
+      - 'julia.md'
+  - 'Computing Resources':
+    - 'training.md'
+    - 'linux.md'
+    - 'glossary.md'
 theme:
   name: material
   logo: images/boisestate-B-1color-orange-rgb.png
@@ -14,3 +34,16 @@ theme:
       name: Switch to light mode
 extra_css:
   - stylesheets/extra.css
+extra:
+  social:
+    - icon: fontawesome/solid/envelope
+      link: mailto:researchcomputing@boisestate.edu
+      name: researchcomputing@boisestate.edu
+copyright: <b>Research Computing</b><br>Riverfront Hall, Suite 319, 1987 W Cesar Chavez Ln, Boise, ID 83725<hr>
+markdown_extensions:
+  - toc:
+      permalink: True
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.keys
