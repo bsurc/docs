@@ -1,21 +1,43 @@
-# High Performance Computing
-Boise State offers support for the several HPC resources. For access instructions email researchcomputing@boisestate.edu with the following information:
-
-- Request Account on the HPC SYSTEM: system name
-- Project: Project Name or Grant Information
-- Description of Research: Short description of research to be done on the cluster.
-- Software: To determine whether or not the software you need is available on the cluster, use “module avail.” If you need further assistance with software, please email us.
-- Project PI Name: PI’s-Name.
-- Email Address of Requestor: user@boisestate.edu
-
 ## Troubleshooting & Software Services
-HPC support services include provisioning accounts troubleshooting and optimizing job runs.
+HPC support services include provisioning accounts, troubleshooting, and optimizing job runs.
 
-Our HPC engineers will also assist users with evaluating system requirements for both open source and licensed software if users are considering purchasing software. Research Computing currently does not purchase software other than what’s needed to manage and administer the cluster (e.g. Bright Cluster Manager, Intel Compiler, and Globus for transferring/sharing data).
+Our HPC engineers will also assist users with evaluating system requirements for both open source and licensed software if users are considering purchasing software. Research Computing does not purchase software but can help you find the right channels to procure software. 
 
-Our HPC engineers also help with software installation, troubleshooting, and updating. To request help with software you’re using or would like to use on the cluster, email researchcomputing@boisestate.edu and provide basic information, including name of software, any known dependencies and issues and whether or not it’s open source or proprietary. **Many commonly used HPC software packages are already installed on our centrally-shared clusters. Check if your package is installed with “module avail” and let us know if there is something you would like installed.** We’re happy to discuss any software needs you have. Please contact researchcomputing@boisestate.edu.
+Our HPC engineers also help with software installation, troubleshooting, and updating. To request help with software you’re using or would like to use on the cluster, email researchcomputing@boisestate.edu and provide basic information, including name of software, any known dependencies and issues and whether or not it’s open source or proprietary. **Many commonly used HPC software packages are already installed on our centrally-shared clusters. Check if your package is installed with 'module avail' and let us know if there is something you would like installed.** We’re happy to discuss any software needs you have. Please contact researchcomputing@boisestate.edu.
 
 For more information on specific systems, see HPC Resources.
+
+## **Rclone**
+
+`rclone` is a command-line program that syncs files and directories between different cloud storage providers or between your local machine and a cloud provider. Some reasons to use `rclone` over other methods like `scp`, Globus, or FTP include:
+
+- **Wide Range of Supported Providers**: `rclone` supports over 40 different cloud storage providers, including popular services like Google Drive, Amazon S3, Dropbox, and more. This makes it a versatile tool for managing files across various platforms.
+- **Efficient Synchronization**: `rclone` provides powerful synchronization options, allowing for incremental transfers, checksum verification, and more. This can be more efficient than traditional methods, especially for large datasets or complex directory structures.
+- **Ease of Automation**: `rclone` offers numerous flags and configuration options, making it easy to script and automate repetitive tasks.
+- **Cross-Platform Support**: `rclone` works on Windows, macOS, and Linux, providing a consistent experience across different operating systems.
+
+### Example Usage of rclone
+
+Here's a simple example of how `rclone` could be used to synchronize a local directory with a remote Google Drive folder:
+
+1. **Configure a Remote Connection**: First, you would configure a connection to Google Drive by running:
+
+   ```bash
+   rclone config
+   ```
+
+   This interactive process guides you through setting up the connection.
+
+2. **Synchronize a Local Directory with Google Drive**: Once configured, you can sync a local directory (e.g., `my_folder`) with a remote Google Drive folder (e.g., `my_drive`) using:
+
+   ```bash
+   rclone sync /path/to/my_folder my_drive:/path/in/drive
+   ```
+
+   This command will ensure that the contents of the local directory and the remote Google Drive folder are identical, copying any new or modified files as needed.
+
+`rclone` provides a robust and flexible way to manage files across different storage systems, making it an appealing option for those working with diverse cloud environments or seeking advanced synchronization capabilities.
+
 
 ## HPC Resources
 ### Borah
@@ -44,20 +66,14 @@ R2 is a heterogeneous compute cluster provided by the Vice President of Research
 | Storage      |             | Dell MD3000 6G SAS [360 TB] Raid-6 XFS     |                                           |                             |
 | Cores        |             | 16                                         | 28                                        | 3584 GPU + 28 CPU           |
 
-### Sawtooth
-Idaho National Laboratory makes the Top 500 supercomputer known as “Sawtooth” available to Boise State researchers. For help setting up accounts, requesting allocations or access to Sawtooth, contact the Research Computing Support Department at: researchcomputing@boisestate.edu.
-
-### Specifications
-See Sawtooths’s [TOP 500](https://www.top500.org/system/179708/) page or [INL’s HPC web page](https://hpc.inl.gov/SitePages/Home.aspx) for more information:
+### Falcon
+Idaho National Laboratory makes the Top 500 supercomputer known as “Falcon” available to Boise State researchers. For help setting up accounts, requesting allocations or access to Falcon, contact the Research Computing Support Department at: Help@c3plus3.org.
 
 ### Lemhi
 Idaho National Laboratory makes the Top 500 supercomputer known as “Lemhi” available to Boise State researchers. For help setting up accounts, requesting allocations or access to Sawtooth, contact the Research Computing Support Department at: researchcomputing@boisestate.edu.
 
 ### Specifications
 See Lemhi’s [TOP 500](https://www.top500.org/system/179570/) page.
-
-### Falcon
-Idaho National Laboratory makes the Top 500 supercomputer known as “Falcon” available to Boise State researchers. For help setting up accounts, requesting allocations or access to Falcon, contact the Research Computing Support Department at: researchcomputing@boisestate.edu.
 
 ### Specifications
 See Lemhi’s [TOP 500](https://www.top500.org/system/179570/) page.

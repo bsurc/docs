@@ -1,36 +1,61 @@
-# Julia Tutorial
+# Julia Tutorial on R2 and Borah
 
-This tutorial will guide you through the process of using Julia, a high-level, high-performance programming language, on Borah.
+This comprehensive guide will help you set up and use Julia, a high-level, high-performance programming language, on both R2 through Open OnDemand and Borah.
 
-## Step 1: Log into the Borah Cluster
+## Setting Up Julia on R2 through Open OnDemand
 
-First, you need to access the Borah cluster. Use SSH (Secure Shell) to connect to the cluster. You'll need your username and the cluster's address for this. 
+[Open OnDemand](https://openondemand.org/) provides users with a graphical interface to the cluster, currently available only for R2: [https://r2-gui.boisestate.edu](https://r2-gui.boisestate.edu).
 
+### Step 1: Load the Julia Module
+First, load any of the available Julia modules. You can see the available modules using \`module avail -i julia\` and load the desired module using \`module load julia/<version number here>\`.
+
+```bash
+$ module load julia
+$ julia
 ```
-ssh yourusername@borah-login.boisestate.edu
+
+You'll see your prompt change to the Julia terminal:
+
+```bash
+julia>
 ```
-Replace `yourusername` with your actual username. 
 
-## Step 2: Load the Julia Module
+### Step 2: Install the IJulia Kernel
+In the Julia terminal, install the IJulia kernel:
 
-Borah uses a system called "modules" to manage software. To use Julia, you need to load its module. 
+```julia
+using Pkg
+Pkg.add("IJulia")
+```
+(You'll only need to add the IJulia package once.)
+
+### Step 3: Use Julia in a Jupyter Notebook
+Navigate to the Jupyter Notebook App on [https://r2-gui.boisestate.edu](https://r2-gui.boisestate.edu), start a Jupyter session, and select the Julia kernel.
+
+## Using Julia on Borah
+
+### Step 1: Load the Julia Module
+Borah uses "modules" to manage software. To use Julia, load its module:
 
 ```bash
 module load julia
 ```
 
-## Step 3: Confirm Julia Module is Loaded
-
-You can see a list of currently loaded modules with the `module list` command. 
+### Step 2: Confirm Julia Module is Loaded
+Check that Julia is in the list of loaded modules:
 
 ```bash
 module list
 ```
-Check that `Julia` is in the list of loaded modules. 
 
-# Step 4: Create a test file
+### Step 3: Create a Test File
+Create a test file using \`vim\`:
 
-```vim test.jl```
+```bash
+vim test.jl
+```
+
+Write a simple Julia script to calculate the sum of two numbers:
 
 ```julia
 # Function to calculate the sum of two numbers
@@ -50,23 +75,18 @@ result = sum_numbers(number1, number2)
 println("The sum of $number1 and $number2 is: $result")
 ```
 
-# Step 5: Run the test using Julia
+### Step 4: Run the Test Using Julia
+Execute the test script:
+
 ```bash
 julia test.jl
 ```
 
-# Extra Notes
-1. Julia Documentation: The official Julia documentation provides comprehensive guides, tutorials, and reference materials to help you learn and use Julia effectively. It covers various topics, including language syntax, standard library functions, package development, and more. 
-    -  [Julia Documentation](https://docs.julialang.org/)
+## Extra Notes and Resources
+1. [Julia Documentation](https://docs.julialang.org/): Comprehensive guides, tutorials, and references.
+2. [Julia By Example](https://juliabyexample.helpmanual.io/): Practical examples of Julia programming.
+3. [Julia Discourse](https://discourse.julialang.org/): Community forum to seek help, share ideas, and learn.
+4. [JuliaHub](https://juliahub.com/): Platform hosting interactive Julia notebooks.
+5. [Julia Academy](https://juliaacademy.com/): Online courses and tutorials to enhance your Julia skills.
 
-2. Julia By Example: Julia By Example is a collection of example programs that demonstrate the usage of Julia in various domains. It covers topics such as data analysis, machine learning, optimization, and plotting. It can be a great resource to explore practical Julia programming. 
-    -  [Julia By Example](https://juliabyexample.helpmanual.io/)
-
-3. Julia Discourse: Julia Discourse is an online community forum where Julia users and developers interact, share knowledge, ask questions, and discuss various Julia-related topics. It's a great place to seek help, share ideas, and learn from the community. 
-    -  [Julia Discourse](https://discourse.julialang.org/)
-
-4. JuliaHub: JuliaHub is a platform that hosts interactive Julia notebooks (Jupyter notebooks) where you can experiment, run code, and learn Julia in a browser-based environment. It provides a collection of notebooks covering a wide range of topics. 
-    -  [JuliaHub](https://juliahub.com/)
-
-5. Julia Academy: Julia Academy offers online courses and tutorials to help you learn Julia at your own pace. It provides interactive courses, exercises, and guided projects to enhance your Julia skills. Some courses are available for free, while others require a subscription. 
-    -  [Julia Academy](https://juliaacademy.com/)
+This combined guide provides you with a step-by-step process for working with Julia on both R2 and Borah, from setting up the IJulia kernel to creating and running a basic script. Whether you're using Julia for scientific computing, data analysis, or machine learning, these instructions will get you started on both platforms.

@@ -2,15 +2,7 @@
 
 This tutorial will guide you through the process of running protein structure prediction using AlphaFold on the Borah cluster.
 
-## Step 1: Start the Development Session
-
-First, you need to start a new development session.
-
-```bash
-run dev-session-bsu
-```
-
-## Step 2: Prepare Directories
+## Step 1: Prepare Directories
 
 Create two new directory for AlphaFold, as well as input and output directories.
 
@@ -51,16 +43,7 @@ You need to create a `query.fasta` file in the `input` directory and put your se
 GWSTELEKHREELKEFLKKEGITNVEIRIDNGRLEVRVEGGTERLKRFLEELRQKLEKKGYTVDIKIE
 ```
 
-## Step 6: Run AlphaFold
-
-Navigate back to the `alphafoldTest` directory and run the `run_alphafold.sh` script.
-
-```bash
-cd alphafoldTest
-run_alphafold.sh -d $DATA_DIR -o $OUTPUT_DIR -m model_1 -f input/query.fasta -t 2020-05-14
-```
-
-## Step 7: Submit the Job
+## Step 6: Submit the Job
 
 Below is the content of an example job submission script. You can use this as a template to create your own job submission script.
 
@@ -92,14 +75,7 @@ fi
 # Do some post processing.
 ```
 
-Save this script to a file, make it executable, and submit it using the sbatch command. You can replace script.sh with the name of your script.
-
-```bash
-chmod +x script.sh
-sbatch script.sh
-```
-
-## Step 8: Check the Output
+## Step 7: Check the Output
 
 After the job is finished, you can find the predicted protein structures in the OUTPUT_DIR directory.
 

@@ -2,24 +2,15 @@
 
 This tutorial will guide you through the process of using MATLAB in the terminal.
 
-## Step 1: Log into Borah Cluster
+## Step 1: Load the Matlab Module
 
-First, you need to access the Borah cluster. Use SSH (Secure Shell) to connect to the cluster. You'll need your username and the cluster's address for this. 
-
-```
-ssh yourusername@borah-login.boisestate.edu
-```
-Replace `yourusername` with your actual username. 
-
-## Step 2: Load the Matlab Module
-
-Borah uses a system called "modules" to manage software. To use ABySS, you need to load its module. 
+Borah uses a system called "modules" to manage software. To use Matlab, you need to load its module. 
 
 ```bash
 module load matlab
 ```
 
-## Step 3: Confirm Matlab Module is Loaded
+## Step 2: Confirm Matlab Module is Loaded
 
 You can see a list of currently loaded modules with the `module list` command. 
 
@@ -29,7 +20,7 @@ module list
 Check that `Matlab` is in the list of loaded modules. 
 
 
-## Step 4: Create a MATLAB Script
+## Step 3: Create a MATLAB Script
 
 First, you need to create a MATLAB script (a .m file). You can use a text editor to do this. For this tutorial, we'll create a file named `myscript.m` with the following content:
 
@@ -42,15 +33,15 @@ y = 6;
 disp(x*y)
 ```
 
-## Step 5: Save the Mathematica Script
-Save your script as `myscript.m.`. This can be done by pushing ```Esc, :, wq```
+## Step 4: Save the Mathematica Script
+Save your script as `myscript.m.`. 
 
-## Step 6: Run the Script
+## Step 5: Run the Script
 Run the following command in the terminal 
 
 `matlab -nodisplay -nosplash -nodesktop -r "run('myscript.m'); exit;"`
 
-## Step 7: Check Output
+## Step 6: Check Output
 
 ```
 Hello, World!
@@ -73,4 +64,15 @@ MATLAB is a high-level language and interactive environment that enables you to 
 
 Remember, like any language, the key to learning MATLAB is practice. Try to use MATLAB regularly for a variety of tasks to get the hang of it.
 
+## More documentation
+
+After opening the terminal application on the desktop, here is an example of the commands to open MATLAB:
+```bash
+module load matlab
+matlab
+```
+And the resulting MATLAB GUI will open in a new window as shown here:
+[Borah OnDemand desktop with MATLAB GUI open](images/ood-desktop-matlab.png) "Borah OnDemand desktop with MATLAB GUI open")
+
+- [MATLAB](https://www.boisestate.edu/rcs/matlab/)
 

@@ -2,16 +2,7 @@
 
 This tutorial will guide you through the process of performing a de novo assembly using ABySS(Assembly By Short Sequences) on the Borah cluster.
 
-## Step 1: Log into Borah Cluster
-
-First, you need to access the Borah cluster. Use SSH (Secure Shell) to connect to the cluster. You'll need your username and the cluster's address for this. 
-
-```
-ssh yourusername@borah-login.boisestate.edu
-```
-Replace `yourusername` with your actual username. 
-
-## Step 2: Load the ABySS Module
+## Step 1: Load the ABySS Module
 
 Borah uses a system called "modules" to manage software. To use ABySS, you need to load its module. 
 

@@ -2,24 +2,15 @@
 
 This tutorial will guide you through the process of using Mathematica in the terminal.
 
-## Step 1: Log into Borah Cluster
+## Step 1: Load the Mathmatica Module
 
-First, you need to access the Borah cluster. Use SSH (Secure Shell) to connect to the cluster. You'll need your username and the cluster's address for this. 
-
-```
-ssh yourusername@borah-login.boisestate.edu
-```
-Replace `yourusername` with your actual username. 
-
-## Step 2: Load the Mathmatica Module
-
-Borah uses a system called "modules" to manage software. To use ABySS, you need to load its module. 
+Borah uses a system called "modules" to manage software. To use Mathematica, you need to load its module. 
 
 ```bash
 module load mathmatica
 ```
 
-## Step 3: Confirm the Mathmatica Module is Loaded
+## Step 2: Confirm the Mathmatica Module is Loaded
 
 You can see a list of currently loaded modules with the `module list` command. 
 
@@ -28,13 +19,13 @@ module list
 ```
 Check that `mathmatica` is in the list of loaded modules.
 
-## Step 4: Access your activation key
+## Step 3: Access your activation key
 
 1. run ```math -h```
 2. go to http://user.wolfram.com to register your activation key and obtain the password
 3. Login in through ```math -h```
 
-## Step 5: Create a Mathematica Script
+## Step 4: Create a Mathematica Script
 
 First, you need to create a Mathematica script (a .m file). You can use a text editor to do this. For this tutorial, we'll create a file named `myscript.m` with the following content:
 
@@ -46,10 +37,10 @@ x = 5;
 y = 6;
 Print[x*y]
 ```
-## Step 6: Save the Mathematica Script
+## Step 5: Save the Mathematica Script
 Save your script as `myscript.m.`. This can be done by pushing ```Esc, :, wq```
 
-## Step 7: Run the Script
+## Step 6: Run the Script
 ```math -script myscript.m```
 
 ## Further Learning

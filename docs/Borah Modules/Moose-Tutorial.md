@@ -1,71 +1,67 @@
-# MOOSE Framework Tutorial on Borah Cluster
+# Getting Started with MOOSE on Borah Cluster
 
-This tutorial will guide you through the process of installing and running an application using the MOOSE (Multiphysics Object-Oriented Simulation Environment) framework on the Borah cluster.
+MOOSE (Multiphysics Object-Oriented Simulation Environment) is a powerful simulation framework, and this guide will walk you through installing and running MOOSE on the Borah cluster.
 
-## Step 1: Log into Borah Cluster
+## Step 1: Log into Borah Cluster and Load PETSc
 
-First, you need to access the Borah cluster. Use SSH (Secure Shell) to connect to the cluster. You'll need your username and the cluster's address for this.
+Login to Borah using SSH:
 
 ```bash
 ssh yourusername@borah-login.boisestate.edu
 ```
 
-Replace `yourusername` with your actual username.
-
-## Step 2: Run dev-session-bsu
-
-Run the dev-session-bsu command on your terminal:
+Load the required PETSc module:
 
 ```bash
-dev-session-bsu
+module load petsc
 ```
 
-## Step 3: Clone MOOSE Repository
-First, you'll need to clone the MOOSE repository from GitHub. This requires that you've set up SSH with GitHub.
+This statement must also be in your `sbatch` file when you run MOOSE.
+
+## Step 2: Create Directory and Clone MOOSE Repository
+
+Navigate to the directory where you want to install MOOSE, such as your scratch directory. Then, run the following commands:
 
 ```bash
-git clone git@github.com:idaholab/moose.git
-```
-
-If SSH hasn't been set up, you can use HTTPS instead:
-
-```bash
+mkdir projects
+cd projects
 git clone https://github.com/idaholab/moose.git
+cd moose
+git checkout master
 ```
 
-This will create a directory called `moose` in your current directory.
+## Step 3: Run MOOSE Installation Script
 
-## Step 4: Run the MOOSE script to install dependencies
-
-MOOSE has a script that will install all necessary dependencies for you. Run it with the following command:
+Execute the MOOSE script to install dependencies:
 
 ```bash
-cd moose
 ./scripts/update_and_rebuild_libmesh.sh
 ```
 
-This script might take a while to run, as it needs to download and build several packages.
+This step may take 1-2 hours to complete.
 
-Step 5: Test MOOSE Installation
+## Step 4: Test MOOSE Installation
 
-To ensure that MOOSE is working correctly, run the test suite included with it:
+Navigate to the test directory and run:
 
 ```bash
+cd test
+make
 ./run_tests
 ```
 
-## Step 6: Clone and build a MOOSE application
+## Step 5: Clone and Build a MOOSE Application (Optional)
 
-For the purposes of this tutorial, we'll clone and build a simple MOOSE application called "BISON"
+For example, you can clone and build a MOOSE application called "BISON":
 
 ```bash
 git clone https://github.com/idaholab/bison.git
 cd bison
 ```
 
-Step 7: Run a MOOSE application
+## Step 6: Run a MOOSE Application
 
-To run the application, navigate to the example directory and use the application executable (here bison-opt) to run an input file.
+Navigate to the example directory and use the application executable to run an input file:
 
 ```bash
 cd examples
@@ -74,18 +70,14 @@ cd examples
 
 Replace `input-file-name.i` with the name of the input file you want to run.
 
-## Further Learning
+## Further Learning and Resources
 
-1. **MOOSE Framework**: Understand the MOOSE Framework, its architecture, and its usage for developing simulation software. You can explore more about the MOOSE Framework [here](https://mooseframework.inl.gov/).
+1. [MOOSE Framework](https://mooseframework.inl.gov/)
+2. [MOOSE Tutorials](https://mooseframework.inl.gov/getting_started/tutorials_and_examples/)
+3. [MOOSE User Manual](https://mooseframework.inl.gov/application_usage/index.html)
+4. [MOOSE API Documentation](https://mooseframework.inl.gov/doxygen/)
+5. [C++ Programming Tutorial](http://www.cplusplus.com/doc/tutorial/)
+6. [PETSc Documentation](https://www.mcs.anl.gov/petsc/)
+7. [libMesh Documentation](http://libmesh.github.io/)
 
-2. **MOOSE Tutorials**: There are several tutorials available on the official MOOSE website that you can use to get a practical understanding of MOOSE. You can find the tutorials [here](https://mooseframework.inl.gov/getting_started/tutorials_and_examples/).
-
-3. **MOOSE User Manual**: Go through the MOOSE user manual to understand how to use MOOSE effectively. The user manual can be found [here](https://mooseframework.inl.gov/application_usage/index.html).
-
-4. **MOOSE API Documentation**: The API documentation for MOOSE is available on the official website. The documentation contains the technical details about the functions, classes, and modules in MOOSE. You can find the API documentation [here](https://mooseframework.inl.gov/doxygen/).
-
-5. **C++ Programming**: MOOSE is written in C++, so a good understanding of C++ programming is required. You can learn C++ [here](http://www.cplusplus.com/doc/tutorial/).
-
-6. **PETSc**: MOOSE heavily relies on PETSc for its underlying data structures and parallel computations. Understanding PETSc can help you understand how MOOSE works. Learn more about PETSc [here](https://www.mcs.anl.gov/petsc/).
-
-7. **libMesh**: libMesh is another library that MOOSE uses. It is a finite element library that provides functionality for the numerical solution of partial differential equations. Learn more about libMesh [here](http://libmesh.github.io/).
+Remember, you will need to use an `sbatch` file to run your jobs on Borah. An example file can be found at `/cm/shared/examples/slurm_moose.bash`.
