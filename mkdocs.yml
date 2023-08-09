@@ -18,7 +18,6 @@ nav:
       - 'abyss_tutorial.md'
       - 'alphafold_tutorial.md'
       - 'gromacs_tutorial.md'
-      - 'julia_tutorial.md'
       - 'mathematica_tutorial.md'
       - 'matlab_tutorial.md'
       - 'moose_tutorial.md'
