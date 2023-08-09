@@ -13,6 +13,7 @@ The cluster is located at the Idaho National Laboratory’s Collaborative Comput
 | GPU          | N/A                                                       | N/A                                                                                         | N/A                                                                                         | NVIDIA Tesla V100 (x2)                                                                      | N/A                                                                                         |
 | Interconnect | Mellanox Non-Blocking HDR200/HDR100 Infiniband            | Mellanox Non-Blocking HDR200/HDR100 Infiniband                                              | Mellanox Non-Blocking HDR200/HDR100 Infiniband                                              | Mellanox Non-Blocking HDR200/HDR100 Infiniband                                              | Mellanox Non-Blocking HDR200/HDR100 Infiniband                                              |
 | Cores        | 6                                                         | 48                                                                                          | 1,968                                                                                       | 20,480 CUDA  + 192 CPU                                                                      | 48                                                                                          |
+
 In addition to the above infrastructure, the Borah system also has another 68 CPU nodes owned by our industry partner, Idaho Power. When not in use by Idaho Power, Boise State researchers have access to up to 34 Idaho Power CPU nodes for their research.
 
 ## R2
@@ -38,7 +39,6 @@ Idaho National Laboratory makes the Top 500 supercomputer known as “Falcon” 
 ## Lemhi
 Idaho National Laboratory makes the Top 500 supercomputer known as “Lemhi” available to Boise State researchers. For help setting up accounts, requesting allocations or access to Sawtooth, contact the Research Computing Support Department at: researchcomputing@boisestate.edu.
 
-### Specifications
 See Lemhi’s [TOP 500](https://www.top500.org/system/179570/) page.
 
 ## Summit
@@ -46,9 +46,8 @@ The Summit Supercomputer is funded by an award from the National Science Foundat
 
 Summit also has GPU nodes, high-memory nodes, and Intel Phi/Knight’s Landing nodes. See the Summit specifications for detailed information.
 
-## Specifications
 See Summit’s [specification](https://www.colorado.edu/rc/resources/summit/specifications) page for system details.
 
-### ACCESS
+## ACCESS
 ACCESS is the successor to the XSEDE program which provides a variety of cyberinfrastructure resources. More information on ACCESS can be found [here](https://access-ci.org/).
 
