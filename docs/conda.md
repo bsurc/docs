@@ -1,4 +1,4 @@
-# Using Python on the cluster
+# Python
 
 When using Python, you may find you need to use various libraries (e.g., numpy for numerical analysis or matplotlib for plotting).
 Installing and managing these different libraries and their dependencies can be problematic, especially when you run into conflicts.
