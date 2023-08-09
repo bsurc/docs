@@ -79,6 +79,36 @@ Or, if your data is on your desktop, see instructions “C. Installing a Persona
 For more information, visit Globus’s documentation contents page [https://docs.globus.org/how-to/](https://docs.globus.org/how-to/) or email researchcomputing@boisestate.edu.
 
 ## Rclone
+`rclone` is a command-line program that syncs files and directories between different cloud storage providers or between your local machine and a cloud provider. Some reasons to use `rclone` over other methods like `scp`, Globus, or FTP include:
+
+- **Wide Range of Supported Providers**: `rclone` supports over 40 different cloud storage providers, including popular services like Google Drive, Amazon S3, Dropbox, and more. This makes it a versatile tool for managing files across various platforms.
+- **Efficient Synchronization**: `rclone` provides powerful synchronization options, allowing for incremental transfers, checksum verification, and more. This can be more efficient than traditional methods, especially for large datasets or complex directory structures.
+- **Ease of Automation**: `rclone` offers numerous flags and configuration options, making it easy to script and automate repetitive tasks.
+- **Cross-Platform Support**: `rclone` works on Windows, macOS, and Linux, providing a consistent experience across different operating systems.
+
+### Example Usage of rclone
+
+Here's a simple example of how `rclone` could be used to synchronize a local directory with a remote Google Drive folder:
+
+1. **Configure a Remote Connection**: First, you would configure a connection to Google Drive by running:
+
+   ```bash
+   rclone config
+   ```
+
+   This interactive process guides you through setting up the connection.
+
+2. **Synchronize a Local Directory with Google Drive**: Once configured, you can sync a local directory (e.g., `my_folder`) with a remote Google Drive folder (e.g., `my_drive`) using:
+
+   ```bash
+   rclone sync /path/to/my_folder my_drive:/path/in/drive
+   ```
+
+   This command will ensure that the contents of the local directory and the remote Google Drive folder are identical, copying any new or modified files as needed.
+
+`rclone` provides a robust and flexible way to manage files across different storage systems, making it an appealing option for those working with diverse cloud environments or seeking advanced synchronization capabilities.
+
+
 [RClone Installation](https://rclone.org/install/)
 
 [RClone Documentation](https://rclone.org/docs/)
