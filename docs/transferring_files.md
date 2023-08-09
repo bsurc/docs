@@ -79,4 +79,6 @@ Or, if your data is on your desktop, see instructions “C. Installing a Persona
 For more information, visit Globus’s documentation contents page [https://docs.globus.org/how-to/](https://docs.globus.org/how-to/) or email researchcomputing@boisestate.edu.
 
 ## Rclone
-Coming soon.
+[RClone Installation](https://rclone.org/install/)
+
+[RClone Documentation](https://rclone.org/docs/)
