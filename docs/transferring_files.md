@@ -55,7 +55,7 @@ While we give some basic instructions below, please email researchcomputing@bois
 
 5. Once logged in, you’ll be directed to the Globus “File Manager” screen.
 
-## Using File Manager to Transfer Data between Existing Endpoints
+### Using File Manager to Transfer Data between Existing Endpoints
 The Globus File Manager interface is similar in look to something like Filezilla. 
 You select two endpoints, highlight files/directories, and copy them. 
 When in the File Manager screen, you can search for the Boise State Primary and Secondary endpoints listed below and transfer/copy files between them.
