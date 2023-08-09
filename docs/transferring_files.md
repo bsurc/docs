@@ -55,20 +55,20 @@ While we give some basic instructions below, please email researchcomputing@bois
 
 5. Once logged in, you’ll be directed to the Globus “File Manager” screen.
 
-## Using File Manager to Transfer Data between Existing Endpoints
+### Using File Manager to Transfer Data between Existing Endpoints
 The Globus File Manager interface is similar in look to something like Filezilla. 
- You select two endpoints, highlight files/directories, and copy them. 
- When in the File Manager screen, you can search for the Boise State Primary and Secondary endpoints listed below and transfer/copy files between them.
+You select two endpoints, highlight files/directories, and copy them. 
+When in the File Manager screen, you can search for the Boise State Primary and Secondary endpoints listed below and transfer/copy files between them.
 
 If your data is on an OIT Research Share, please contact Research Computing so we can help make it available on the Globus-VM endpoint for transfer to other existing endpoints. 
 Or, if your data is on your desktop, see instructions “C. Installing a Personal Endpoint” or contact Research Computing, and we can help.
 
-## Primary Boise State Endpoints
+### Primary Boise State Endpoints
 - Globus-VM (connected to Boise State’s network)
 - Borah-DTN (connected to Borah at C3 in Idaho Falls)
 - DTN-R2 (connected to R2 at CCP in downtown Boise)
 
-## Using Globus Personal Endpoint to Transfer Data from Your Desktop to Existing Endpoints
+### Using Globus Personal Endpoint to Transfer Data from Your Desktop to Existing Endpoints
 1. Install Globus Personal Connect by going to: [https://www.globus.org/globus-connect-personal](https://www.globus.org/globus-connect-personal)
     - Windows: [https://docs.globus.org/how-to/globus-connect-personal-windows](https://docs.globus.org/how-to/globus-connect-personal-windows)
     - macOS:   [https://docs.globus.org/how-to/globus-connect-personal-mac](https://docs.globus.org/how-to/globus-connect-personal-mac)
@@ -79,4 +79,34 @@ Or, if your data is on your desktop, see instructions “C. Installing a Persona
 For more information, visit Globus’s documentation contents page [https://docs.globus.org/how-to/](https://docs.globus.org/how-to/) or email researchcomputing@boisestate.edu.
 
 ## Rclone
-Coming soon.
+`rclone` is a command-line program that syncs files and directories between different cloud storage providers or between your local machine and a cloud provider. 
+`rclone` supports over 40 different cloud storage providers, including popular services like Google Drive, Amazon S3, Dropbox, and more. 
+It provides powerful synchronization options and numerous flags and configuration options, making it easy to script and automate repetitive tasks.
+And `rclone` works on Windows, macOS, and Linux, providing a consistent experience across different operating systems.
+
+### Example Usage of rclone
+
+Here's a simple example of how `rclone` could be used to synchronize a local directory with a remote Google Drive folder:
+
+1. Configure a Remote Connection 
+
+    First, you would configure a connection to Google Drive by running:
+   ```bash
+   rclone config
+   ```
+
+    This interactive process guides you through setting up the connection.
+
+2. Synchronize a Local Directory with Google Drive 
+
+    Once configured, you can sync a local directory (e.g., `my_folder`) with a remote Google Drive folder (e.g., `my_drive`) using:
+   ```bash
+   rclone sync /path/to/my_folder my_drive:/path/in/drive
+   ```
+
+    This command will ensure that the contents of the local directory and the remote Google Drive folder are identical, copying any new or modified files as needed.
+
+
+[RClone Installation](https://rclone.org/install/)
+
+[RClone Documentation](https://rclone.org/docs/)
