@@ -70,7 +70,7 @@ julia hello_world.jl
 sbatch julia-slurm.sh
 ```
 
-## Extra Notes and Resources
+## Resources
 - [Julia Documentation](https://docs.julialang.org/): Comprehensive guides, tutorials, and references.
 - [Julia By Example](https://juliabyexample.helpmanual.io/): Practical examples of Julia programming.
 - [Julia Discourse](https://discourse.julialang.org/): Community forum to seek help, share ideas, and learn.
