@@ -1,35 +1,27 @@
-# Mathematica Tutorial
+# Mathematica
 
-This tutorial will guide you through the process of using Mathematica in the terminal.
+Mathematica is a very powerful language with a wide array of uses in scientific computing, machine learning, image processing, data visualization, and much more.
 
-## Step 1: Load the Mathmatica Module
+## Activate Mathematica
 
-Borah uses a system called "modules" to manage software. To use Mathematica, you need to load its module. 
-
+1. Load the Mathematica module
 ```bash
-module load mathmatica
+module load mathematica
 ```
-
-## Step 2: Confirm the Mathmatica Module is Loaded
-
-You can see a list of currently loaded modules with the `module list` command. 
-
+2. Go to [http://user.wolfram.com](http://user.wolfram.com) and log in using Single Sign ON (SSO) with your Boise State email. 
+1. Run Mathematica to start the activation process
 ```bash
-module list
+math
 ```
-Check that `mathmatica` is in the list of loaded modules.
+You'll get a message about needing to log in and 
 
-## Step 3: Access your activation key
+## Submit a job to the scheduler
 
-1. run ```math -h```
-2. go to http://user.wolfram.com to register your activation key and obtain the password
-3. Login in through ```math -h```
+First, you need to create a Mathematica script (a .m file). 
+You can use a text editor to do this. 
+For this tutorial, we'll create a file named `myscript.m` with the following content:
 
-## Step 4: Create a Mathematica Script
-
-First, you need to create a Mathematica script (a .m file). You can use a text editor to do this. For this tutorial, we'll create a file named `myscript.m` with the following content:
-
-```mathematica
+```mathematica title="myscript.m"
 (* Mathematica Script *)
 Print["Hello, World!"]
 
@@ -37,25 +29,35 @@ x = 5;
 y = 6;
 Print[x*y]
 ```
-## Step 5: Save the Mathematica Script
-Save your script as `myscript.m.`. This can be done by pushing ```Esc, :, wq```
 
-## Step 6: Run the Script
-```math -script myscript.m```
+And a submission script called `mathematica-slurm.sh`:
 
-## Further Learning
+```bash title="mathematica-slurm.sh"
+#!/bin/bash                                                                        
+#SBATCH -J mathematica      # job name                                             
+#SBATCH -o log_slurm.o%j    # output and error file name (%j expands to jobID)  
+#SBATCH -n 1                # total number of tasks requested                      
+#SBATCH -N 1                # number of nodes you want to run on                   
+#SBATCH --cpus-per-task 1                                                         
+#SBATCH -p bsudfq           # queue (partition)                                    
+#SBATCH -t 12:00:00         # run time (hh:mm:ss)                                  
+                                                                                   
 
-Mathematica is a very powerful language with a wide array of uses in scientific computing, machine learning, image processing, data visualization, and much more.
+# Load the mathematica module
+module load mathematica
+                                                                                   
+# Run your script
+math -script myscript.m
+```
 
-1. **Official Documentation**: The official [Mathematica & Wolfram Language documentation](https://reference.wolfram.com/language/) is a comprehensive resource that covers all aspects of the language.
+This can be submitted using:
+```bash
+sbatch mathematica-slurm.sh
+```
 
-2. **Wolfram Community**: The [Wolfram Community](http://community.wolfram.com/) is a great place to ask questions and learn from other Mathematica users and experts.
+## Resources
 
-3. **Online Courses**: Websites like Coursera, Udemy, and LinkedIn Learning offer courses on Mathematica that can help you understand the language more deeply. A popular one is the [Wolfram U's Mathematica programming: an advanced introduction](https://www.wolfram.com/wolfram-u/catalog/gen005/).
-
-4. **Books**: There are several books available that cover Mathematica, like "Programming with Mathematica: An Introduction" by Paul Wellin, and "Mathematica: A Problem-Centered Approach" by Roozbeh Hazrat.
-
-5. **Wolfram Demonstrations Project**: The [Wolfram Demonstrations Project](https://demonstrations.wolfram.com/) is a collection of interactive illustrations created by Mathematica users from around the world, which can provide both learning and inspiration.
-
-Remember, like any language, the key to learning Mathematica is practice. Try to use Mathematica regularly for a variety of tasks to get the hang of it.
-
+- [Mathematica & Wolfram Language documentation](https://reference.wolfram.com/language/): Comprehensive resource that covers all aspects of the language.
+- [Wolfram Community](http://community.wolfram.com/): Forum to ask questions and learn from other Mathematica users and experts.
+- [Wolfram U's Mathematica programming: an advanced introduction](https://www.wolfram.com/wolfram-u/catalog/gen005/): Fifteen minute video introduction to Mathematica.
+- [Wolfram Demonstrations Project](https://demonstrations.wolfram.com/): A collection of interactive illustrations created by Mathematica users from around the world.
