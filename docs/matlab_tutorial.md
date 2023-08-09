@@ -1,30 +1,11 @@
-# MATLAB Tutorial
+# MATLAB
 
-This tutorial will guide you through the process of using MATLAB in the terminal.
+MATLAB is a high-level language and interactive environment that enables you to perform computationally intensive tasks faster than with traditional programming languages.
 
-## Step 1: Load the Matlab Module
+1. Create a MATLAB Script
 
-Borah uses a system called "modules" to manage software. To use Matlab, you need to load its module. 
-
-```bash
-module load matlab
-```
-
-## Step 2: Confirm Matlab Module is Loaded
-
-You can see a list of currently loaded modules with the `module list` command. 
-
-```bash
-module list
-```
-Check that `Matlab` is in the list of loaded modules. 
-
-
-## Step 3: Create a MATLAB Script
-
-First, you need to create a MATLAB script (a .m file). You can use a text editor to do this. For this tutorial, we'll create a file named `myscript.m` with the following content:
-
-```matlab
+    First, you need to create a MATLAB script (a .m file) using any text editor. For this tutorial, we'll create a file named `myscript.m`:
+```matlab title="myscript.m"
 % MATLAB Script
 disp('Hello, World!')
 
@@ -33,46 +14,54 @@ y = 6;
 disp(x*y)
 ```
 
-## Step 4: Save the Mathematica Script
-Save your script as `myscript.m.`. 
+2. Submit your MATLAB job
 
-## Step 5: Run the Script
-Run the following command in the terminal 
+    Create your submission script:
+```bash title="matlab-slurm.sh"
+#!/bin/bash                                                                        
+#SBATCH -J matlab           # job name                                             
+#SBATCH -o log_slurm.o%j    # output and error file name (%j expands to jobID)  
+#SBATCH -n 1                # total number of tasks requested                      
+#SBATCH -N 1                # number of nodes you want to run on                   
+#SBATCH --cpus-per-task 1
+#SBATCH -p bsudfq           # queue (partition)                                    
+#SBATCH -t 12:00:00         # run time (hh:mm:ss)                                  
+                                                                                   
+                                                                                   
+# Load the MATLAB module
+module load matlab
 
-`matlab -nodisplay -nosplash -nodesktop -r "run('myscript.m'); exit;"`
+# Run the script
+matlab -nodisplay -nosplash -nodesktop -r "run('myscript.m'); exit;"
+```
 
-## Step 6: Check Output
+    And submit this script using
+```bash
+sbatch matlab-slurm.sh
+```
 
+3. Check Output
+
+    The output of the above job will be saved to a file called `log_slurm.o######` where `######` is replaced with the slurm job id. You should see something like the following in the output:
 ```
 Hello, World!
 30
 ```
 
-## Further Learning
+## Using MATLAB in OnDemand
 
-MATLAB is a high-level language and interactive environment that enables you to perform computationally intensive tasks faster than with traditional programming languages.
-
-1. **Official Documentation**: The official [MATLAB Documentation](https://www.mathworks.com/help/matlab/) is a comprehensive resource that covers all aspects of the language.
-
-2. **MATLAB Central**: The [MATLAB Central](https://www.mathworks.com/matlabcentral/) is a great place to ask questions and learn from other MATLAB users and experts. 
-
-3. **Online Courses**: Websites like Coursera, edX, Udemy, and LinkedIn Learning offer courses on MATLAB that can help you understand the language more deeply. A popular one is the [MATLAB Onramp](https://www.mathworks.com/learn/tutorials/matlab-onramp.html) which is a free two-hour introductory tutorial that allows you to learn and practice using MATLAB interactively.
-
-4. **Books**: There are several books available that cover MATLAB, like "MATLAB for Dummies" by Jim Sizemore, and "MATLAB: A Practical Introduction to Programming and Problem Solving" by Stormy Attaway.
-
-5. **MATLAB Examples**: The [MATLAB Examples](https://www.mathworks.com/examples/matlab) is a collection of code examples for a variety of MATLAB functions. It can be a great source of learning and inspiration.
-
-Remember, like any language, the key to learning MATLAB is practice. Try to use MATLAB regularly for a variety of tasks to get the hang of it.
-
-## More documentation
-
+Currently OnDemand is available for Borah and R2: [https://borah-ondemand.boisestate.edu](https://borah-ondemand.boisestate.edu) and [https://r2-gui.boisestate.edu](https://r2-gui.boisestate.edu)
 After opening the terminal application on the desktop, here is an example of the commands to open MATLAB:
 ```bash
 module load matlab
 matlab
 ```
 And the resulting MATLAB GUI will open in a new window as shown here:
-[Borah OnDemand desktop with MATLAB GUI open](images/ood-desktop-matlab.png) "Borah OnDemand desktop with MATLAB GUI open")
+![Borah OnDemand desktop with MATLAB GUI open](images/ood-desktop-matlab.png "Borah OnDemand desktop with MATLAB GUI open")
 
-- [MATLAB](https://www.boisestate.edu/rcs/matlab/)
+## Resources
 
+- [MATLAB Documentation](https://www.mathworks.com/help/matlab/): Official documentaion
+- [MATLAB Central](https://www.mathworks.com/matlabcentral/): Forum to ask questions and learn from other MATLAB users and experts. 
+- [MATLAB Onramp](https://www.mathworks.com/learn/tutorials/matlab-onramp.html): A free two-hour introductory tutorial that allows you to learn and practice using MATLAB interactively.
+- [MATLAB Examples](https://www.mathworks.com/examples/matlab): A collection of code examples for a variety of MATLAB functions.
