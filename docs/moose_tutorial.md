@@ -33,9 +33,6 @@ Don't forget to replace the environment name (`moose`), the executable (`mooseEx
 ## Resources
 
 - [MOOSE Framework](https://mooseframework.inl.gov/)
-- [MOOSE Tutorials](https://mooseframework.inl.gov/getting_started/tutorials_and_examples/)
 - [MOOSE User Manual](https://mooseframework.inl.gov/application_usage/index.html)
-- [MOOSE API Documentation](https://mooseframework.inl.gov/doxygen/)
-- [C++ Programming Tutorial](http://www.cplusplus.com/doc/tutorial/)
 - [PETSc Documentation](https://www.mcs.anl.gov/petsc/)
 - [libMesh Documentation](http://libmesh.github.io/)
