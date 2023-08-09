@@ -88,21 +88,23 @@ And `rclone` works on Windows, macOS, and Linux, providing a consistent experien
 
 Here's a simple example of how `rclone` could be used to synchronize a local directory with a remote Google Drive folder:
 
-1. **Configure a Remote Connection**: First, you would configure a connection to Google Drive by running:
+1. Configure a Remote Connection 
 
+    First, you would configure a connection to Google Drive by running:
    ```bash
    rclone config
    ```
 
-   This interactive process guides you through setting up the connection.
+    This interactive process guides you through setting up the connection.
 
-2. **Synchronize a Local Directory with Google Drive**: Once configured, you can sync a local directory (e.g., `my_folder`) with a remote Google Drive folder (e.g., `my_drive`) using:
+2. Synchronize a Local Directory with Google Drive 
 
+    Once configured, you can sync a local directory (e.g., `my_folder`) with a remote Google Drive folder (e.g., `my_drive`) using:
    ```bash
    rclone sync /path/to/my_folder my_drive:/path/in/drive
    ```
 
-   This command will ensure that the contents of the local directory and the remote Google Drive folder are identical, copying any new or modified files as needed.
+    This command will ensure that the contents of the local directory and the remote Google Drive folder are identical, copying any new or modified files as needed.
 
 
 [RClone Installation](https://rclone.org/install/)
