@@ -9,6 +9,18 @@ If you have additional questions after looking through these docs, please don't 
 
 To best resolve your issue, we also recommend reading [How to ask for help effectively](asking_questions.md).
 
+## Troubleshooting & Software Services
+
+Research Computing services include provisioning accounts, troubleshooting and optimizing software, training, assisting with data transfer and storage, and more. 
+Please let us know how we can help remove barriers to research!
+
+Our team will also assist users with evaluating system requirements for both open source and licensed software if users are considering purchasing software. Research Computing does not purchase software but can help you find the right channels to procure software. 
+
+Our team also helps with software installation, troubleshooting, and updating.
+To request help with software you’re using or would like to use on the cluster, email researchcomputing@boisestate.edu and provide basic information, including name of software, any known dependencies and issues and whether or not it’s open source or proprietary. 
+**Many commonly used HPC software packages are already installed. 
+Check if your package is installed with 'module avail'.**
+
 ## What is a compute cluster?
 
 A compute cluster, also known as a "supercomputer," is a set of computers that all work together to form one functional system.

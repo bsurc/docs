@@ -1,13 +1,3 @@
-# Troubleshooting & Software Services
-Research Computing services include provisioning accounts, troubleshooting and optimizing software, training, assisting with data transfer and storage, and more. 
-Please let us know how we can help remove barriers to research!
-
-Our team will also assist users with evaluating system requirements for both open source and licensed software if users are considering purchasing software. Research Computing does not purchase software but can help you find the right channels to procure software. 
-
-Our team also helps with software installation, troubleshooting, and updating.
-To request help with software you’re using or would like to use on the cluster, email researchcomputing@boisestate.edu and provide basic information, including name of software, any known dependencies and issues and whether or not it’s open source or proprietary. 
-**Many commonly used HPC software packages are already installed. 
-Check if your package is installed with 'module avail'.**
 
 # HPC Resources
 ## Borah
@@ -27,7 +17,7 @@ In addition to the above infrastructure, the Borah system also has another 68 CP
 
 ## R2
 R2 is a heterogeneous compute cluster provided by the Vice President of Research. It consists of 31 compute nodes and 5 GPU nodes, each with dual Intel Xeon E5-2680 CPUs. The GPU nodes each have dual NVIDIA P100 GPUs.
-*R2 will be decommissioned September 30th 2023*
+!!! warning "R2 will be decommissioned September 30th 2023"
 
 ### Specifications
 | Category     | Login Nodes | Head Nodes                                 | Compute Nodes                             | GPU Nodes                   |
