@@ -102,7 +102,7 @@ python mypythonscript.py
 ## Using a conda environment with Open OnDemand
 
 [Open OnDemand](https://openondemand.org/) is a tool which provides users with a graphical interface to the cluster.
-Currently Open OnDemand is only available for R2: [https://r2-gui.boisestate.edu](https://r2-gui.boisestate.edu)
+Currently Open OnDemand is available for Borah, [https://borah-ondemand.boisestate.edu](https://borah-ondemand.boisestate.edu), and R2, [https://r2-gui.boisestate.edu](https://r2-gui.boisestate.edu).
 
 In order to use your conda environment in a Jupyter Notebook through Open OnDemand, you'll need to install some additional packages.
 *With the conda environment you want to use activated*, install `ipykernel`:
@@ -115,7 +115,7 @@ Then run ipykernel to create the custom Jupyter kernel: (replace `ENVIRONMENT_NA
 python -m ipykernel install --user --name ENVIRONMENT_NAME --display-name "PYTHON ENV NAME"
 ```
 
-Then navigate to the Jupyter Notebook App on [https://r2-gui.boisestate.edu](https://r2-gui.boisestate.edu):
+Then navigate to the Jupyter Notebook App on [https://borah-ondemand.boisestate.edu](https://borah-ondemand.boisestate.edu) or [https://r2-gui.boisestate.edu](https://r2-gui.boisestate.edu):
 
 ![Navigate to the Jupyter Notebook App](images/ood-notebook.png)
 
