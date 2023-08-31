@@ -2,16 +2,15 @@
 
 When using Python, you may find you need to use various libraries (e.g., numpy for numerical analysis or matplotlib for plotting).
 Installing and managing these different libraries and their dependencies can be problematic, especially when you run into conflicts.
-Conda and Mamba are package managers that helps you create and navigate "environments" to help automatically handle these conflicts.
+Conda and Mamba are package managers that help you create and navigate "environments" to help automatically handle these conflicts.
 These environments can help you keep the python package versions needed for your different projects separate, which helps resolve dependency conflicts.
-It is good practice to *not* install any packages in your base environment but instead to create separate environments.
 To learn more, we recommend this [introduction to conda](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html) or this [conda tutorial](https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/).
 Mamba is, for the most part, a drop-in replacement for Conda, and is often much faster and better able to solve complex dependencies: [Mamba documentation](https://mamba.readthedocs.io).
 In the following tutorial, we will demonstrate how to install and use Mamba, but if you already have a conda installation via miniconda or another distribution, you can likely just replace `mamba` with `conda` in the commands.
 
 ## Installing Conda/Mamba
 
-For managing python environments on the cluster, we recommend the following the install instruction for Unix-like platforms provided by [Mambaforge](https://github.com/conda-forge/miniforge#mambaforge):
+For managing python environments on the cluster, we recommend following the install instruction for Unix-like platforms provided by [Mambaforge](https://github.com/conda-forge/miniforge#mambaforge):
 ```bash
 curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh"
 bash Mambaforge-$(uname)-$(uname -m).sh
@@ -27,6 +26,12 @@ At this point you should see the environment, `(base)`, appear at the front of y
 ```
 
 This lets you know that your "base" environment is active.
+
+!!! info 
+
+    Using `mamba install` while your base environment is active will install packages into the base environment.
+
+    It is good practice to *not* install any packages in your base environment but instead to create separate environments.
 
 ## Creating an environment
 
