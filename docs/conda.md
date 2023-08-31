@@ -37,7 +37,7 @@ This lets you know that your "base" environment is active.
 
 Now that you've installed mamba/conda, let's create an environment.
 
-The following command tells conda to create an environment called "climate" that pulls from the conda-forge channel with the packages matplotlib and numpy: 
+The following command creates an environment called "climate" that pulls from the conda-forge channel with the packages matplotlib and numpy: 
 ```bash
 mamba create -n climate -c conda-forge matplotlib numpy
 ```
@@ -47,12 +47,12 @@ Once this environment is created, it can be activated using the following comman
 mamba activate climate
 ```
 
-Conda/Mamba are powerful tools with many different ways they can be used, to learn more check out the [conda user guide](https://docs.conda.io/projects/conda/en/latest/user-guide/index.html).
+Conda/Mamba are powerful tools with many different options, to learn more check out the [conda user guide](https://docs.conda.io/projects/conda/en/latest/user-guide/index.html).
 
 ## Creating an environment to work with the GPU
 
 Many python packages distribute builds which can make use of the GPU through CUDA.
-In order to build a conda environment which can use the GPU, we'll need to load these modules so that conda will detect CUDA to download the correct python package build.
+In order to build an environment which can use the GPU, we'll need to load these modules so that conda will detect CUDA to download the correct python package build.
 Conda does this detection through [virtual packages](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-virtual.html), and you can see what virtual packages conda sees by running `conda info`.
 
 First, check out a GPU node to prevent the conda environment creation step from getting killed on the login node and load CUDA module.
