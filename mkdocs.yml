@@ -15,6 +15,7 @@ nav:
     - 'Software Specific Guides':
       - 'conda.md'
       - 'julia.md'
+      - 'r.md'
       - 'abyss_tutorial.md'
       - 'alphafold_tutorial.md'
       - 'gromacs_tutorial.md'
