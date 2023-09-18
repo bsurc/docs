@@ -35,10 +35,10 @@ On the notebook screen, open the dropdown for a "New" notebook and select "R".
 ## Installing R packages
 
 There are many R packages beyond the standard library. 
-If you find yourself getting an error like `there is no package called ‘PACKAGENAME’`, you probably need to install it. 
+If you find yourself getting an error like `there is no package called ‘PACKAGENAME’`, you probably need to install a package.
 Here is how you can install packages in R:
 
-1. Load an R module **or** activate your conda environment containing your R installation:
+1. Load an R module **or** activate the conda environment containing your R installation:
     ```bash
     module load borah-misc r/4.2.2
     ```
@@ -57,6 +57,9 @@ Here is how you can install packages in R:
     where `mypackagename` is the name of the package you want to install. 
     If you are using an R module, it will ask if you want to install into a personal library in your home directory. 
     Both options will ask you to select a mirror--you can just choose the closest one.
+
+Once the package is finished installing, you're ready to go.
+If you run into issues installing a package, please contact [researchcomputing@boisestate.edu](mailto:researchccomputing@boisestate.edu).
 
 ## Submitting an R job to the scheduler
 
