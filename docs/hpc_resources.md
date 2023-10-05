@@ -16,23 +16,6 @@ The cluster is located at the Idaho National Laboratory’s Collaborative Comput
 
 In addition to the above infrastructure, the Borah system also has another 68 CPU nodes owned by our industry partner, Idaho Power. When not in use by Idaho Power, Boise State researchers have access to up to 34 Idaho Power CPU nodes for their research.
 
-## R2
-R2 is a heterogeneous compute cluster provided by the Vice President of Research. It consists of 31 compute nodes and 5 GPU nodes, each with dual Intel Xeon E5-2680 CPUs. The GPU nodes each have dual NVIDIA P100 GPUs.
-!!! warning "R2 will be decommissioned September 30th 2023"
-
-### Specifications
-| Category     | Login Nodes | Head Nodes                                 | Compute Nodes                             | GPU Nodes                   |
-| :---         | :---        | :---                                       | :---                                      | :---                        |
-| Mother Board |             | Dell PE R730/xd                            | Dell PE R630                              | Dell PE R730/xd             |
-| CPU          |             | Intel Xeon E5-2623 v4 14 core 2.6GHz (x2)  | Intel Xeon E5-2680 v4 14 core 2.4GHz (x2) |                             |
-| Memory       |             | 64 GB                                      | 192 GB                                    |	256 GB                      |
-| GPU          | N/A         |                                            |                                           | NVIDIA Tesla NVLink P100 x2 |
-| Ethernet     |             | Dual 10GigE                                | Quad Port GigE                            |                             |
-| Infiniband   |             | Mellanox ConnectX-3 VPIFDR, QSFP+ 40/56GbE |                                           |                             |
-| Storage      |             | Dell MD3460 12G SAS [60 TB] Raid-6 XFS     |                                           |                             |
-| Storage      |             | Dell MD3000 6G SAS [360 TB] Raid-6 XFS     |                                           |                             |
-| Cores        |             | 16                                         | 28                                        | 3584 GPU + 28 CPU           |
-
 ## Falcon
 Idaho National Laboratory makes the Top 500 supercomputer known as “Falcon” available to Boise State researchers. For help setting up accounts, requesting allocations or access to Falcon, contact the Research Computing Support Department at: Help@c3plus3.org.
 
