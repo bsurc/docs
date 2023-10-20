@@ -18,16 +18,16 @@ disp(x*y)
 
     Create your submission script:
 ```bash title="matlab-slurm.sh"
-#!/bin/bash                                                                        
-#SBATCH -J matlab           # job name                                             
-#SBATCH -o log_slurm.o%j    # output and error file name (%j expands to jobID)  
-#SBATCH -n 1                # total number of tasks requested                      
-#SBATCH -N 1                # number of nodes you want to run on                   
+#!/bin/bash
+#SBATCH -J matlab           # job name
+#SBATCH -o log_slurm.o%j    # output and error file name (%j expands to jobID)
+#SBATCH -n 1                # total number of tasks requested
+#SBATCH -N 1                # number of nodes you want to run on
 #SBATCH --cpus-per-task 1
-#SBATCH -p bsudfq           # queue (partition)                                    
-#SBATCH -t 12:00:00         # run time (hh:mm:ss)                                  
-                                                                                   
-                                                                                   
+#SBATCH -p bsudfq           # queue (partition)
+#SBATCH -t 12:00:00         # run time (hh:mm:ss)
+
+
 # Load the MATLAB module
 module load matlab
 
@@ -50,7 +50,7 @@ Hello, World!
 
 ## Using MATLAB in OnDemand
 
-Currently OnDemand is available for Borah and R2: [https://borah-ondemand.boisestate.edu](https://borah-ondemand.boisestate.edu) and [https://r2-gui.boisestate.edu](https://r2-gui.boisestate.edu)
+Currently OnDemand is available for Borah [https://borah-ondemand.boisestate.edu](https://borah-ondemand.boisestate.edu)
 After opening the terminal application on the desktop, here is an example of the commands to open MATLAB:
 ```bash
 module load matlab
@@ -62,6 +62,6 @@ And the resulting MATLAB GUI will open in a new window as shown here:
 ## Resources
 
 - [MATLAB Documentation](https://www.mathworks.com/help/matlab/): Official documentaion
-- [MATLAB Central](https://www.mathworks.com/matlabcentral/): Forum to ask questions and learn from other MATLAB users and experts. 
+- [MATLAB Central](https://www.mathworks.com/matlabcentral/): Forum to ask questions and learn from other MATLAB users and experts.
 - [MATLAB Onramp](https://www.mathworks.com/learn/tutorials/matlab-onramp.html): A free two-hour introductory tutorial that allows you to learn and practice using MATLAB interactively.
 - [MATLAB Examples](https://www.mathworks.com/examples/matlab): A collection of code examples for a variety of MATLAB functions.

@@ -5,11 +5,11 @@ This comprehensive guide will help you set up and use Julia, a high-level, high-
 ## Adding the Julia Kernel to OnDemand
 
 [Open OnDemand](https://openondemand.org/) provides users with a graphical interface to the cluster, which provides an interactive user-interface for code development and testing.
-Currently OnDemand is available for Borah and R2: [https://borah-ondemand.boisestate.edu](https://borah-ondemand.boisestate.edu) and [https://r2-gui.boisestate.edu](https://r2-gui.boisestate.edu)
+Currently OnDemand is available for Borah [https://borah-ondemand.boisestate.edu](https://borah-ondemand.boisestate.edu)
 
-In order to use Julia in a Jupyter Notebook through OnDemand, you'll first need to install the IJulia kernel from the command line. 
+In order to use Julia in a Jupyter Notebook through OnDemand, you'll first need to install the IJulia kernel from the command line.
 
-First, load any of the available Julia modules. 
+First, load any of the available Julia modules.
 You can see the available modules using `module avail -i julia` and load the module using `module load julia/<version number here>`.
 Next, load the Julia module, and open a Julia terminal:
 ```bash
@@ -18,17 +18,17 @@ $ julia
 ```
 After these commands, you'll see your prompt change to the Julia terminal:
 ```bash
-julia> 
+julia>
 ```
 Then in the Julia terminal, install the IJulia kernel:
 ```julia
 using Pkg
 Pkg.add("IJulia")
 ```
-After this, the Julia kernel is installed for you. 
+After this, the Julia kernel is installed for you.
 (You'll only need to add the IJulia package once.)
 
-Finally, to use Julia in a notebook, navigate to the Jupyter Notebook App on [https://borah-ondemand.boisestate.edu](https://borah-ondemand.boisestate.edu) or [https://r2-gui.boisestate.edu](https://r2-gui.boisestate.edu):
+Finally, to use Julia in a notebook, navigate to the Jupyter Notebook App on [https://borah-ondemand.boisestate.edu](https://borah-ondemand.boisestate.edu).
 
 ![Navigate to the Jupyter Notebook App](images/ood-notebook.png)
 
@@ -48,19 +48,19 @@ print("Hello World")
 
 2. Create your submission script. The example below is called `julia-slurm.sh`:
 ```bash title="julia-slurm.sh"
-#!/bin/bash                                                                        
-#SBATCH -J julia            # job name                                             
-#SBATCH -o log_slurm.o%j    # output and error file name (%j expands to jobID)  
-#SBATCH -n 1                # total number of tasks requested                      
-#SBATCH -N 1                # number of nodes you want to run on                   
-#SBATCH --cpus-per-task 1                                                         
-#SBATCH -p bsudfq           # queue (partition)                                    
-#SBATCH -t 12:00:00         # run time (hh:mm:ss)                                  
-                                                                                   
-                                                                                   
+#!/bin/bash
+#SBATCH -J julia            # job name
+#SBATCH -o log_slurm.o%j    # output and error file name (%j expands to jobID)
+#SBATCH -n 1                # total number of tasks requested
+#SBATCH -N 1                # number of nodes you want to run on
+#SBATCH --cpus-per-task 1
+#SBATCH -p bsudfq           # queue (partition)
+#SBATCH -t 12:00:00         # run time (hh:mm:ss)
+
+
 # Load the Julia module
 module load julia
-                                                                                   
+
 # Run the example script
 julia hello_world.jl
 ```

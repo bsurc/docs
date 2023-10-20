@@ -5,11 +5,11 @@ Below is a list of good practices.
 
 ## Specify your environment
 
-On which system (e.g. Borah, R2, Falcon) are you running?  
+On which system (e.g. Borah, Falcon) are you running?
 
-Is this code you compiled? 
+Is this code you compiled?
 
-Which modules were loaded? 
+Which modules were loaded?
 
 Are you using a conda environment?
 
@@ -40,7 +40,7 @@ The better you describe the problem the less we have to guess and ask.
 If you are asking for advice on e.g. how to use a particular software package, then please explain in detail what documentation you have already read and why this hasn't yet fully answered your question.
 This allows us to answer your specific question instead of simply referring you to the existing documentation.
 
-## Send your requests to Research Computing 
+## Send your requests to Research Computing
 
 Always send requests to [researchcomputing@boisestate.edu](mailto:researchcomputing@boisestate.edu) instead of staff members directly.
 In the Research Computing inbox requests are tracked, have higher visibility and will get picked up by the correct specialist.
@@ -57,11 +57,11 @@ This requires some effort from you but it will help us to resolve your issue fas
 ## Identify yourself
 
 Give your Boise State username and professional affiliation (if using non-professional email account like gmail).
-It is also helpful to provide your Borah/Falcon/R2 username.
+It is also helpful to provide your Borah/Falcon username.
 
 ## New problem, new email
 
-Please do not send support requests by replying to old tickets, which probably contain unrelated issues. 
+Please do not send support requests by replying to old tickets, which probably contain unrelated issues.
 Please start a new email for each issue you encounter.
 
 ## The XY problem

@@ -27,7 +27,7 @@ At this point you should see the environment, `(base)`, appear at the front of y
 
 This lets you know that your "base" environment is active.
 
-!!! info 
+!!! info
 
     Using `mamba install` while your base environment is active will install packages into the base environment.
 
@@ -37,7 +37,7 @@ This lets you know that your "base" environment is active.
 
 Now that you've installed mamba/conda, let's create an environment.
 
-The following command creates an environment called "climate" that pulls from the conda-forge channel with the packages matplotlib and numpy: 
+The following command creates an environment called "climate" that pulls from the conda-forge channel with the packages matplotlib and numpy:
 ```bash
 mamba create -n climate -c conda-forge matplotlib numpy
 ```
@@ -66,20 +66,20 @@ module load cudnn8.0-cuda11.0/8.0.5.39
 Next, create your new environment using a create command as shown above.
 You can verify that the package you've installed in the environment is built with GPU support by running `conda list` with the environment active.
 An appropriate build will often have "gpu" or the CUDA version in the build tag.
-For example the following output is from a pytorch environment built with CUDA11.2 support: 
+For example the following output is from a pytorch environment built with CUDA11.2 support:
 ![pytorch cuda](images/pytorch-cuda.png)
 
 
 ## Submitting jobs that use python in an environment
 
-Following is an example script to submit a python job to the scheduler. 
+Following is an example script to submit a python job to the scheduler.
 ```bash
 #!/bin/bash
 #SBATCH -J python 		    # job name
 #SBATCH -o log_slurm.o%j    # output and error file name (%j expands to jobID)
 #SBATCH -n 1 			    # total number of tasks requested
 #SBATCH -N 1 			    # number of nodes you want to run on
-#SBATCH -p bsudfq			# queue (partition) for R2 use defq
+#SBATCH -p bsudfq			# queue (partition)
 #SBATCH -t 12:00:00 		# run time (hh:mm:ss) - 12.0 hours in this example.
 
 # Activate the environment
@@ -95,7 +95,7 @@ python mypythonscript.py
 ## Using an environment with Open OnDemand
 
 [Open OnDemand](https://openondemand.org/) is a tool which provides users with a graphical interface to the cluster.
-Currently Open OnDemand is available for Borah, [https://borah-ondemand.boisestate.edu](https://borah-ondemand.boisestate.edu), and R2, [https://r2-gui.boisestate.edu](https://r2-gui.boisestate.edu).
+Currently, Open OnDemand is available on Borah [https://borah-ondemand.boisestate.edu](https://borah-ondemand.boisestate.edu).
 
 In order to use your environment in a Jupyter Notebook through Open OnDemand, you'll need to install some additional packages.
 *With the environment you want to use activated*, install `ipykernel`:
@@ -108,7 +108,7 @@ Then run ipykernel to create the custom Jupyter kernel: (replace `ENVIRONMENT_NA
 python -m ipykernel install --user --name ENVIRONMENT_NAME --display-name "PYTHON ENV NAME"
 ```
 
-Then navigate to the Jupyter Notebook App on [https://borah-ondemand.boisestate.edu](https://borah-ondemand.boisestate.edu) or [https://r2-gui.boisestate.edu](https://r2-gui.boisestate.edu):
+Then navigate to the Jupyter Notebook App on [https://borah-ondemand.boisestate.edu](https://borah-ondemand.boisestate.edu):
 
 ![Navigate to the Jupyter Notebook App](images/ood-notebook.png)
 
