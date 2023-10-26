@@ -12,16 +12,16 @@ nav:
     - 'open_ondemand.md'
     - 'faq.md'
     - 'hpc_resources.md'
-    - 'Software Specific Guides':
-      - 'conda.md'
-      - 'julia.md'
-      - 'r.md'
-      - 'abyss_tutorial.md'
-      - 'alphafold_tutorial.md'
-      - 'gromacs_tutorial.md'
-      - 'matlab_tutorial.md'
-      - 'moose_tutorial.md'
-  - 'Computing Resources':
+  - 'Software Specific Guides':
+    - 'conda.md'
+    - 'julia.md'
+    - 'r.md'
+    - 'abyss_tutorial.md'
+    - 'alphafold_tutorial.md'
+    - 'gromacs_tutorial.md'
+    - 'matlab_tutorial.md'
+    - 'moose_tutorial.md'
+  - 'Resources':
     - 'training.md'
     - 'linux.md'
     - 'glossary.md'
