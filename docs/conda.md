@@ -10,10 +10,10 @@ In the following tutorial, we will demonstrate how to install and use Mamba, but
 
 ## Installing Conda/Mamba
 
-For managing python environments on the cluster, we recommend following the install instruction for Unix-like platforms provided by [Mambaforge](https://github.com/conda-forge/miniforge#mambaforge):
+For managing python environments on the cluster, we recommend following the install instruction for Unix-like platforms provided by [Miniforge](https://github.com/conda-forge/miniforge#install):
 ```bash
-curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh"
-bash Mambaforge-$(uname)-$(uname -m).sh
+wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+bash Miniforge3-$(uname)-$(uname -m).sh
 ```
 The following prompt will ask whether you accept the license, if the default installation location (typically in your home directory) is alright (it is), and whether you want to initialize conda each time you log in (generally a good idea).
 Once the install is finished, re-sourcing your bashrc will add the conda/mamba commands to your path:
