@@ -10,7 +10,7 @@ Borah uses a system called "modules" to manage software. To use ABySS, you need 
 module add abyss
 ```
 
-## Step 3: Confirm ABySS Module is Loaded
+## Step 2: Confirm ABySS Module is Loaded
 
 You can see a list of currently loaded modules with the `module list` command. 
 
@@ -59,19 +59,47 @@ ABySS will create several output files. The main output is a FASTA file containi
 ls -l my_assembly*
 ```
 
+## Prerequisites
+
+1. Bioinformatics Knowledge:
+    - Basic understanding of genome assembly concepts.
+    - Familiarity with sequence data types (e.g., FASTQ format).
+    - Knowledge of de Bruijn graphs and their role in genome assembly.
+2. Genomics and Molecular Biology:
+    - Fundamental concepts of genomics, such as DNA sequencing, genome structure, and genetic variation.
+    - Understanding of sequencing technologies (Illumina, PacBio, etc.) and their outputs.
+3. Computational Skills:
+    - Proficiency in using the command line interface (CLI) and shell scripting.
+    - Basic understanding of Linux/Unix operating systems, as most bioinformatics tools, including ABySS, are used in these environments.
+    - Familiarity with file formats used in bioinformatics, like FASTA, FASTQ, SAM/BAM.
+4. Programming Knowledge (optional but helpful):
+    - Skills in a programming language like Python, R, or Perl can be advantageous for custom data analysis and automation.
+
 ## Further Learning
 
 ABySS is a de novo, parallel, paired-end sequence assembler that is designed for short reads. It can handle very large data sets and was one of the first assemblers to demonstrate the use of the de Bruijn graph technique. 
 
-1. **Official Documentation**: The official [ABySS Documentation](https://www.bcgsc.ca/abyss) is a comprehensive resource that covers all aspects of the assembler.
+1. Official ABySS Documentation and Tutorials:
+    - The [ABySS website](https://www.bcgsc.ca/abyss) and [GitHub repository](https://github.com/bcgsc/abyss) provide comprehensive guides, installation instructions, and usage examples.
 
-2. **GitHub Repository**: The [ABySS GitHub Repository](https://github.com/bcgsc/abyss) provides the latest version of ABySS, including source code, release notes, and additional documentation.
+2. Online Courses and Tutorials:
+    - Websites like [Coursera](https://www.coursera.org/), [edX](https://www.edx.org/), or [Khan Academy](https://www.khanacademy.org/) offer courses in genomics, bioinformatics, and data analysis.
+    - Specific courses on genome assembly and next-generation sequencing techniques possibly found on [Udmey](https://www.udemy.com/).
+3. Textbooks and Academic Literature:
+    - Books on bioinformatics and genomic data analysis.
+    - Research papers on de novo genome assembly and the use of ABySS in various studies.
+4. Community Forums and Groups:
+    - Platforms like [BioStars](https://www.biostars.org/) and [SEQanswers](http://seqanswers.com/) for community support and discussions.
+    - Joining bioinformatics communities on social media platforms like LinkedIn or X.
+5. Workshops and Conferences:
+    - Attend workshops or webinars focused on genome assembly or ABySS.
+    - Conferences like ISMB (International Society for Computational Biology) often have sessions or workshops on genome assembly and bioinformatics tools.
+6. Practical Experience:
+    - Hands-on practice with sequencing data.
+    - Experimenting with different parameters and data sets in ABySS to understand the effects on assembly outcomes.
+7. Collaboration with Experienced Individuals:
+    - Collaborating with experienced bioinformaticians or joining a research lab can provide practical insights and mentorship.
 
-3. **Research Papers**: The original paper introducing ABySS, "De novo assembly of the ABySS", was published in 2009 and provides detailed information about the techniques used in the assembler. Many other papers have since cited and expanded upon this work. These can be found in scientific databases like PubMed.
-
-4. **Online Forums and Communities**: Online resources such as [SeqAnswers](http://seqanswers.com/) and [Biostars](https://www.biostars.org/) often have threads discussing issues, solutions, and best practices related to ABySS and other bioinformatics tools.
-
-5. **Workshops and Conferences**: There are many workshops, webinars, and conferences related to bioinformatics that may provide training or sessions specific to ABySS or genome assembly in general. These may be offered by universities, research institutions, or companies in the bioinformatics field.
 
 Remember, like any tool, the key to mastering ABySS is practice. Use it regularly and don't be afraid to experiment and troubleshoot when issues arise.
 
