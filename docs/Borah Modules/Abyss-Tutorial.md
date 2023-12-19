@@ -61,18 +61,18 @@ ls -l my_assembly*
 
 ## Prerequisites
 
-1. Bioinformatics Knowledge:
+1. **Bioinformatics Knowledge:**
     - Basic understanding of genome assembly concepts.
     - Familiarity with sequence data types (e.g., FASTQ format).
     - Knowledge of de Bruijn graphs and their role in genome assembly.
-2. Genomics and Molecular Biology:
+2. **Genomics and Molecular Biology:**
     - Fundamental concepts of genomics, such as DNA sequencing, genome structure, and genetic variation.
     - Understanding of sequencing technologies (Illumina, PacBio, etc.) and their outputs.
-3. Computational Skills:
+3. **Computational Skills:**
     - Proficiency in using the command line interface (CLI) and shell scripting.
     - Basic understanding of Linux/Unix operating systems, as most bioinformatics tools, including ABySS, are used in these environments.
     - Familiarity with file formats used in bioinformatics, like FASTA, FASTQ, SAM/BAM.
-4. Programming Knowledge (optional but helpful):
+4. **Programming Knowledge (optional but helpful):**
     - Skills in a programming language like Python, R, or Perl can be advantageous for custom data analysis and automation.
 
 ## Further Learning
@@ -82,22 +82,22 @@ ABySS is a de novo, parallel, paired-end sequence assembler that is designed for
 1. Official ABySS Documentation and Tutorials:
     - The [ABySS website](https://www.bcgsc.ca/abyss) and [GitHub repository](https://github.com/bcgsc/abyss) provide comprehensive guides, installation instructions, and usage examples.
 
-2. Online Courses and Tutorials:
+2. **Online Courses and Tutorials:**
     - Websites like [Coursera](https://www.coursera.org/), [edX](https://www.edx.org/), or [Khan Academy](https://www.khanacademy.org/) offer courses in genomics, bioinformatics, and data analysis.
     - Specific courses on genome assembly and next-generation sequencing techniques possibly found on [Udmey](https://www.udemy.com/).
-3. Textbooks and Academic Literature:
+3. **Textbooks and Academic Literature:**
     - Books on bioinformatics and genomic data analysis.
     - Research papers on de novo genome assembly and the use of ABySS in various studies.
-4. Community Forums and Groups:
+4. **Community Forums and Groups:**
     - Platforms like [BioStars](https://www.biostars.org/) and [SEQanswers](http://seqanswers.com/) for community support and discussions.
     - Joining bioinformatics communities on social media platforms like LinkedIn or X.
-5. Workshops and Conferences:
+5. **Workshops and Conferences:**
     - Attend workshops or webinars focused on genome assembly or ABySS.
     - Conferences like ISMB (International Society for Computational Biology) often have sessions or workshops on genome assembly and bioinformatics tools.
-6. Practical Experience:
+6. **Practical Experience:**
     - Hands-on practice with sequencing data.
     - Experimenting with different parameters and data sets in ABySS to understand the effects on assembly outcomes.
-7. Collaboration with Experienced Individuals:
+7. **Collaboration with Experienced Individuals:**
     - Collaborating with experienced bioinformaticians or joining a research lab can provide practical insights and mentorship.
 
 
