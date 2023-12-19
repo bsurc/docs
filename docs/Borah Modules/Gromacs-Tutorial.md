@@ -90,21 +90,29 @@ srun gmx_mpi mdrun -v -deffnm water
 sbatch job.sh
 ```
 
-## Additional Resources
-1. **Official Documentation**: The [GROMACS online manual](http://manual.gromacs.org/documentation/) provides a comprehensive guide to the program, covering installation, basic usage, and more advanced features.
-
-2. **Tutorials**: The [GROMACS tutorials](http://www.mdtutorials.com/gmx/) offer a step-by-step guide to running simulations, from basic setups to more advanced topics.
-
-3. **User Forum**: The [GROMACS user forum](http://gromacs.bioexcel.eu/) is a great place to ask questions and learn from other users' experiences.
-
-4. **BioExcel Webinars**: [BioExcel](https://www.youtube.com/playlist?list=PLBQ5BPNzjS5IvMhTvA9LQBJsC0_fJUIiB), the leading European Centre of Excellence for Computational Biomolecular Research, offers webinars on using GROMACS and other tools.
-
-5. **Workshops and Training**: Many universities and institutes offer GROMACS workshops, which can provide hands-on experience. Check for opportunities at your institution or nearby research centers.
-
-Remember, mastering GROMACS, like any computational tool, comes with practice and familiarity. Use it frequently, experiment with its features, and don't hesitate to seek help when needed.
+## Prerequisites
+1. **Background in Molecular Dynamics and Computational Chemistry:**
+    - Basic understanding of molecular dynamics simulations and their applications in scientific research.
+    - Familiarity with key concepts in computational chemistry and biophysics.
+2. **Technical Skills:**
+    - Proficiency in using command line interfaces and navigating Linux/Unix environments.
+    - Understanding of high-performance computing (HPC) environments and job scheduling systems, like SLURM.
+3. **Mathematics and Physics Knowledge (optional but helpful):**
+    - Basic grasp of physical principles underlying molecular dynamics, such as forces, energy, and statistical mechanics.
+    - Understanding of numerical methods and algorithms used in simulations.
 
 
-**Note:** Remember to adjust the parameters in the job script (e.g., time, partition, nodes, ntasks) according to the resources required by your task.
-
-
+## Further Learning
+1. **Official GROMACS Documentation:**
+    -  Comprehensive guides, installation instructions, and detailed usage instructions are available on the [GROMACS online manual](http://manual.gromacs.org/documentation/).
+2. **Step-by-Step Tutorials:**
+    - The [GROMACS tutorials](http://www.mdtutorials.com/gmx/) provide practical, step-by-step instructions for various types of simulations, from beginner to advanced levels.
+3. **Community Support and Discussion Forums:**
+    - Engage with the [GROMACS user forum](http://gromacs.bioexcel.eu/) to ask questions, share experiences, and learn from other users' challenges and solutions.
+4. **Educational Webinars and Videos:**
+    - Explore webinars and instructional videos from [BioExcel](https://www.youtube.com/@BioExcelCoE) and other platforms for visual and detailed explanations of GROMACS features and applications.
+5. **Workshops and Hands-on Training:**
+    - Look for workshops and training sessions offered by universities, research institutions, and conferences. These often provide valuable hands-on experience and networking opportunities.
+6. **Research Papers and Case Studies:**
+    - Review academic literature and case studies involving GROMACS to understand its application in cutting-edge research.
 
