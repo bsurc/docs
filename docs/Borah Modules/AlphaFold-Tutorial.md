@@ -79,16 +79,37 @@ fi
 
 After the job is finished, you can find the predicted protein structures in the OUTPUT_DIR directory.
 
+## Prerequisites
+1. **Bioinformatics and Computational Biology Knowledge:**
+    - Understanding of protein structures and their significance in biological research.
+    - Familiarity with the concepts of machine learning, especially as they apply to biological data.
+2. **Technical Skills:**
+    - Proficiency in using command line interfaces and shell scripting.
+    - Basic knowledge of Linux/Unix operating systems.
+    - Understanding of job scheduling and management in a cluster environment, particularly with SLURM.
+3. **Programming Knowledge (optional but beneficial):**
+    - Experience with Python, as AlphaFold and many related tools are Python-based.
+    - Familiarity with data analysis and visualization tools.
+
 ## Further Learning
+AlphaFold is an advanced protein structure prediction system developed by DeepMind, using machine learning techniques. It has significantly impacted computational biology and structural genomics.
 
-AlphaFold is a protein structure prediction system developed by DeepMind. It uses machine learning techniques to accurately predict protein structures, which is an important task in computational biology.
-
-1. **Official Documentation**: The official [AlphaFold Documentation](https://www.alphafold.ebi.ac.uk/) is a comprehensive resource that covers all aspects of AlphaFold.
-
-2. **GitHub Repository**: The [AlphaFold GitHub Repository](https://github.com/deepmind/alphafold) provides the latest version of AlphaFold, including source code, release notes, and additional documentation.
-
-3. **Research Papers**: The original paper introducing AlphaFold, "Highly accurate protein structure prediction for the human proteome", was published in 2021 and provides detailed information about the techniques used in AlphaFold. Many other papers have since cited and expanded upon this work. These can be found in scientific databases like PubMed.
-
-4. **Online Forums and Communities**: Online resources such as [Bioinformatics Stack Exchange](https://bioinformatics.stackexchange.com/) and [Biostars](https://www.biostars.org/) often have threads discussing issues, solutions, and best practices related to AlphaFold and other bioinformatics tools.
-
-5. **Workshops and Conferences**: There are many workshops, webinars, and conferences related to bioinformatics that may provide training or sessions specific to AlphaFold or protein structure prediction in general. These may be offered by universities, research institutions, or companies in the bioinformatics field.
+1. **Official AlphaFold Documentation:**
+    - Detailed guides, installation instructions, and usage examples are available on the [AlphaFold website](https://www.alphafold.ebi.ac.uk/) and its [GitHub repository](https://github.com/deepmind/alphafold).
+2. **Educational Resources:**
+    - Explore online courses on platforms like [Coursera](https://www.coursera.org/), [edX](https://www.edx.org/), or [Khan Academy](https://www.khanacademy.org/) for foundational knowledge in bioinformatics, machine learning, and computational biology.
+    - Consider courses or tutorials on protein structure prediction and the application of machine learning in biology.
+ 3. **Academic Literature and Case Studies:**
+    - Review the original research paper on AlphaFold and subsequent publications for a deep dive into the methodology and applications.
+    - Explore case studies demonstrating the use of AlphaFold in various research contexts.
+4. **Community Forums and Support:**
+    - Engage with bioinformatics communities on platforms like [BioStars](https://www.biostars.org/) and [SEQanswers](http://seqanswers.com/) for discussions and troubleshooting.
+    - Join social media groups or professional networks focused on bioinformatics and computational biology.
+5. **Conferences and Workshops:**
+    - Attend events, workshops, or webinars that focus on protein structure prediction, machine learning applications in biology, and the use of tools like AlphaFold.
+    - Networking opportunities at conferences like ISMB (International Society for Computational Biology) can provide insights into current trends and research in the field.
+6. **Hands-On Practice:**
+    - Practical application with various datasets in AlphaFold to understand its capabilities and limitations.
+    - Experiment with different settings and parameters to gain a deeper understanding of the tool's functionality.
+      
+Remember, AlphaFold is a complex and powerful tool, and mastering it requires both theoretical understanding and practical experience. Regular practice and staying updated with the latest developments in the field are key to effectively utilizing AlphaFold for protein structure prediction.
