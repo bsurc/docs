@@ -82,11 +82,25 @@ Execute the test script:
 julia test.jl
 ```
 
+## Prerequisites
+
+1. **Basic Programming Knowledge:**
+    - Familiarity with programming concepts and experience in at least one programming language.
+2. **Understanding of Command Line Operations:**
+    - Comfort with using command line interfaces, especially in Unix/Linux environments.
+3. **Access to R2 and Borah Systems:**
+    - Valid user accounts and necessary permissions to access both R2 and Borah.
+
 ## Extra Notes and Resources
-1. [Julia Documentation](https://docs.julialang.org/): Comprehensive guides, tutorials, and references.
-2. [Julia By Example](https://juliabyexample.helpmanual.io/): Practical examples of Julia programming.
-3. [Julia Discourse](https://discourse.julialang.org/): Community forum to seek help, share ideas, and learn.
-4. [JuliaHub](https://juliahub.com/): Platform hosting interactive Julia notebooks.
-5. [Julia Academy](https://juliaacademy.com/): Online courses and tutorials to enhance your Julia skills.
+1. **Julia Documentation:**
+      -  Comprehensive guides, tutorials, and references. Visit [Julia Documentation](https://docs.julialang.org/).
+2. **Julia by Example**
+    - Practical examples of Julia programming. Explore [Julia By Example](https://juliabyexample.helpmanual.io/).
+3. **Julia Discourse**
+    - A community forum to seek help, share ideas, and learn. Join [Julia Discourse](https://discourse.julialang.org/).
+4. **JuliaHub**
+    -  Platform hosting interactive Julia notebooks. Check out [JuliaHub](https://juliahub.com/).
+5. **Julia Academy**
+    - Online courses and tutorials to enhance your Julia skills. Visit [Julia Academy](https://juliaacademy.com/).
 
 This combined guide provides you with a step-by-step process for working with Julia on both R2 and Borah, from setting up the IJulia kernel to creating and running a basic script. Whether you're using Julia for scientific computing, data analysis, or machine learning, these instructions will get you started on both platforms.
