@@ -70,14 +70,39 @@ cd examples
 
 Replace `input-file-name.i` with the name of the input file you want to run.
 
-## Further Learning and Resources
+## Prerequisites
+1. **Basic Knowledge of Computational Physics and Engineering:**
+    - Understanding of the principles behind multiphysics simulations.
+    - Familiarity with the types of problems MOOSE can solve.
+2. **Programming Skills:**
+    - Proficiency in C++ programming is essential as MOOSE is built using C++.
+    - Familiarity with Python for scripting and automating tasks.
+3. **Experience with Linux/Unix Systems:**
+    - Comfortable with command-line interface (CLI) operations.
+    - Knowledge of basic Linux commands and file system navigation.
+4. **Understanding of Version Control Systems:**
+    - Basic knowledge of Git for cloning repositories.
 
-1. [MOOSE Framework](https://mooseframework.inl.gov/)
-2. [MOOSE Tutorials](https://mooseframework.inl.gov/getting_started/tutorials_and_examples/)
-3. [MOOSE User Manual](https://mooseframework.inl.gov/application_usage/index.html)
-4. [MOOSE API Documentation](https://mooseframework.inl.gov/doxygen/)
-5. [C++ Programming Tutorial](http://www.cplusplus.com/doc/tutorial/)
-6. [PETSc Documentation](https://www.mcs.anl.gov/petsc/)
-7. [libMesh Documentation](http://libmesh.github.io/)
+## Further Learning and Resources
+1. **MOOSE Framework:**
+    - Visit the [MOOSE Framework](https://mooseframework.inl.gov/) website for detailed information and updates.
+2. **MOOSE Tutorials:**
+    - Start with [MOOSE Examples & Tutorials](https://mooseframework.inl.gov/getting_started/) for hands-on learning.
+3. **MOOSE User Manual:**
+    - Consult the [MOOSE User Manual](https://mooseframework.inl.gov/application_usage/index.html) for application usage guidelines.
+4. **MOOSE API Documentation:**
+    - Explore the [MOOSE API Documentation](https://mooseframework.inl.gov/) for API references.
+5. **C++ Programming:**
+    - Brush up on C++ with tutorials from [cplusplus.com](http://www.cplusplus.com/doc/tutorial/).
+6. **PETSc Documentation:**
+    - Review the [PETSc Documentation](https://www.mcs.anl.gov/petsc/) for information on the PETSc library.
+7. **libMesh Documentation:**
+    - Familiarize yourself with [libMesh](http://libmesh.github.io/), a library used by MOOSE.
+8. **Community Engagement:**
+    - Participate in MOOSE-related forums, user groups, or mailing lists for community support.
+9. **Workshops and Conferences:**
+    - Attend MOOSE-related workshops or conferences for advanced learning and networking.
+10. **Collaboration and Projects:**
+    - Engage in collaborative projects or research using MOOSE for practical experience.
 
 Remember, you will need to use an `sbatch` file to run your jobs on Borah. An example file can be found at `/cm/shared/examples/slurm_moose.bash`.
