@@ -48,31 +48,50 @@ Hello, World!
 30
 ```
 
-## Further Learning
+## Accessing MATLAB GUI
 
-MATLAB is a high-level language and interactive environment that enables you to perform computationally intensive tasks faster than with traditional programming languages.
-
-1. **Official Documentation**: The official [MATLAB Documentation](https://www.mathworks.com/help/matlab/) is a comprehensive resource that covers all aspects of the language.
-
-2. **MATLAB Central**: The [MATLAB Central](https://www.mathworks.com/matlabcentral/) is a great place to ask questions and learn from other MATLAB users and experts. 
-
-3. **Online Courses**: Websites like Coursera, edX, Udemy, and LinkedIn Learning offer courses on MATLAB that can help you understand the language more deeply. A popular one is the [MATLAB Onramp](https://www.mathworks.com/learn/tutorials/matlab-onramp.html) which is a free two-hour introductory tutorial that allows you to learn and practice using MATLAB interactively.
-
-4. **Books**: There are several books available that cover MATLAB, like "MATLAB for Dummies" by Jim Sizemore, and "MATLAB: A Practical Introduction to Programming and Problem Solving" by Stormy Attaway.
-
-5. **MATLAB Examples**: The [MATLAB Examples](https://www.mathworks.com/examples/matlab) is a collection of code examples for a variety of MATLAB functions. It can be a great source of learning and inspiration.
-
-Remember, like any language, the key to learning MATLAB is practice. Try to use MATLAB regularly for a variety of tasks to get the hang of it.
-
-## More documentation
-
-After opening the terminal application on the desktop, here is an example of the commands to open MATLAB:
+For GUI access on Borah, open the terminal and use:
 ```bash
 module load matlab
 matlab
 ```
-And the resulting MATLAB GUI will open in a new window as shown here:
-[Borah OnDemand desktop with MATLAB GUI open](images/ood-desktop-matlab.png) "Borah OnDemand desktop with MATLAB GUI open")
 
-- [MATLAB](https://www.boisestate.edu/rcs/matlab/)
+This opens the MATLAB GUI in a new window
+
+- For more details, visit the [MATLAB](https://www.boisestate.edu/rcs/matlab/)
+
+## Prerequisites
+1. **Basic Knowledge of MATLAB:**
+    - Familiarity with MATLAB's environment and syntax.
+    - Understanding of basic programming concepts like variables, loops, and functions in MATLAB.
+2. **Computational Skills:**
+    - Proficiency in using the command line interface (CLI).
+    - Basic understanding of Linux/Unix operating systems, as you will be using MATLAB in a terminal environment.
+3. **Programming Experience:**
+    - Experience in programming, preferably in MATLAB, but knowledge in other languages can be beneficial.
+
+## Further Learning
+
+MATLAB is a high-level language and interactive environment that enables you to perform computationally intensive tasks faster than with traditional programming languages.
+
+1. **Official Documentation**: 
+    - Consult the [MATLAB Documentation](https://www.mathworks.com/help/matlab/) for detailed language reference.
+2. **MATLAB Central**: 
+    - Visit [MATLAB Central](https://www.mathworks.com/matlabcentral/) for community support and expert advice.
+3. **Online Courses**: 
+    -  Explore courses on Coursera, edX, Udemy, and LinkedIn Learning. Start with the [MATLAB Onramp](https://www.mathworks.com/learn/tutorials/matlab-onramp.html) for a free introductory tutorial.
+4. **Books**: 
+    - Read "MATLAB for Dummies" by Jim Sizemore, and "MATLAB: A Practical Introduction to Programming and Problem Solving" by Stormy Attaway.
+5. **MATLAB Examples**:
+    - Check out [MATLAB Examples](https://www.mathworks.com/examples/matlab) for a variety of code samples.
+6. **Interactive Tutorials and Workshops:**
+    - Participate in MATLAB workshops or webinars offered by educational institutions or MATLAB itself.
+7. Community Forums and Groups:
+    - Join forums or social media groups dedicated to MATLAB for discussions and networking.
+8. **Hands-on Practice:**
+    - Apply MATLAB to different types of problems and projects. Experiment with various functions and toolboxes to enhance your understanding.
+9. **Collaboration:**
+    - Work with peers or mentors on MATLAB projects to gain practical experience and insights.
+  
+Remember, like any language, the key to learning MATLAB is practice. Try to use MATLAB regularly for a variety of tasks to get the hang of it.
 
