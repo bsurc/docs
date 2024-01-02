@@ -79,18 +79,26 @@ After the job finishes, VASP will generate several output files including `OUTCA
 
 less OUTCAR
 
-## Further Learning
+## Prerequisites for VASP
+1. **Basic Understanding of Computational Materials Science:**
+   - Familiarity with concepts of electronic structure and ab initio simulations.
+2. **Knowledge of Density Functional Theory (DFT):**
+   - Understanding of DFT, the foundational theory behind VASP calculations.
+3. **Experience with Linux/Unix Systems:**
+   - Comfortable with command-line operations and Linux environment.
+4. **Understanding of Crystallography:**
+   - Basic knowledge of crystal structures, lattice parameters, and atomic positions.
 
-VASP is a complex package capable of performing a variety of simulations. To master its use:
-
-1. **Official Documentation**: Refer to the [VASP Manual](https://www.vasp.at/wiki/index.php/The_VASP_Manual) for comprehensive details on setting up calculations and understanding output files.
-
-2. **Tutorials and Examples**: Look at provided examples and tutorials, often available within your HPC center's documentation or on the VASP website.
-
-3. **Scientific Literature**: Many research papers detail the use of VASP for different types of calculations. Use these as a guide for best practices and inspiration for different uses of the software.
-
-4. **Community Forums**: Platforms such as the [VASP Forum](https://www.vasp.at/forum/) can be invaluable for getting help with specific issues or learning from the experiences of other users.
-
-5. **Workshops and Training Sessions**: Participate in workshops offered by HPC centers or by the VASP group to get hands-on experience and learn from experts.
-
-Remember that practice is key to becoming proficient with VASP, and always ensure your calculations are well-justified and methodologically sound.
+## Further Learning and Resources for VASP
+1. **VASP Manual:**
+   - Study the [VASP Manual](https://www.vasp.at/wiki/index.php/The_VASP_Manual) for detailed instructions and guidelines.
+2. **Online Tutorials and Courses:**
+   - Look for online courses and tutorials that specifically focus on VASP and DFT.
+3. **Scientific Literature:**
+   - Read research papers where VASP has been used to understand its application in various studies.
+4. **VASP Forum:**
+   - Join the [VASP Forum](https://www.vasp.at/forum/) for community support and discussions.
+5. **Workshops and Webinars:**
+   - Attend VASP-related workshops or webinars to gain practical experience and insights from experts.
+6. **Collaborative Projects:**
+   - Engage in projects that use VASP to get hands-on experience.
