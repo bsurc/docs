@@ -19,7 +19,7 @@ module list
 ```
 Check that `abyss` is in the list of loaded modules. 
 
-## Step 4: Prepare Input Files
+## Step 3: Prepare Input Files
 
 ABySS requires paired-end sequencing data as input, typically in FASTQ format. Make sure you have your input files ready in the cluster. For this tutorial, we'll assume that your files are named `reads1.fastq` and `reads2.fastq`.
 
