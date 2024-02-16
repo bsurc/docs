@@ -41,7 +41,7 @@ Each read in a FASTQ file is represented by four lines:
 
 Your actual input files will be much larger and contain many such reads.
 
-## Step 5: Run ABySS
+## Step 4: Run ABySS
 
 You can now run ABySS with the `abyss-pe` command. You'll need to set several parameters, including the k-mer size (`k`), the name of the output (`name`), and the input files (`in`). 
 
@@ -51,7 +51,7 @@ abyss-pe k=64 name=my_assembly in='reads1.fastq reads2.fastq'
 
 Replace `64` with the k-mer size appropriate for your data, `my_assembly` with the name you want for your output, and `'reads1.fastq reads2.fastq'` with the names of your actual input files. 
 
-## Step 6: Check Output
+## Step 5: Check Output
 
 ABySS will create several output files. The main output is a FASTA file containing the assembled sequences, which will have the name you specified (e.g., `my_assembly-contigs.fa`).
 
