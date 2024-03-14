@@ -73,3 +73,4 @@ Save your script as `myscript.m.`. This can be done by pushing ```Esc, :, wq```
     - Work with peers or mentors on Mathematica projects to gain practical experience and insights.
 
 Remember, consistent practice and exploration are key to mastering Mathematica. Don't hesitate to experiment with different features and applications of the language.
+

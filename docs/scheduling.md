@@ -2,62 +2,72 @@
 
 ## Slurm
 
-The clusters run jobs based on a queue system provided by the software Slurm. 
-Jobs are submitted on a cluster to this scheduling software, assessed for priority, and then run on that cluster in order of priority. 
-Priority is decided based on a few factors, such as how many jobs the user has run during that month on that cluster, how much time is requested for the job, how many cores and nodes are requested, and how long the job has waited. 
+The clusters run jobs based on a queue system provided by the software Slurm.
+Jobs are submitted to this scheduling software, assessed for priority, and then
+run on that cluster in order of priority.
+Priority is decided based on a few factors, such as how many jobs the user has
+run during that month on that cluster, how much time is requested for the job,
+how many cores and nodes are requested, and how long the job has waited.
 Individual user priority is reset at the start of every month.
 
-Jobs must be run through the job scheduler – those not run through the scheduler will be automatically stopped by the system as the high CPU usage from a computational task could cause instability and crashes when other vital system processes then have to compete for resources.
+Jobs must be run through the scheduler – those not run through the scheduler
+will be automatically stopped by the system as the high CPU usage from a
+computational task could cause instability and crashes when other vital system
+processes then have to compete for resources.
 
-Jobs submitted to Slurm are specified with what’s called an “sbatch script”, which is essentially a set of commands and parameters that are passed to and then run by Slurm that become the job. 
-These commands can include shell commands, the running of script files by other programs like R or Python, or running specific pieces of software.
 
-## Writing a Basic sbatch Script
+## Writing a Basic Submission Script
 
-An sbatch script contains two components: a set of sbatch parameters and the commands to be executed. 
-The first of these tells Slurm some of the parameters about how the job should be run, the second tells it what to run. 
-There are a wide variety of different sbatch parameters that can be specified, but only a few are relevant in most cases.
+Jobs scripts can be submitted to the scheduler using the command `sbatch`.
+These job scripts (sometimes called "batch scripts", "sbatch scripts", or
+"submission scripts") start with a header containing slurm parameters; the
+lines will all start with `#SBATCH`. These slurm parameters tell the scheduler
+how to allocate resources, and terminal commands, which are the commands you
+actually want to run: including shell commands, running scripts through other
+programs like R or Python, or calling specific software.
+Here we will discuss the slurm parameters and provide some basic options to help
+you get started, but please see the
+[Slurm sbatch documentation](https://slurm.schedmd.com/sbatch.html) for a
+full list of options.
 
-## Queues 
+## Queues
 
-The first of these parameters is the queue, also known as partition, parameter. 
-Specified by the line `#SBATCH -p (partition name)` in the sbatch script, this parameter tells Slurm which queue (or partition) the job should be run in. 
-You can view the queues available to you using the `sinfo` command.
+The queue (or partition) parameter tells the scheduler which queue the job
+should be submitted to and is specified as follows:
+```
+#SBATCH -p (partition name)
+```
+You can view the queues available to you from the command line using `sinfo`.
+The following table provides information about the queues on Borah:
 
 !!! warning
 
-    “Preemptable” means that jobs submitted to this queue can be stopped and requeued if a higher priority job needs the resources. If the software you are using makes use of checkpointing, i.e., writing out intermediate data so the job doesn't need to restart from the beginning, you can make the best use of these queues.
+    “Preemptable” means that jobs submitted to this queue can be stopped and
+    requeued if a higher priority job needs the resources. If the software you
+    are using makes use of checkpointing, i.e., writing out intermediate data so
+    the job doesn't need to restart from the beginning, you can make the best
+    use of these queues.
 
-The following are the queues available on R2:
-
-| Queue     | Node Type | Max Nodes/User | Time limit (days) | Preemptable? | Total nodes |
-| :---      | :---      | :---           | :---              | :---         | :---        |
-| defq      | CPU       | 8              | infinite          | No           | 21          | 
-| shortq    | CPU       | 35             | 2                 | Yes          | 35          | 
-| gpuq      | GPU       | 2              | infinite          | No           | 4           |
-| shortgpuq | GPU       | 5              | 7                 | Yes          | 5           |
-
-!!! info "R2 hardware specifications"
-
-    Each CPU and GPU node has two Intel Xeon E5-2680 v4 14 core 2.4GHz processors, for a total of 28 cores per node. CPU nodes have 192GB and GPU nodes have 256GB of memory. Additionally, each GPU node has 2 NVIDIA Tesla NVLink P100 GPUs.
-
-The following are the queues available on Borah:
 
 | Queue    | Node Type | Max Nodes/User | Time limit (days) | Preemptable? | Total nodes |
 | :---     | :---      | :---           | :---              | :---         | :---        |
-| bsudfq   | CPU       | 8              | inifinite         | No           | 40          |
-| short    | CPU       | 72             | 2                 | Yes          | 72          |
-| gpu      | GPU       | 2              | infinite          | No           | 4           |
+| bsudfq   | CPU       | 8              | 28                | No           | 38          |
+| short    | CPU       | 39             | 7                 | Yes          | 39          |
+| gpu      | GPU       | 2              | 7                 | No           | 4           |
 | shortgpu | GPU       | 5              | 7                 | Yes          | 5           |
-| bigmem   | CPU (768 GB of RAM)| 1     | infinite          | No           | 1           |
+| bigmem   | CPU (768 GB of RAM)| 1     | 7                 | No           | 1           |
 
 !!! info "Borah hardware specifications"
 
-    Each CPU and GPU node has two Intel Xeon Gold 6252 2.1G 24 core processors, for a total of 48 cores per node. CPU nodes have 192GB and GPU nodes have 384GB of memory. Additionally, each GPU node has 2 NVIDIA Tesla V100 GPUs.
+    Each CPU and GPU node has two Intel Xeon Gold 6252 2.1G 24 core processors,
+    for a total of 48 cores per node. CPU nodes have 192GB and GPU nodes have
+    384GB of memory. Additionally, each GPU node has 2 NVIDIA Tesla V100 GPUs.
 
 !!! note "Note about shortgpu queue"
 
-    The shortgpu partition contains 8 NVidia V100 gpus and 8 NVidia Quadro RTX8000 gpus. If you would like to run on a specific gpu type, you can add the following to your slurm scripts:
+    The shortgpu partition contains 8 NVidia V100 gpus and 8 NVidia Quadro
+    RTX8000 gpus. If you would like to run on a specific gpu type, you can add
+    the following to your slurm scripts:
     for one RTX8000:
 
     `--gres=gpu:RTX8000:1`
@@ -70,95 +80,190 @@ The following are the queues available on Borah:
 
     `--gres=gpu:1`
 
-## Nodes and Cores
+## Requesting Resources
 
-The next parameter is for specifying the number of nodes wanted and is set with `#SBATCH -N (number of nodes)`. 
-This is used if CPU nodes are requested and tells Slurm how many overall nodes you want your job to use. 
-The `#SBATCH -n (tasks per node)` parameter is used in conjunction with the number of nodes parameter to tell Slurm how many tasks (aka CPU cores) you want to use on each node. 
-This can be used to request more cores than available on one node by setting the nodes count to greater than one and the tasks count to the number of cores per node (28 on R2, 48 on Borah).
+In order to know how many resources you should request for your job, it helps to
+understand a little about the different resources.
 
-The equivalent command for GPUs is `#SBATCH --gres=gpu:(number of GPUs requested)`. 
-This parameter can be set to a maximum of two on R2, and a maximum of one on Borah.
+!!! info "Node vs. CPU vs. task"
 
-## Naming, Timing, and Output
+    A **node** is a computer or server within the cluster, e.g., the login node
+    or a compute node like cpu101.
+    When we talk about the node we are talking about the entire machine; this
+    encompasses the memory, network card, CPU(s), GPU(s), hard drive, etc.
 
-The last three standard parameters you’ll need are `#SBATCH -t DD-HH:MM:SS, #SBATCH -o (output file name), and #SBATCH -J (job name)`. 
-The first of these is mandatory and tells Slurm how much time you’re requesting for your job. 
-This is formatted as DD-HH:MM:SS. 
-So, for example, running a job for one day and twenty hours would be 1-20:00:00, running for twelve hours and fifty minutes would be 12:50:00, and running for a half hour would be 00:30:00. 
-This is the maximum amount of time you expect your job to run; if a job runs for beyond this specified amount, the scheduler will terminate it. 
-If you have a job that looks like it will exceed the amount of time you’ve specified for it here, please reach out to Research Computing so we can add more time to the job to avoid it being cancelled. 
-The second parameter is the optional output file specifier. 
-This will redirect any terminal output that the job produces to a file with the name you put in the parameter; if this parameter is left out, the output will go into a text file named slurm-(job number).out. 
-The last parameter is the mandatory job name that shows up when the Slurm queue is viewed.
+    A **CPU**, generally, is the processing unit of a computer, but slurm kind
+    of fudges this definition to be the sockets, cores, or threads of a CPU.
+    [This Slurm resource](https://slurm.schedmd.com/cpu_management.html) provides
+    more information.
 
-One more parameter that warrants mention is `#SBATCH --exclusive`. 
-Using this parameter will claim the entire compute node (and all its resources) for just your job, stopping other jobs from running on the node. 
-This is useful if you’re actually utilizing all 28 or 48 (on R2 and Borah, respectively) cores on a node and/or a significant portion of the node’s memory, but it can make the job take a little bit longer to get through the queue.
+    A **task** is a part of a job parallelized using a distributed memory model,
+    e.g., using MPI.
+    For an overview of shared and distributed memory models, please check out
+    [Cornell Virtual Workshop: Memory Access](https://cvw.cac.cornell.edu/parallel/memory-access/index).
 
-## What to Run
+If you are not sure how many resources to request, in general,  we recommend
+requesting 1 node, 1 task, and a full node's worth of cores working on that
+task. For Borah, this would look like this:
 
-The other component of an sbatch script is a set of arbitrary commands that will be run after the parameters are parsed. 
-These can be essentially any shell commands you could normally run, though obviously only some are useful. 
-As an example, here’s a full sbatch script for an MPI job running a Mandelbrot fractal generator across 28 CPU cores on a single CPU node:
-
-
-``` bash title="slurm_mandelbrot.sh"
-#!/bin/bash
-#SBATCH -J MPI_TEST # job name
-#SBATCH -o log_slurm.o%j # output and error file name (%j expands to jobID)
-#SBATCH -n 28 # total number of tasks requested
-#SBATCH -N 1 # number of nodes you want to run on
-#SBATCH -p defq # queue (partition)
-#SBATCH -t 12:00:00 # run time (hh:mm:ss) - 12.0 hours in this example.
-
-module load slurm
-module load gcc
-module load mpich/ge/gcc/64/3.2.1
-mpirun -np 28 ./mandelbrot
+```
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=48
 ```
 
-As another example, here’s a full sbatch script for a CUDA job running a Mandelbrot fractal generator on a single GPU node:
+If you are using a distributed memory framework, e.g., MPI, you may want to use
+more tasks with one or more core(s) per task.
+This can also distribute your job across multiple nodes by setting the nodes
+count to greater than one and the tasks count to greater than the number of cores
+per node.
+We recommend scaling multi-node jobs in increments of the number of cores per
+node; e.g., request a number of cores that can be evenly divided by the number
+of cores per node ($n_{cores/node} \times N$).
 
-``` bash title="slurm_cumandy.sh"
-#!/bin/bash
-#SBATCH -J CUDA_TEST # job name
-#SBATCH -o log_slurm.o%j # output and error file name (%j expands to jobID)
-#SBATCH -n 1 # total number of tasks requested
-#SBATCH -N 1 # number of nodes you want to run on
-#SBATCH -p gpuq # queue (partition) -- defq, eduq, gpuq, shortq
-#SBATCH --gres=gpu:1 # request one gpu
-#SBATCH -t 12:00:00 # run time (hh:mm:ss) - 12.0 hours in this example.
-
-module load slurm
-module load cuda10.0
-
-# Execute the program
-./cudaMandy
+In addtion to nodes and cores, you can also request that your job run on a GPU.
+To request a GPU, add the following to your submission script:
+```
+#SBATCH --gres=gpu:(number of GPUs requested)
 ```
 
-The first parts of these scripts are the parameters we discussed above. 
-Below those begin the shell commands; the first of these, the module load commands, are just loading certain modules into the environment. 
-These modules are the Slurm scheduler (slurm), the gcc compiler (gcc), an MPI framework called “mpich” (mpich/ge/gcc/64/3.2.1), and the CUDA version 10 toolkit (cuda10.0). 
-Note that Slurm is necessary in both (and in all) sbatch scripts as this loads the job scheduler. 
-gcc is also required for many programs to run correctly – mpich and CUDA are job dependent, however. 
-In the first example, the `mpirun -np 28 ./mandelbrot` command invokes the loaded mpich MPI interface and runs the program with it across 28 cores. 
-In the second example, the `./cudaMandy` command runs a program with CUDA that generates the fractal using a GPU on a GPU node. 
-In your own scripts, the section with commands like the mpirun is where you would, for example, run your parallel R or Python script that’s meant to utilize the computing resources. 
-This is also where you’d invoke commands from programs like GROMACS, BLAST, or whatever software you’re using.
+## Timing, Output, and Naming
 
-These other commands will differ from job to job. 
-As can be seen, these scripts are somewhat nuanced, so contact Research Computing if you need any help putting them together.
+The scheduler relies on the the submission script to estimate how long a job
+will take. You can set a time limit for your job with the following line:
+```
+#SBATCH -t DD-HH:MM:SS
+```
+For example, one day and twenty hours would be 1-20:00:00, twelve hours and
+fifty minutes would be 12:50:00, and a half hour would be 00:30:00.
+This time limit is a hard stop for your job, and when it is reached, your job
+will be terminated regardless of whether your script has finished.
+Ideally, you want to choose a time limit that is just longer than you expect
+your job to run.
+If no time limit is specified, a default of twelve hours will be set.
+If you have a running job that needs more time, you can update the job's time
+limit by running:
+```bash
+scontrol update job JOBID timelimit=NEWTIMELIMIT
+```
+where `JOBID` is the job id of the job you want to update and `NEWTIMELIMIT` is
+the new time limit.
 
-Once your script is ready, use the command `sbatch (job script filename)` to run the job. 
-You will get an output message saying `Submitted batch job (job number)`, which tells you that your job was successfully submitted.
+If you want to change the name of the file where the script output is logged,
+you can use the following line:
+```
+#SBATCH -o (output file name)
+```
+This will redirect any terminal output that the job produces to a file in the
+current working directory with the name you specify; if this parameter is
+omitted, the output is logged to a text file named `slurm-(job number).out`.
+
+If you want to give your job a unique name to identify it in the `squeue`
+output, you can do so by adding the following line to your script:
+```
+#SBATCH -J (job name)
+```
+
+Finally, if you want to make sure that your job has exclusive access to an
+entire node--regardless of how many resources it is using--you can add the
+following line to your submission script:
+```
+#SBATCH --exclusive
+```
+This will claim the entire compute node (and all its resources) for just your
+job, stopping other jobs from running on the node. This is useful if you’re
+actually utilizing all 48 cores (on Borah) and/or a significant portion of the
+node’s memory, but it can make the job take a little longer to get through
+the queue.
+
+## Example submission scripts
+
+The final component of an sbatch script is the set of commands that will be run
+after the slurm parameters are parsed.
+These can be any shell command, e.g., loading modules, setting environment
+variables, or calling executables.
+Let's say you've created an MPI executable (maybe your code is something like
+[hello_world.c](https://mpitutorial.com/tutorials/mpi-hello-world/)); you could
+use the following script to submit this job to the scheduler requesting 48 cores
+on a single CPU node:
+
+```bash title="hello_world_slurm.sh"
+#!/bin/bash
+#SBATCH -J HELLOWORLD    # job name
+#SBATCH -o log_slurm.o%j # output and error file name (%j expands to jobID)
+#SBATCH -n 48            # total number of tasks requested
+#SBATCH -N 1             # number of nodes you want to run on
+#SBATCH -p bsudfq        # queue (partition)
+#SBATCH -t 00:05:00      # run time (hh:mm:ss) - 5 minutes in this example
+
+# (optional) Print some debugging information
+echo "Date              = $(date)"
+echo "Hostname          = $(hostname -s)"
+echo "Working Directory = $(pwd)"
+echo ""
+echo "Number of Nodes Allocated  = $SLURM_JOB_NUM_NODES"
+echo "Number of Tasks Allocated  = $SLURM_NTASKS"
+echo ""
+
+# Run the program
+module load borah-base openmpi/4.1.3/gcc/12.1.0
+mpirun -n 48 ./hello_world
+```
+
+As another example, here’s a job script requesting a GPU node and then running
+`nvidia-smi` to see information about the GPU:
+
+```bash title="gpu_slurm.sh"
+#!/bin/bash
+#SBATCH -J NVIDIASMI        # job name
+#SBATCH -o log_slurm.o%j    # output and error file name (%j expands to jobID)
+#SBATCH -c 1                # cpus per task
+#SBATCH -N 1                # number of nodes you want to run on
+#SBATCH --gres=gpu:1        # request a gpu
+#SBATCH -p gpu              # queue (partition)
+#SBATCH -t 00:05:00         # run time (hh:mm:ss)
+
+# (optional) Print some debugging information
+echo "Date              = $(date)"
+echo "Hostname          = $(hostname -s)"
+echo "Working Directory = $(pwd)"
+echo ""
+echo "Number of Nodes Allocated  = $SLURM_JOB_NUM_NODES"
+echo "Number of Tasks Allocated  = $SLURM_NTASKS"
+echo "GPU Allocated              = $SLURM_JOB_GPUS"
+echo ""
+nvidia-smi
+```
+
+These commands will differ from job to job.
+If you need any help setting up a submission script, please don't hesitate to
+email us at ResearchComputing@boisestate.edu--we're happy to help!
+
+Once your script is ready, you can submit it using
+```
+sbatch (job script filename)
+```
+You will get an output message saying `Submitted batch job (job number)`, which
+tells you that your job was successfully submitted.
 
 ## Other Useful Slurm Commands
 
-`scancel (job number)` cancels a job based on its number; you can, for obvious reasons, only cancel jobs that you’ve submitted. 
-`squeue` shows the current Slurm queue and all jobs in it. 
-Jobs that have something like `r2-cpu-01` (on R2) or `cpu102` (on Borah) at their far right are jobs that are currently running. 
-If a job has something like `(Resources)` or `(Priority)` on the far right, then it’s currently sitting in the queue waiting to be run. 
-`(Resources)` means that the job has priority over other jobs in the queue and is just waiting on node(s) to become available, while `(Priority)` means that there are other jobs in the queue with a higher priority that must be run before that job will run.
+`scancel (job number)` : cancels a job; you can only cancel your own jobs.
 
-The command `scontrol` also allows for detailed job information to be viewed, and can be used with `scontrol show job (job number)`.
+`squeue` : shows the current Slurm queue and all jobs in it.
+
+`squeue --me` : shows only your jobs in the current Slurm queue.
+
+!!! note "How to read squeue"
+
+    A job that is currently running will have a state (`ST`) code of `R`.
+    The `NODELIST (REASON)` column will tell you what nodes the job is running
+    on, or if it is not yet running, why it is waiting.
+    If a job has something like `(Resources)` or `(Priority)` in that column,
+    then it’s currently sitting in the queue waiting to be run.
+    `(Resources)` means that the job has priority over other jobs in the queue
+    and is just waiting on resources to become available, while `(Priority)`
+    means that there are other jobs in the queue with a higher priority that
+    must be run before that job will run.
+
+`scontrol show job (job number)` : shows detailed job information.

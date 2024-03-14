@@ -11,18 +11,17 @@ nav:
     - 'interactive_sessions.md'
     - 'open_ondemand.md'
     - 'faq.md'
-    - 'Software Specific Guides':
-      - 'conda.md'
-      - 'using_software.md'
-      - 'julia.md'
-      - 'Abyss-Tutorial.md'
-      - 'AlphaFold-Tutorial.md'
-      - 'Gromacs-Tutorial.md'
-      - 'Julia-Tutorial.md'
-      - 'Mathmatica-Tutorial.md'
-      - 'Matlab-Tutorial.md'
-      - 'Moose-Tutorial.md'
-  - 'Computing Resources':
+    - 'hpc_resources.md'
+  - 'Software Specific Guides':
+    - 'conda.md'
+    - 'julia.md'
+    - 'r.md'
+    - 'abyss_tutorial.md'
+    - 'alphafold_tutorial.md'
+    - 'gromacs_tutorial.md'
+    - 'matlab_tutorial.md'
+    - 'moose_tutorial.md'
+  - 'Resources':
     - 'training.md'
     - 'linux.md'
     - 'glossary.md'
@@ -41,6 +40,10 @@ theme:
       name: Switch to light mode
 extra_css:
   - stylesheets/extra.css
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 extra:
   social:
     - icon: fontawesome/solid/envelope
@@ -54,3 +57,6 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.keys
+  - codehilite
+  - pymdownx.arithmatex:
+      generic: true

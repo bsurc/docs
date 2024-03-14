@@ -106,3 +106,4 @@ Replace `input-file-name.i` with the name of the input file you want to run.
     - Engage in collaborative projects or research using MOOSE for practical experience.
 
 Remember, you will need to use an `sbatch` file to run your jobs on Borah. An example file can be found at `/cm/shared/examples/slurm_moose.bash`.
+

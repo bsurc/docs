@@ -104,3 +104,4 @@ julia test.jl
     - Online courses and tutorials to enhance your Julia skills. Visit [Julia Academy](https://juliaacademy.com/).
 
 This combined guide provides you with a step-by-step process for working with Julia on both R2 and Borah, from setting up the IJulia kernel to creating and running a basic script. Whether you're using Julia for scientific computing, data analysis, or machine learning, these instructions will get you started on both platforms.
+
