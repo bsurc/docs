@@ -13,8 +13,8 @@ First, load any of the available Julia modules.
 You can see the available modules using `module avail -i julia` and load the module using `module load julia/<version number here>`.
 Next, load the Julia module, and open a Julia terminal:
 ```bash
-$ module load julia
-$ julia
+module load julia
+julia
 ```
 After these commands, you'll see your prompt change to the Julia terminal:
 ```bash

@@ -55,9 +55,13 @@ By first loading the meta-module, you can query what is available. On **Borah** 
 
 As an example, a user looking for gromacs on **Borah** might try:
 
-`$ module load borah-applications`
+```bash
+module load borah-applications
+```
 
-`$ module avail gromacs`
+```bash
+module avail gromacs
+```
 
 And see the available builds:
 
@@ -70,11 +74,15 @@ gromacs/2022.3/mpich/3.4.3/gcc/12.1.0
 
 From which they decide on the newest build, and the openmpi stack:
 
-`$ module load gromacs/2022.3/openmpi/4.1.3/gcc/12.1.0 `
+```bash
+module load gromacs/2022.3/openmpi/4.1.3/gcc/12.1.0
+```
 
 If they're curious, they can see the whole path:
 
-`$ which gmx_mpi`
+```bash
+which gmx_mpi
+```
 
 ```
 /cm/shared/software/spack/opt/spack/linux-centos7-cascadelake/gcc-12.1.0/gromacs-2022.3-glpifvpytlwhdmxdby2ldmi3unjcigvr/bin/gmx_mpi
@@ -82,6 +90,8 @@ If they're curious, they can see the whole path:
 
 And if they're *really* curious, they can see what it links:
 
-`$ ldd $(which gmx_mpi)`
+```bash
+ldd $(which gmx_mpi)
+```
 
 This will give a complete list of the libraries it uses to satisfy its dependencies, which in this case includes libraries available from the borah-libraries module.
