@@ -13,8 +13,8 @@ First, load any of the available Julia modules.
 You can see the available modules using `module avail -i julia` and load the module using `module load julia/<version number here>`.
 Next, load the Julia module, and open a Julia terminal:
 ```bash
-$ module load julia
-$ julia
+module load julia
+julia
 ```
 After these commands, you'll see your prompt change to the Julia terminal:
 ```bash
@@ -30,11 +30,11 @@ After this, the Julia kernel is installed for you.
 
 Finally, to use Julia in a notebook, navigate to the Jupyter Notebook App on [https://borah-ondemand.boisestate.edu](https://borah-ondemand.boisestate.edu).
 
-![Navigate to the Jupyter Notebook App](images/ood-notebook.png)
+![Navigate to the Jupyter Notebook App](../images/ood-notebook.png)
 
 Once your Jupyter session starts, select the Julia kernel:
 
-![Select the Julia kernel](images/julia-kernel.png)
+![Select the Julia kernel](../images/julia-kernel.png)
 
 ## Julia Batch Script Example
 

@@ -57,7 +57,7 @@ module load matlab
 matlab
 ```
 And the resulting MATLAB GUI will open in a new window as shown here:
-![Borah OnDemand desktop with MATLAB GUI open](images/ood-desktop-matlab.png "Borah OnDemand desktop with MATLAB GUI open")
+![Borah OnDemand desktop with MATLAB GUI open](../images/ood-desktop-matlab.png "Borah OnDemand desktop with MATLAB GUI open")
 
 ## Resources
 
