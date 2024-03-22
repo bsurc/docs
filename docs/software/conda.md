@@ -73,15 +73,16 @@ For example the following output is from a pytorch environment built with CUDA11
 ## Submitting jobs that use python in an environment
 
 Following is an example script to submit a python job to the scheduler.
-```bash conda_slurm.sh
+
+```bash title="conda-slurm.sh"
 #!/bin/bash
-#SBATCH -J python 		    # job name
+#SBATCH -J python         # job name
 #SBATCH -o log_slurm.o%j  # output and error file name (%j expands to jobID)
-#SBATCH -n 1 			        # total number of tasks requested
-#SBATCH -c 48 			      # CPU cores per task
-#SBATCH -N 1 			        # number of nodes you want to run on
-#SBATCH -p bsudfq			    # queue (partition)
-#SBATCH -t 12:00:00 		  # run time (hh:mm:ss) - 12.0 hours in this example.
+#SBATCH -n 1              # total number of tasks requested
+#SBATCH -c 48             # CPU cores per task
+#SBATCH -N 1              # number of nodes you want to run on
+#SBATCH -p bsudfq         # queue (partition)
+#SBATCH -t 12:00:00       # run time (hh:mm:ss) - 12.0 hours in this example.
 
 # Activate the environment
 # Replace environmentName with your environment name
