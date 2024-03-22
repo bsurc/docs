@@ -18,7 +18,7 @@ The services available can be accessed through the tabs at the top of the page.
 
 ![Borah OnDemand dashboard with Files tab highlighted](images/ood-dash-files.png "Borah OnDemand dashboard with Files tab highlighted")
 
-The file explorer tab provides a graphical explorer where you can upload, download, move, copy, delete, and create files and directories. 
+The file explorer tab provides a graphical explorer where you can upload, download, move, copy, delete, and create files and directories.
 There is even a graphical text editor to modify files:
 ![The file dropdown to access the text editor](images/ood-file-edit.png "The file dropdown to access the text editor")
 
@@ -36,7 +36,7 @@ The Job Composer will let you create and submit a slurm job from a template.
 
 Through the "Clusters" tab you can access a terminal (shell) on Borah's login node:
 ![Borah OnDemand dashboard with Clusters tab highlighted](images/ood-dash-shell.png "Borah OnDemand dashboard with Clusters tab highlighted")
-This allows access to Borah without needing to download an ssh client or terminal emulator. 
+This allows access to Borah without needing to download an ssh client or terminal emulator.
 
 ## Interactive Apps
 
@@ -79,5 +79,5 @@ After launching the Jupyter Notebook interactive app and clicking "Connect to Ju
 From here you can select an existing notebook to work in or you can use the "New" button to create a new notebook in an existing kernel:
 ![Jupyter notebook landing page showing 'New' menu](images/ood-jupyter-landing.png "Jupyter notebook landing page showing 'New' menu")
 
-For more information about how to create a custom Jupyter kernel from a conda environment, please read the [using a conda environment with Open OnDemand](conda.md#using-a-conda-environment-with-open-ondemand) section.
-And to use Julia in a Jupyter notebook, please read [Adding the Julia Kernel to OnDemand](julia.md)
+For more information about how to create a custom Jupyter kernel from a conda environment, please read the [using a conda environment with Open OnDemand](software/conda.md#using-a-conda-environment-with-open-ondemand) section.
+And to use Julia in a Jupyter notebook, please read [Adding the Julia Kernel to OnDemand](software/julia.md)

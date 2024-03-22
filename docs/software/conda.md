@@ -67,20 +67,21 @@ Next, create your new environment using a create command as shown above.
 You can verify that the package you've installed in the environment is built with GPU support by running `conda list` with the environment active.
 An appropriate build will often have "gpu" or the CUDA version in the build tag.
 For example the following output is from a pytorch environment built with CUDA11.2 support:
-![pytorch cuda](images/pytorch-cuda.png)
+![pytorch cuda](../images/pytorch-cuda.png)
 
 
 ## Submitting jobs that use python in an environment
 
 Following is an example script to submit a python job to the scheduler.
-```bash
+```bash conda_slurm.sh
 #!/bin/bash
 #SBATCH -J python 		    # job name
-#SBATCH -o log_slurm.o%j    # output and error file name (%j expands to jobID)
-#SBATCH -n 1 			    # total number of tasks requested
-#SBATCH -N 1 			    # number of nodes you want to run on
-#SBATCH -p bsudfq			# queue (partition)
-#SBATCH -t 12:00:00 		# run time (hh:mm:ss) - 12.0 hours in this example.
+#SBATCH -o log_slurm.o%j  # output and error file name (%j expands to jobID)
+#SBATCH -n 1 			        # total number of tasks requested
+#SBATCH -c 48 			      # CPU cores per task
+#SBATCH -N 1 			        # number of nodes you want to run on
+#SBATCH -p bsudfq			    # queue (partition)
+#SBATCH -t 12:00:00 		  # run time (hh:mm:ss) - 12.0 hours in this example.
 
 # Activate the environment
 # Replace environmentName with your environment name
@@ -110,8 +111,8 @@ python -m ipykernel install --user --name ENVIRONMENT_NAME --display-name "PYTHO
 
 Then navigate to the Jupyter Notebook App on [https://borah-ondemand.boisestate.edu](https://borah-ondemand.boisestate.edu):
 
-![Navigate to the Jupyter Notebook App](images/ood-notebook.png)
+![Navigate to the Jupyter Notebook App](../images/ood-notebook.png)
 
 Once your Jupyter session starts, select the kernel you just made (It will be listed under the name you put in `PYTHON ENV NAME` the example below shows a kernel named "climate"):
 
-![Select the right Jupyter kernel](images/jupyter-kernel.png)
+![Select the right Jupyter kernel](../images/jupyter-kernel.png)
