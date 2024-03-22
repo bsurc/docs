@@ -21,10 +21,11 @@ processes then have to compete for resources.
 Jobs scripts can be submitted to the scheduler using the command `sbatch`.
 These job scripts (sometimes called "batch scripts", "sbatch scripts", or
 "submission scripts") start with a header containing slurm parameters; the
-lines will all start with `#SBATCH`. These slurm parameters tell the scheduler
-how to allocate resources, and terminal commands, which are the commands you
-actually want to run: including shell commands, running scripts through other
-programs like R or Python, or calling specific software.
+lines read by sbatch all start with `#SBATCH`.
+These slurm parameters tell the scheduler how to allocate resources,
+and terminal commands, which encompasses what you actually want to run:
+including shell commands, running scripts through other programs like R or
+Python, or calling specific software.
 Here we will discuss the slurm parameters and provide some basic options to help
 you get started, but please see the
 [Slurm sbatch documentation](https://slurm.schedmd.com/sbatch.html) for a
