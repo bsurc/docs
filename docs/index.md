@@ -9,6 +9,15 @@ If you have additional questions after looking through these docs, please don't 
 
 To best resolve your issue, we also recommend reading [How to ask for help effectively](asking_questions.md).
 
+## Office Hours
+
+Puzzled about python? Big data too big? HPC feeling like a hassle?
+Come to Research Computing Services office hours!
+Our staff will be available to help with any questions, issues, or errors.
+
+Please see the calendar below for information about office hours:
+<iframe src="https://calendar.google.com/calendar/embed?height=400&wkst=1&ctz=America%2FBoise&bgcolor=%23ffffff&mode=AGENDA&title&showPrint=0&showCalendars=0&showTitle=0&src=Y18wMGZkNDllOTExMWQ3NGE5ZmIzZWZlYTI4Yjg5Y2ZhMzUwYTc4ZWZmODE0Y2VhNTE0NDViZThjNDAzMWZhMzBhQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%237CB342" style="border-width:0" width="800" height="400" frameborder="0" scrolling="no"></iframe>
+
 ## Troubleshooting & Software Services
 
 Research Computing services include provisioning accounts, troubleshooting and optimizing software, training, assisting with data transfer and storage, and more.
