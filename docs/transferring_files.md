@@ -18,9 +18,12 @@ It’s a built in command with the syntax:
 scp <source file> <dest file>
 ```
 where the source and destination are located on different servers.
-For example, to download a file from Borah to your current directory on your local machine, you would use:
+For example, to download a file called myfile.txt from Borah to your current
+directory on your local machine, you would use:
 
-`(Borah username)@borah-login.boisestate.edu`
+```bash
+scp (Borah username)@borah-login.boisestate.edu:~/myfile.txt .
+```
 
 **Be aware that this process is destructive and will overwrite anything on the destination machine with the same name as the uploaded file.**
 This method should not be used for file transfers in excess of 50 GB – please see “Globus” section below if this is the case.
