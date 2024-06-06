@@ -53,33 +53,53 @@ The following table provides information about the queues on Borah:
 | Queue    | Node Type | Max Nodes/User | Time limit (days) | Preemptable? | Total nodes |
 | :---     | :---      | :---           | :---              | :---         | :---        |
 | bsudfq   | CPU       | 8              | 28                | No           | 38          |
-| short    | CPU       | 39             | 7                 | Yes          | 39          |
-| gpu      | GPU       | 2              | 7                 | No           | 4           |
-| shortgpu | GPU       | 5              | 7                 | Yes          | 5           |
 | bigmem   | CPU (768 GB of RAM)| 1     | 7                 | No           | 1           |
+| short    | CPU       | no limit       | 7                 | Yes          | 39          |
+| gpu              | GPU | 2            | 7                 | No           | 6           |
+| gpu-l40          | GPU | 1            | 7                 | No           | 2           |
+| gpu-p100         | GPU | no limit     | 7                 | No           | 1           |
+| gpu-v100         | GPU | 2            | 7                 | No           | 4           |
+| shortgpu         | GPU | no limit     | 7                 | Yes          | 9           |
+| shortgpu-a30     | GPU | no limit     | 7                 | Yes          | 1           |
+| shortgpu-l40     | GPU | no limit     | 7                 | Yes          | 2           |
+| shortgpu-p100    | GPU | no limit     | 7                 | Yes          | 1           |
+| shortgpu-rtx8000 | GPU | no limit     | 7                 | Yes          | 1           |
+| shortgpu-v100    | GPU | no limit     | 7                 | Yes          | 4           |
+
 
 !!! info "Borah hardware specifications"
 
-    Each CPU and GPU node has two Intel Xeon Gold 6252 2.1G 24 core processors,
-    for a total of 48 cores per node. CPU nodes have 192GB and GPU nodes have
-    384GB of memory. Additionally, each GPU node has 2 NVIDIA Tesla V100 GPUs.
+    The default queue on Borah is `bsudfq`. Each node in this queue has 48 CPU
+    cores and 192GB of memory. See
+    [Borah's Specifications](hpc_resources.md/#specifications) for more information.
 
-!!! note "Note about shortgpu queue"
+!!! note "Note about the gpu and shortgpu queues"
 
-    The shortgpu partition contains 8 NVidia V100 gpus and 8 NVidia Quadro
-    RTX8000 gpus. If you would like to run on a specific gpu type, you can add
-    the following to your slurm scripts:
-    for one RTX8000:
+    The `gpu` and `shortgpu` partitions have heterogeneous node configurations; the
+    `gpu` queue contains nodes with V100 (2/node) and L40 (4/node) GPUs with 48
+    and 64 CPU cores, respectively. The `shortgpu` queue contains, in addition to
+    the nodes in the `gpu` queue, nodes with A30 (2/node), P100 (2/node), and
+    RTX8000 (8/node) GPUs with 64, 28, and 48 CPU cores, respectively.
+    If you would like to run on a specific GPU type, you can add the following
+    to your slurm scripts:
 
-    `--gres=gpu:RTX8000:1`
+    To request a specific GPU type when submitting to the `gpu` or `shortgpu`
+    queue, for example an L40:
 
-    for one V100:
+    `--gres=gpu:L40:1`
 
-    `--gres=gpu:V100:1`
-
-    and for one gpu regardless of type:
+    and for one GPU regardless of type:
 
     `--gres=gpu:1`
+
+    Or you can just submit to the specific GPU queue; e.g., submitting to the
+    `gpu-v100` queue will ensure that you get on a node with a V100 GPU.
+
+To see the CPU cores, memory, and resources of all the nodes in a particular
+queue, you can run the following command:
+```bash
+sinfo -p shortgpu -o "%n %c %m %G"
+```
 
 ## Requesting Resources
 
@@ -105,7 +125,7 @@ understand a little about the different resources.
 
 If you are not sure how many resources to request, in general,  we recommend
 requesting 1 node, 1 task, and a full node's worth of cores working on that
-task. For Borah, this would look like this:
+task. For the default queue on Borah, this request would look like this:
 
 ```
 #SBATCH --nodes=1
