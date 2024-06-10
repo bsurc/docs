@@ -95,8 +95,11 @@ The following table provides information about the queues on Borah:
     Or you can just submit to the specific GPU queue; e.g., submitting to the
     `gpu-v100` queue will ensure that you get on a node with a V100 GPU.
 
-To see the CPU cores, memory, and resources of all the nodes in a particular
-queue, you can run the following command:
+The above table provides information about the specifications of nodes in
+the available queues, but you can also see these resources from the
+command-line using sinfo.
+The following example queries the node name, CPU cores, memory, and resources
+of all the nodes in the `shortgpu` queue:
 ```bash
 sinfo -p shortgpu -o "%n %c %m %G"
 ```
