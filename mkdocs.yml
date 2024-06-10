@@ -23,6 +23,7 @@ nav:
     - 'software/moose.md'
     - 'software/quantumespresso.md'
     - 'software/vasp.md'
+    - 'software/apptainer.md'
   - 'Resources':
     - 'training.md'
     - 'linux.md'
