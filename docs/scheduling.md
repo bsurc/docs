@@ -165,13 +165,22 @@ will be terminated regardless of whether your script has finished.
 Ideally, you want to choose a time limit that is just longer than you expect
 your job to run.
 If no time limit is specified, a default of twelve hours will be set.
-If you have a running job that needs more time, you can update the job's time
-limit by running:
+You can update the job's time limit by running:
 ```bash
 scontrol update job JOBID timelimit=NEWTIMELIMIT
 ```
 where `JOBID` is the job id of the job you want to update and `NEWTIMELIMIT` is
 the new time limit.
+
+!!! note "Updating time limits"
+
+    You will only be able to increase the time limit of a job that is still
+    queued. Once a job is running, you will only be able to _decrease_ the
+    time limit.
+
+    If you need more time on a currently running job, please email us at
+    researchcomputing@boisestate.edu.
+
 
 If you want to change the name of the file where the script output is logged,
 you can use the following line:
