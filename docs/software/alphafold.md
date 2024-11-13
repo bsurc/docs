@@ -1,5 +1,9 @@
 # AlphaFold
 
+!!! warning
+    Currently `alphafold` jobs _must_ be submitted from a `dev-` or `gpu-`
+    session.
+
 AlphaFold is a protein structure prediction system developed by DeepMind. It uses machine learning techniques to accurately predict protein structures, which is an important task in computational biology.
 
 ## How to use
@@ -47,7 +51,7 @@ export DATA_DIR=/bsuscratch/alphafold_data
 # Execute the program:
 run_alphafold.sh -d $DATA_DIR -o $OUTPUT_DIR -m model_1 -f ./input/query.fasta -t 2020-05-14
 ```
-    
+
     Submit the job using:
 ```bash
 sbatch alphafold-slurm.sh
