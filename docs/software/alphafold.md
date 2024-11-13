@@ -1,25 +1,24 @@
 # AlphaFold
 
-AlphaFold is a protein structure prediction system developed by DeepMind. It uses machine learning techniques to accurately predict protein structures, which is an important task in computational biology.
+AlphaFold is a protein structure prediction system developed by DeepMind.
+It uses machine learning techniques to accurately predict protein structures,
+which is an important task in computational biology.
 
 ## How to use
 
 1. Prepare Directories
 
-    Create two new directory for AlphaFold, as well as input and output directories.
+    Create a new directory for running AlphaFold in your scratch directory.
 ```bash
-mkdir alphafoldTest
-mkdir alphafold_output
+cd /bsuscratch/${USER}
+mkdir alphafold_test
 
 cd alphafoldTest
-
-mkdir input
-mkdir output
 ```
 
 2. Prepare Input Files
 
-    You need to create a `query.fasta` file in the `input` directory and put your sequences in it. The content should be in FASTA format, as shown below:
+    Create a `query.fasta` file, which contains your sequence in FASTA format:
 ```bash title="query.fasta"
 >dummy_sequence
 GWSTELEKHREELKEFLKKEGITNVEIRIDNGRLEVRVEGGTERLKRFLEELRQKLEKKGYTVDIKIE
@@ -27,27 +26,29 @@ GWSTELEKHREELKEFLKKEGITNVEIRIDNGRLEVRVEGGTERLKRFLEELRQKLEKKGYTVDIKIE
 
 3. Submit the Job
 
-    Below is the content of an example job submission script. You can use this as a template to create your own job submission script.
+    Below is the content of an example job submission script. You can use this
+    as a template to create your own job submission script.
 ```bash title="alphafold-slurm.sh"
 #!/bin/bash
 #SBATCH -J Alphafold      # job name
 #SBATCH -o log_slurm.o%j  # output and error file name (%j expands to jobID)
 #SBATCH -N 1              # number of nodes you want to run on
-#SBATCH --gres=gpu:2
-#SBATCH -p gpu            # queue (partition) -- bsudfq, eduq, gpuq, shortq
+#SBATCH -c 24
+#SBATCH --gres=gpu:1
+#SBATCH -p gpu            # queue (partition)
 #SBATCH -t 12:00:00       # run time (hh:mm:ss) - 12.0 hours in this example.
 
 # Load the necessary modules
-module load alphafold
+module load alphafold/2
 
 # Set the environment variables
-export OUTPUT_DIR=/bsuscratch/${USER}/alphafold_output
+export OUTPUT_DIR=/bsuscratch/${USER}/alphafold_test
 export DATA_DIR=/bsuscratch/alphafold_data
 
 # Execute the program:
-run_alphafold.sh -d $DATA_DIR -o $OUTPUT_DIR -m model_1 -f ./input/query.fasta -t 2020-05-14
+run_alphafold.sh -d $DATA_DIR -o $OUTPUT_DIR -m monomer -f query.fasta -t 2020-05-14 -n 24
 ```
-    
+
     Submit the job using:
 ```bash
 sbatch alphafold-slurm.sh
@@ -55,7 +56,8 @@ sbatch alphafold-slurm.sh
 
 4. Check the Output
 
-    After the job is finished, you can find the predicted protein structures in the OUTPUT_DIR directory.
+    After the job is finished, you can find the predicted protein structures in
+    a new directory called query.
 
 ## Further Learning
 
