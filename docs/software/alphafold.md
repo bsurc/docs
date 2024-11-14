@@ -13,7 +13,7 @@ which is an important task in computational biology.
 cd /bsuscratch/${USER}
 mkdir alphafold_test
 
-cd alphafoldTest
+cd alphafold_test
 ```
 
 2. Prepare Input Files
