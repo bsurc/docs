@@ -54,6 +54,7 @@ extra:
       name: researchcomputing@boisestate.edu
 copyright: <b>Research Computing</b><br>Riverfront Hall, Suite 319, 1987 W Cesar Chavez Ln, Boise, ID 83725<hr>
 markdown_extensions:
+  - attr_list
   - toc:
       permalink: True
   - admonition
