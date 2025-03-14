@@ -3,7 +3,7 @@ After getting your account from Research Computing, you will typically use a ter
 
 !!! note "Important"
 
-    When connecting to the clusters off campus, using the [Boise State VPN](https://www.boisestate.edu/oit/network/vpn-services/) is required. All active University faculty, staff, and student employees have access to Boise State’s VPN service. Students and affiliates can get access per their instructor's or affiliate sponsor's request. Please reach out to the [Help Desk](https://www.boisestate.edu/oit/assistance/) to request access, or get help using the VPN.
+    When connecting to the clusters off campus, using the [Boise State VPN](https://www.boisestate.edu/oit/network/vpn-services/) is required. All active university faculty, staff, and student employees have access to Boise State’s VPN service. Students and affiliates can get access per their instructor's or affiliate sponsor's request. Please reach out to the [Help Desk](https://www.boisestate.edu/oit/assistance/) to request access, or get help using the VPN.
 
 ### Windows:
 
@@ -17,7 +17,7 @@ Mac and Linux both have built-in terminals, just search "terminal".
 
 ### Web Browser:
 
-Alternatively, you can connect to Borah by using [Open OnDemand](https://bsu-docs.readthedocs.io/en/latest/open_ondemand/#shell-access) in your web browser. This is the best option for mobile devices, like iPads or Chromebooks.
+Alternatively, you can connect to Borah by using [Open OnDemand](open_ondemand.md) in your web browser. This is the best option for mobile devices, like iPads or Chromebooks.
 
 ## Connecting to the cluster
 Once you have installed or located your terminal, you can connect to the cluster as follows:
