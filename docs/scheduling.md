@@ -71,7 +71,7 @@ The following table provides information about the queues on Borah:
 
     The default queue on Borah is `bsudfq`. Each node in this queue has 48 CPU
     cores and 192GB of memory. See
-    [Borah's Specifications](hpc_resources.md/#specifications) for more information.
+    [Borah's Specifications](../hpc_resources/#specifications) for more information.
 
 !!! note "Note about the gpu and shortgpu queues"
 
