@@ -1,6 +1,6 @@
 # Getting an Account
 Connecting to Borah requires an account for that cluster provided by Research Computing.
-To request an account, please email researchcomputing@boisestate.edu with the following information:
+To request an account, please email [researchcomputing@boisestate.edu](mailto:researchcomputing@boisestate.edu?subject=Account%20Request%20for%20[CLUSTER NAME]&body=Hello Research Computing,%0D%0A%0D%0AI would like to request [CLUSTER NAME] access for [REQUESTOR'S NAME] [REQUESTOR'S EMAIL]. This will be used for [RESEARCH OR GRANT INFORMATION] and my PI is [PI NAME].%0D%0A%0D%0A[EMAIL SIGNATURE]%0D%0A%0D%0APlease fill out ALL information requested in brackets. E.x [CLUSTER NAME].) with the following information:
 
   - Name of requestor
   - Cluster you are requesting an account on
@@ -9,8 +9,3 @@ To request an account, please email researchcomputing@boisestate.edu with the fo
   - Email address of requestor
 
 In order to grant access, the HPC administrator will verify that you are a valid user by contacting the project’s PI.
-When on the Boise State campus, the campus clusters can be accessed from most wired computers or from the secured Eduroam Wi-Fi network.
-If you are off campus, a VPN connection must be used.
-The Boise State VPN is a virtual network connection that allows users to be on the internal network from off campus.
-More info on it can be found here: [vpn-services](https://www.boisestate.edu/oit-network/vpn-services/).
-The VPN is only accessible to current employees and student employees of Boise State, so if you need VPN access, please have your faculty advisor/PI contact the help desk to request VPN access on your behalf.

@@ -1,7 +1,7 @@
 # Transferring Files
 
 ## MobaXTerm FTP Browser
-On Windows, if MobaXTerm is being used to connect the cluster, the file browser built into it can be used to quickly upload or download files.
+On Windows, if [MobaXTerm](https://mobaxterm.mobatek.net/) is being used to connect the cluster, the file browser built into it can be used to quickly upload or download files.
 Once logged into the cluster, a view will appear on the left hand side of the screen showing a list of files.
 To download, click a file to select it and then click the blue download arrow at the top of where the files are displayed.
 Multiple files can be downloaded at once by holding the control key and selecting multiple files and then pressing the same download button.
