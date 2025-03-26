@@ -24,7 +24,7 @@ nav:
     - 'software/quantumespresso.md'
     - 'software/vasp.md'
     - 'software/apptainer.md'
-    - 'software/c_cpp.md'
+    - 'software/c.md'
   - 'Resources':
     - 'training.md'
     - 'linux.md'
