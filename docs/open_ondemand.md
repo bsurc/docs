@@ -85,7 +85,7 @@ And to use Julia in a Jupyter notebook, please read [Adding the Julia Kernel to 
 ### VS Code-Server
 
 When using an IDE on Borah, please use the VS Code Server Interactive App. 
-!!! warning "Connecting from a different IDE starts multiple background processes that slow down the login node. Please use this app when you need an IDE."
+!!! warning "Connecting directly to Borah using an IDE starts multiple background processes that slow down the login node. Please use the OnDemand VSCode app when you need an IDE."
 ![VS Code server setting creation page](images/ood-vscode-creation.png "VS Code server setting creation page")
 
 After launching the VS Code session, it may take some time for a link to be generated. After clicking on the link to start the live session, you will be put in a new tab that is running the VS Code Server.
