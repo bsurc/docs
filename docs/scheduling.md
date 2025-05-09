@@ -215,8 +215,7 @@ The final component of an sbatch script is the set of commands that will be run
 after the slurm parameters are parsed.
 These can be any shell command, e.g., loading modules, setting environment
 variables, or calling executables.
-Let's say you've created an MPI executable (maybe your code is something like
-[hello_world.c](https://mpitutorial.com/tutorials/mpi-hello-world/)); you could
+Let's say you've created an [MPI executable](software/c_cpp.md); you could
 use the following script to submit this job to the scheduler requesting 48 cores
 on a single CPU node:
 

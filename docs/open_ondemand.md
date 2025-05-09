@@ -81,3 +81,11 @@ From here you can select an existing notebook to work in or you can use the "New
 
 For more information about how to create a custom Jupyter kernel from a conda environment, please read the [using a conda environment with Open OnDemand](software/conda.md#using-a-conda-environment-with-open-ondemand) section.
 And to use Julia in a Jupyter notebook, please read [Adding the Julia Kernel to OnDemand](software/julia.md)
+
+### VS Code-Server
+
+When using an IDE on Borah, please use the VS Code Server Interactive App. 
+!!! warning "Connecting directly to Borah using an IDE starts multiple background processes that slow down the login node. Please use the OnDemand VSCode app when you need an IDE."
+![VS Code server setting creation page](images/ood-vscode-creation.png "VS Code server setting creation page")
+
+After launching the VS Code session, it may take some time for a link to be generated. After clicking on the link to start the live session, you will be put in a new tab that is running the VS Code Server.
