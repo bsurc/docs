@@ -37,6 +37,23 @@ This lets you know that your "base" environment is active.
 
 Now that you've installed mamba/conda, let's create an environment.
 
+!!! warning
+
+    Don't create conda environments or install packages on the login node.
+    You can tell which node you're on by looking at your terminal prompt.
+    If your prompt shows you are on the login node (e.g.,
+    `[username@borah-login]$`), make sure to check out an interactive session
+    using the command `dev-session` before installing.
+
+The general command to create an environment is as follows:
+```bash
+mamba create -n ENVIRONMENTNAME -c CHANNEL PACKAGE1 PACKAGE2
+```
+The environment name can be whatever you like, the channel is one from
+[Anaconda.org](https://anaconda.org/) (common channels are conda-forge or
+bioconda), and the package names are whatever packages you want in that
+environment. For example:
+
 The following command creates an environment called "climate" that pulls from the conda-forge channel with the packages matplotlib and numpy:
 ```bash
 mamba create -n climate -c conda-forge matplotlib numpy
@@ -117,3 +134,32 @@ Then navigate to the Jupyter Notebook App on [https://borah-ondemand.boisestate.
 Once your Jupyter session starts, select the kernel you just made (It will be listed under the name you put in `PYTHON ENV NAME` the example below shows a kernel named "climate"):
 
 ![Select the right Jupyter kernel](../images/jupyter-kernel.png)
+
+## Moving your conda installation to scratch
+
+Conda environments can get quite large and can exceed your home directory quota.
+In this situation you may want to move your conda installation to your scratch.
+You can relocate your `miniforge3` directory to your scratch space using the
+following steps:
+
+1. Make a `miniforge3` directory in your scratch space:
+```bash
+mkdir ~/scratch/miniforge3
+```
+
+2. Copy over your existing data. (This may take several minutes if your
+        `miniforge3` directory is large.):
+```bash
+rsync -aAvP ~/miniforge3/* ~/scratch/miniforge3
+```
+
+3. Remove your current `miniforge3` directory:
+```bash
+rm -rf ~/miniforge3
+```
+4. Create a link to your new `miniforge3` directory:
+```bash
+ln -s ~/scratch/miniforge3 ~/miniforge3
+```
+
+And that's it--you can continue using conda as before!
