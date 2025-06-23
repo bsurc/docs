@@ -37,6 +37,23 @@ This lets you know that your "base" environment is active.
 
 Now that you've installed mamba/conda, let's create an environment.
 
+!!! warning
+
+    Don't create conda environments or install packages on the login node.
+    You can tell which node you're on by looking at your terminal prompt.
+    If your prompt shows you are on the login node (e.g.,
+    `[username@borah-login]$`), make sure to check out an interactive session
+    using the command `dev-session` before installing.
+
+The general command to create an environment is as follows:
+```bash
+mamba create -n ENVIRONMENTNAME -c CHANNEL PACKAGE1 PACKAGE2
+```
+The environment name can be whatever you like, the channel is one from
+[Anaconda.org](https://anaconda.org/) (common channels are conda-forge or
+bioconda), and the package names are whatever packages you want in that
+environment. For example:
+
 The following command creates an environment called "climate" that pulls from the conda-forge channel with the packages matplotlib and numpy:
 ```bash
 mamba create -n climate -c conda-forge matplotlib numpy
