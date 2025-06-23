@@ -117,3 +117,32 @@ Then navigate to the Jupyter Notebook App on [https://borah-ondemand.boisestate.
 Once your Jupyter session starts, select the kernel you just made (It will be listed under the name you put in `PYTHON ENV NAME` the example below shows a kernel named "climate"):
 
 ![Select the right Jupyter kernel](../images/jupyter-kernel.png)
+
+## Moving your conda installation to scratch
+
+Conda environments can get quite large and can exceed your home directory quota.
+In this situation you may want to move your conda installation to your scratch.
+You can relocate your `miniforge3` directory to your scratch space using the
+following steps:
+
+1. Make a `miniforge3` directory in your scratch space:
+```bash
+mkdir ~/scratch/miniforge3
+```
+
+2. Copy over your existing data. (This may take several minutes if your
+        `miniforge3` directory is large.):
+```bash
+rsync -aAvP ~/miniforge3/* ~/scratch/miniforge3
+```
+
+3. Remove your current `miniforge3` directory:
+```bash
+rm -rf ~/miniforge3
+```
+4. Create a link to your new `miniforge3` directory:
+```bash
+ln -s ~/scratch/miniforge3 ~/miniforge3
+```
+
+And that's it--you can continue using conda as before!
