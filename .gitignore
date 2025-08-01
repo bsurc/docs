@@ -17,3 +17,5 @@
 # Built documentation
 site/*
 
+# Mac stuff
+.DS_Store
