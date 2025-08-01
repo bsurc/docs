@@ -1,41 +1,109 @@
 # Logging In
-After getting your account from Research Computing, you will typically use a terminal to connect to the cluster via Secure Shell (ssh). The process for using the terminal varies depending on your operating system:
+After getting your account from Research Computing, you can navigate to [https://ondemand.boisestate.edu](https://ondemand.boisestate.edu) and log in with your Boise State username and password.
 
+Once connected to Borah through OnDemand, you can access a terminal, view your
+files, access an IDE or Jupyter notebook, and much more!
+[More information about OnDemand](open_ondemand.md).
+
+## SSH
+To use a terminal to connect to the cluster via Secure Shell (SSH) you will need
+to set up your SSH keys and be connected to the Boise State network.
 !!! warning "Important VPN Notice"
 
-    When connecting to the clusters while off campus, using the [Boise State VPN](https://www.boisestate.edu/oit/network/vpn-services/) is required. All active university faculty, staff, and student employees have access to Boise State’s VPN service. Students and affiliates can get access per their instructor's or affiliate sponsor's request. Please reach out to the [Help Desk](https://www.boisestate.edu/oit/assistance/) to request access, or get help using the VPN.
+    You can only connect to the cluster via SSH while on campus or connected to the [Boise State VPN](https://www.boisestate.edu/oit/network/vpn-services/).
+    All active university faculty, staff, and student employees have access to Boise State’s VPN service.
+    Students and affiliates can get access per their instructor's or affiliate sponsor's request.
+    Please reach out to the [Help Desk](https://www.boisestate.edu/oit/assistance) to request access, or get help using the VPN.
 
-### Windows:
+### Terminal
+Your terminal application varies depending on your operating system:
 
-There are many options, but we recommend MobaXTerm for terminal access on Windows. Go to the [MobaXTerm download page](https://mobaxterm.mobatek.net/download.html) and download the “Home” edition of MobaXTerm.
+#### Windows:
+
+There are many options, but we recommend MobaXTerm for terminal access on Windows.
+Go to the [MobaXTerm download page](https://mobaxterm.mobatek.net/download.html) and download the “Home” edition of MobaXTerm.
 This software is an emulator for a Linux shell that will allow you to utilize a Linux shell on Windows.
 There’s a tutorial available on the [MobaXterm demo page](https://mobaxterm.mobatek.net/demo.html).
 
-### Mac and Linux:
+#### Mac and Linux:
 
 Mac and Linux both have built-in terminals, just search "terminal".
 
-### Web Browser or IDE:
+### Setting up your SSH keys
+Once you have installed or located your terminal, the next step is to set up
+your SSH keys.
+SSH keys are tied to a single computer, so if you access Borah from multiple
+computers (e.g. laptop, home PC), you will need to do this process for each.
+However, you only need to add keys once for each machine.
 
-Alternatively, you can connect to Borah by using [Open OnDemand](open_ondemand.md) in your web browser. This is the best option for mobile devices, like iPads or Chromebooks.
+1. Open your terminal (on MobaXTerm select "Start Local Terminal") and check
+whether you already have SSH keys by listing the contents of the `.ssh` directory:
+    ```bash
+    ls ~/.ssh
+    ```
+    If you see something like `id_rsa` (private key) and `id_rsa.pub` (public
+    key) in that that folder, you already have SSH keys and don't need to
+    regenerate the keys.
 
-For using an IDE on Borah, please use the Open OnDemand interactive app: [VS Code-Server](open_ondemand.md#vs-code-server).
+2. Generate SSH keys for your local machine:
+    ```bash
+    ssh-keygen
+    ```
+    This command has many options, including supplying a passphrase to protect
+    your private key, but it is not mandatory. To accept the default settings,
+    press ++enter++ without specifying a filename.
 
+    !!! warning "Security Warning"
 
-## Connecting to the cluster
-Once you have installed or located your terminal, you can connect to the cluster as follows:
+        If you do not protect your private key with a passphrase, anyone with
+        access to your computer could SSH to your account on Borah.
+        Do not set up SSH keys on shared computers.
 
-1. Open the terminal and type `ssh -XC (your Borah username)@borah-login.boisestate.edu` for Borah.
+    By default, the key files will be stored in `~/.ssh/id_rsa` and
+    `~/.ssh/id_rsa.pub` on your local machine.
+
+3. Copy your public key. Print the contents of your public key:
+    ```bash
+    cat ~/.ssh/id_rsa.pub
+    ```
+    The output will look something like this:
+    ```
+    ssh-rsa XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    XXXXXXXXXXXXXXXXX= user@localmachine
+    ```
+    Select and copy the output.
+
+4. In your browser, navigate to [https://ondemand.boisestate.edu](https://ondemand.boisestate.edu) and log in with your Boise State username and password.
+
+5. Once logged on to OnDemand, go to "Clusters" on the top toolbar.
+    Click "Borah Shell Access" and you will be able to see the terminal.
+
+6. On Borah, make a directory in your home called `.ssh` and open a
+    file called `authorized_keys`:
+    ```bash
+    mkdir ~/.ssh
+    nano ~/.ssh/authorized_keys
+    ```
+    Paste the public key you copied from your local computer into this file.
+
+    !!! note "Navigating Nano"
+
+        To exit nano, press ++control++ + ++x++, press ++y++ for yes when asked
+        if you want to save, and hit ++enter++ when it prompts for the filename.
+
+7. And that's it--your key is added! To test if it is working, in your local
+    terminal try to SSH to Borah:
+    ```bash
+    ssh -XC (your Borah username)@borah-login.boisestate.edu
+    ```
 
     !!! note "Reminder"
 
-        If you are off campus, you need to be connected to the [VPN](https://www.boisestate.edu/oit-network/vpn-services/) in order to access Borah.
+        If you are off campus, you need to be connected to the 
+        [VPN](https://www.boisestate.edu/oit-network/vpn-services/) in order to
+        access Borah via SSH.
 
-2. Enter the password provided to you by Research Computing.
-
-    !!! info
-
-        Your password will not be shown as you type it, so it’s normal to see an empty prompt even though you are entering characters.
-
-3. You will now be connected to the cluster.
-If it’s your first time connecting, use the `passwd` command to change your password.
+You should now be connected to the cluster!

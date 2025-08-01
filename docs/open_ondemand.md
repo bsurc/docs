@@ -1,10 +1,9 @@
 # Open OnDemand
 
 Open OnDemand is a web portal that provides a graphical user interface (GUI) to a supercomputer cluster.
-This open-source project is developed and maintained by the Ohio Supercomputer Center (OSC); you can learn more at  [https://openondemand.org/](https://openondemand.org/).
+This open-source project is developed and maintained by the Ohio Supercomputer Center (OSC); you can learn more at [https://openondemand.org/](https://openondemand.org/).
 
-You can access the Open OnDemand portal for Borah at [https://borah-ondemand.boisestate.edu](https://borah-ondemand.boisestate.edu).
-(You'll need to be on VPN and log in with your Borah username and password.)
+You can access the Open OnDemand portal for Borah at [https://ondemand.boisestate.edu](https://ondemand.boisestate.edu).
 
 ![borah-ondemand login screen](images/ood-login.png "Borah OnDemand login screen")
 
@@ -84,7 +83,7 @@ And to use Julia in a Jupyter notebook, please read [Adding the Julia Kernel to 
 
 ### VS Code-Server
 
-When using an IDE on Borah, please use the VS Code Server Interactive App. 
+When using an IDE on Borah, please use the VS Code Server Interactive App.
 !!! warning "Connecting directly to Borah using an IDE starts multiple background processes that slow down the login node. Please use the OnDemand VSCode app when you need an IDE."
 ![VS Code server setting creation page](images/ood-vscode-creation.png "VS Code server setting creation page")
 
