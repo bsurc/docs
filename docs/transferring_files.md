@@ -1,7 +1,7 @@
 # Transferring Files
 
 ## MobaXTerm FTP Browser
-On Windows, if [MobaXTerm](https://mobaxterm.mobatek.net/) is being used to connect the cluster, the file browser built into it can be used to quickly upload or download files.
+On Windows, if [MobaXTerm](https://mobaxterm.mobatek.net/){:target="_blank"} is being used to connect the cluster, the file browser built into it can be used to quickly upload or download files.
 Once logged into the cluster, a view will appear on the left hand side of the screen showing a list of files.
 To download, click a file to select it and then click the blue download arrow at the top of where the files are displayed.
 Multiple files can be downloaded at once by holding the control key and selecting multiple files and then pressing the same download button.
@@ -11,7 +11,7 @@ To upload files, click the green upload arrow at the top of where files are disp
 This method should not be used for file transfers in excess of 50 GB – please see “Globus” section below if this is the case.
 
 ## Secure Copy Protocol (scp)
-[scp](https://linux.die.net/man/1/scp) is an alternative to the MobaXTerm
+[scp](https://linux.die.net/man/1/scp){:target="_blank"} is an alternative to the MobaXTerm
 method that can be used if on Mac or Linux.
 It’s a built in command with the syntax:
 ```bash
@@ -41,7 +41,7 @@ When you do this, you will give your endpoint a name and search for that endpoin
 While we give some basic instructions below, please email researchcomputing@boisestate.edu if you want to use Globus to share data on your computer with an outside collaborator.
 
 ### Log in to Globus Using Your Boise State Credentials
-1. Go to [www.globus.org](https://www.globus.org)
+1. Go to [www.globus.org](https://www.globus.org){:target="_blank"}
 
 2. Click Login (upper right)
 
@@ -64,14 +64,14 @@ Or, if your data is on your desktop, see instructions “C. Installing a Persona
 - Borah-DTN (connected to Borah at C3 in Idaho Falls)
 
 ### Using Globus Personal Endpoint to Transfer Data from Your Desktop to Existing Endpoints
-1. Install Globus Personal Connect by going to: [https://www.globus.org/globus-connect-personal](https://www.globus.org/globus-connect-personal)
-    - Windows: [https://docs.globus.org/how-to/globus-connect-personal-windows](https://docs.globus.org/how-to/globus-connect-personal-windows)
-    - macOS:   [https://docs.globus.org/how-to/globus-connect-personal-mac](https://docs.globus.org/how-to/globus-connect-personal-mac)
-    - Linux:   [https://docs.globus.org/how-to/globus-connect-personal-linux](https://docs.globus.org/how-to/globus-connect-personal-linux)
+1. Install Globus Personal Connect by going to: [https://www.globus.org/globus-connect-personal](https://www.globus.org/globus-connect-personal){:target="_blank"}
+    - Windows: [https://docs.globus.org/how-to/globus-connect-personal-windows](https://docs.globus.org/how-to/globus-connect-personal-windows){:target="_blank"}
+    - macOS:   [https://docs.globus.org/how-to/globus-connect-personal-mac](https://docs.globus.org/how-to/globus-connect-personal-mac){:target="_blank"}
+    - Linux:   [https://docs.globus.org/how-to/globus-connect-personal-linux](https://docs.globus.org/how-to/globus-connect-personal-linux){:target="_blank"}
 2. Log in using Boise State username and password. **NOTE:** Do not mark computer as having sensitive personal files.
 3. Follow the instructions of step 2, except change the Research Share collection to the new personal collection that was created when setting up Globus Personal Connect.
 
-For more information, visit Globus’s documentation contents page [https://docs.globus.org/how-to/](https://docs.globus.org/how-to/) or email researchcomputing@boisestate.edu.
+For more information, visit Globus’s documentation contents page [https://docs.globus.org/how-to/](https://docs.globus.org/how-to/){:target="_blank"} or email researchcomputing@boisestate.edu.
 
 ## Rclone
 `rclone` is a command-line program that syncs files and directories between different cloud storage providers or between your local machine and a cloud provider.
@@ -102,6 +102,6 @@ Here's a simple example of how `rclone` could be used to synchronize a local dir
     This command will ensure that the contents of the local directory and the remote Google Drive folder are identical, copying any new or modified files as needed.
 
 
-[RClone Installation](https://rclone.org/install/)
+[RClone Installation](https://rclone.org/install/){:target="_blank"}
 
-[RClone Documentation](https://rclone.org/docs/)
+[RClone Documentation](https://rclone.org/docs/){:target="_blank"}
