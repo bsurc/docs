@@ -1,6 +1,6 @@
 # Apptainer
 
-[Apptainer](https://apptainer.org) is a containerization tool specifically
+[Apptainer](https://apptainer.org){:target="_blank"} is a containerization tool specifically
 designed for HPC systems.  The HPC adminstrators can build a container if it is
 the right fit for your software stack.  This is typically the case if your
 software has complex dependencies, or requires very specific versions of tools
@@ -40,6 +40,6 @@ argument to apptainer:
 
 ## Further Reading
 
-The [Apptainer Documentation](https://apptainer.org/docs/user/latest/) has more
+The [Apptainer Documentation](https://apptainer.org/docs/user/latest/){:target="_blank"} has more
 information for users, and please email
 [us](mailto:researchcomputing@boisestate.edu) with any questions.

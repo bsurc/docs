@@ -13,7 +13,7 @@ electronic structure calculation of atomic structures.
     - `POTCAR`: Contains the pseudopotentials for the elements.
 
     More information about these files and their format can be found in the
-[VASP wiki](https://www.vasp.at/wiki/index.php)
+[VASP wiki](https://www.vasp.at/wiki/index.php){:target="_blank"}
 
 2. Create a Job Script
 
@@ -65,5 +65,5 @@ electronic structure, and optimized geometry.
 
 ## Resources
 
-- [VASP Manual](https://www.vasp.at/wiki/index.php/The_VASP_Manual): Official wiki.
-- [VASP Forum](https://www.vasp.at/forum/): Community support and discussions.
+- [VASP Manual](https://www.vasp.at/wiki/index.php/The_VASP_Manual){:target="_blank"}: Official wiki.
+- [VASP Forum](https://www.vasp.at/forum/){:target="_blank"}: Community support and discussions.

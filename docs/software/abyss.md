@@ -1,10 +1,10 @@
 # ABySS
 
-ABySS is a de novo, parallel, paired-end sequence assembler that is designed for short reads. It can handle very large data sets and was one of the first assemblers to demonstrate the use of the de Bruijn graph technique. 
+ABySS is a de novo, parallel, paired-end sequence assembler that is designed for short reads. It can handle very large data sets and was one of the first assemblers to demonstrate the use of the de Bruijn graph technique.
 
 1. Prepare Input Files
 
-    ABySS requires paired-end sequencing data as input, typically in [FASTQ format](https://compgenomr.github.io/book/fasta-and-fastq-formats.html). Make sure you have your input files ready in the cluster. For this tutorial, we'll assume that your files are named `reads1.fastq` and `reads2.fastq`.
+    ABySS requires paired-end sequencing data as input, typically in [FASTQ format](https://compgenomr.github.io/book/fasta-and-fastq-formats.html){:target="_blank"}. Make sure you have your input files ready in the cluster. For this tutorial, we'll assume that your files are named `reads1.fastq` and `reads2.fastq`.
 
 2. Submit Abyss job
 
@@ -27,7 +27,7 @@ module load abyss
 abyss-pe k=64 name=my_assembly in='reads1.fastq reads2.fastq'
 ```
 
-    Replace `64` with the k-mer size appropriate for your data, `my_assembly` with the name you want for your output, and `'reads1.fastq reads2.fastq'` with the names of your actual input files. 
+    Replace `64` with the k-mer size appropriate for your data, `my_assembly` with the name you want for your output, and `'reads1.fastq reads2.fastq'` with the names of your actual input files.
 
     Then submit your job to the scheduler:
 ```bash
@@ -43,8 +43,8 @@ ls -l my_assembly*
 
 ## Resources
 
-- [ABySS Documentation](https://www.bcgsc.ca/abyss): Official documentation.
-- [ABySS GitHub Repository](https://github.com/bcgsc/abyss): Provides the latest version of ABySS, including source code, release notes, and additional documentation.
-- [ABySS: A parallel assembler for short read sequence data](https://genome.cshlp.org/content/19/6/1117): Paper introducing ABySS.
-- [SeqAnswers](http://seqanswers.com/) and [Biostars](https://www.biostars.org/): Bioinformatics forums.
+- [ABySS Documentation](https://www.bcgsc.ca/abyss){:target="_blank"}: Official documentation.
+- [ABySS GitHub Repository](https://github.com/bcgsc/abyss){:target="_blank"}: Provides the latest version of ABySS, including source code, release notes, and additional documentation.
+- [ABySS: A parallel assembler for short read sequence data](https://genome.cshlp.org/content/19/6/1117){:target="_blank"}: Paper introducing ABySS.
+- [SeqAnswers](http://seqanswers.com/){:target="_blank"} and [Biostars](https://www.biostars.org/){:target="_blank"}: Bioinformatics forums.
 
