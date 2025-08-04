@@ -84,7 +84,7 @@ Next, create your new environment using a create command as shown above.
 You can verify that the package you've installed in the environment is built with GPU support by running `conda list` with the environment active.
 An appropriate build will often have "gpu" or the CUDA version in the build tag.
 For example the following output is from a pytorch environment built with CUDA11.2 support:
-![pytorch cuda](../images/pytorch-cuda.png)
+![pytorch package output showing cuda in build](../images/pytorch-cuda.png "pytorch package output showing cuda in build")
 
 
 ## Submitting jobs that use python in an environment
@@ -133,11 +133,11 @@ python -m ipykernel install --user --name ENVIRONMENT_NAME --display-name "PYTHO
 
 Then navigate to the Jupyter Notebook App on [ondemand.boisestate.edu](https://ondemand.boisestate.edu){:target="_blank"}:
 
-![Navigate to the Jupyter Notebook App](../images/ood-notebook.png)
+![Navigate to the Jupyter Notebook App](../images/ood-notebook.png "Navigate to the Jupyter Notebook App")
 
 Once your Jupyter session starts, select the kernel you just made (It will be listed under the name you put in `PYTHON ENV NAME` the example below shows a kernel named "climate"):
 
-![Select the right Jupyter kernel](../images/jupyter-kernel.png)
+![Select the right Jupyter kernel](../images/jupyter-kernel.png "Select the right Jupyter kernel")
 
 ## Moving your conda installation to scratch
 

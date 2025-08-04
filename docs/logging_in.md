@@ -84,7 +84,7 @@ whether you already have SSH keys by listing the contents of the `.ssh` director
 
 5. Once logged on to OnDemand, go to "Clusters" on the top toolbar.
     Click "Borah Shell Access" and you will be able to see the terminal.
-    ![Screenshot of ondemand dashboard showing clusters tab](images/ood-dash-shell.png)
+    ![Screenshot of ondemand dashboard showing clusters tab](images/ood-dash-shell.png "Screenshot of ondemand dashboard showing clusters tab")
 
 6. On Borah, make a directory in your home called `.ssh` and open a
     file called `authorized_keys`:

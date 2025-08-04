@@ -30,11 +30,11 @@ After this, the Julia kernel is installed for you.
 
 Finally, to use Julia in a notebook, navigate to the Jupyter Notebook App on [ondemand.boisestate.edu](https://ondemand.boisestate.edu){:target="_blank"}.
 
-![Navigate to the Jupyter Notebook App](../images/ood-notebook.png)
+![Navigate to the Jupyter Notebook App](../images/ood-notebook.png "Navigate to the Jupyter Notebook App")
 
 Once your Jupyter session starts, select the Julia kernel:
 
-![Select the Julia kernel](../images/julia-kernel.png)
+![Select the Julia kernel](../images/julia-kernel.png "Select the Julia kernel")
 
 ## Julia Batch Script Example
 
