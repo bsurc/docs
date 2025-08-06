@@ -112,6 +112,6 @@ If you are using R from a conda environment, just replace lines 9 and 10 in the 
 
 ```bash title="r-slurm.sh" linenums="9"
 # Activate your environment
-~/.bashrc
+. ~/.bashrc
 conda activate r-env
 ```
