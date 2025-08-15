@@ -23,7 +23,7 @@ Idaho National Laboratory makes the Top 500 supercomputer known as “Falcon” 
 ACCESS is the successor to the XSEDE program which provides a variety of cyberinfrastructure resources. More information on ACCESS can be found [here](https://access-ci.org/){:target="_blank"}.
 
 ## RMACC
-The Alpine Supercomputer is funded by the University of Colorado Boulder (CU), the University of Colorado Anschutz, Colorado State University, and the National Science Foundation (NSF). The supercomputer is available to members of RMACC (Rocky Mountain Advanced Computing Consortium), which includes Boise State researchers. To access Alpine visit [the CU Research Computing documentation](https://curc.readthedocs.io/en/latest/access/rmacc.html){:target="_blank"}.
+The Alpine Supercomputer is funded by the University of Colorado Boulder (CU), the University of Colorado Anschutz, Colorado State University, and the National Science Foundation (NSF). The supercomputer is available to members of RMACC (Rocky Mountain Advanced Computing Consortium), which includes Boise State researchers. To access Alpine visit [the CU Research Computing documentation](https://curc.readthedocs.io/en/latest/getting_started/logging-in.html){:target="_blank"} and switch to the 'RMACC' tab to find more infos.
 
 See Alpine’s [specification](https://curc.readthedocs.io/en/latest/clusters/alpine/alpine-hardware.html){:target="_blank"} page for system details.
 
