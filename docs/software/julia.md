@@ -4,8 +4,8 @@ This comprehensive guide will help you set up and use Julia, a high-level, high-
 
 ## Adding the Julia Kernel to OnDemand
 
-[Open OnDemand](https://openondemand.org/) provides users with a graphical interface to the cluster, which provides an interactive user-interface for code development and testing.
-Currently OnDemand is available for Borah [https://borah-ondemand.boisestate.edu](https://borah-ondemand.boisestate.edu)
+[Open OnDemand](https://openondemand.org/){:target="_blank"} provides a graphical interface to the cluster, which provides an interactive user-interface for code development and testing.
+The OnDemand interface for Borah is available at [ondemand.boisestate.edu](https://ondemand.boisestate.edu){:target="_blank"}
 
 In order to use Julia in a Jupyter Notebook through OnDemand, you'll first need to install the IJulia kernel from the command line.
 
@@ -28,13 +28,13 @@ Pkg.add("IJulia")
 After this, the Julia kernel is installed for you.
 (You'll only need to add the IJulia package once.)
 
-Finally, to use Julia in a notebook, navigate to the Jupyter Notebook App on [https://borah-ondemand.boisestate.edu](https://borah-ondemand.boisestate.edu).
+Finally, to use Julia in a notebook, navigate to the Jupyter Notebook App on [ondemand.boisestate.edu](https://ondemand.boisestate.edu){:target="_blank"}.
 
-![Navigate to the Jupyter Notebook App](../images/ood-notebook.png)
+![Navigate to the Jupyter Notebook App](../images/ood-notebook.png "Navigate to the Jupyter Notebook App")
 
 Once your Jupyter session starts, select the Julia kernel:
 
-![Select the Julia kernel](../images/julia-kernel.png)
+![Select the Julia kernel](../images/julia-kernel.png "Select the Julia kernel")
 
 ## Julia Batch Script Example
 
@@ -71,8 +71,8 @@ sbatch julia-slurm.sh
 ```
 
 ## Resources
-- [Julia Documentation](https://docs.julialang.org/): Comprehensive guides, tutorials, and references.
-- [Julia By Example](https://juliabyexample.helpmanual.io/): Practical examples of Julia programming.
-- [Julia Discourse](https://discourse.julialang.org/): Community forum to seek help, share ideas, and learn.
-- [JuliaHub](https://juliahub.com/): Platform hosting interactive Julia notebooks.
-- [Julia Academy](https://juliaacademy.com/): Online courses and tutorials to enhance your Julia skills.
+- [Julia Documentation](https://docs.julialang.org/){:target="_blank"}: Comprehensive guides, tutorials, and references.
+- [Julia By Example](https://juliabyexample.helpmanual.io/){:target="_blank"}: Practical examples of Julia programming.
+- [Julia Discourse](https://discourse.julialang.org/){:target="_blank"}: Community forum to seek help, share ideas, and learn.
+- [JuliaHub](https://juliahub.com/){:target="_blank"}: Platform hosting interactive Julia notebooks.
+- [Julia Academy](https://juliaacademy.com/){:target="_blank"}: Online courses and tutorials to enhance your Julia skills.

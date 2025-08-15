@@ -50,18 +50,19 @@ Hello, World!
 
 ## Using MATLAB in OnDemand
 
-Currently OnDemand is available for Borah [https://borah-ondemand.boisestate.edu](https://borah-ondemand.boisestate.edu)
+The OnDemand interface for Borah is available at [ondemand.boisestate.edu](https://ondemand.boisestate.edu){:target="_blank"}
 After opening the terminal application on the desktop, here is an example of the commands to open MATLAB:
 ```bash
 module load matlab
 matlab
 ```
+
 And the resulting MATLAB GUI will open in a new window as shown here:
 ![Borah OnDemand desktop with MATLAB GUI open](../images/ood-desktop-matlab.png "Borah OnDemand desktop with MATLAB GUI open")
 
 ## Resources
 
-- [MATLAB Documentation](https://www.mathworks.com/help/matlab/): Official documentaion
-- [MATLAB Central](https://www.mathworks.com/matlabcentral/): Forum to ask questions and learn from other MATLAB users and experts.
-- [MATLAB Onramp](https://www.mathworks.com/learn/tutorials/matlab-onramp.html): A free two-hour introductory tutorial that allows you to learn and practice using MATLAB interactively.
-- [MATLAB Examples](https://www.mathworks.com/examples/matlab): A collection of code examples for a variety of MATLAB functions.
+- [MATLAB Documentation](https://www.mathworks.com/help/matlab/){:target="_blank"}: Official documentaion
+- [MATLAB Central](https://www.mathworks.com/matlabcentral/){:target="_blank"}: Forum to ask questions and learn from other MATLAB users and experts.
+- [MATLAB Onramp](https://www.mathworks.com/learn/tutorials/matlab-onramp.html){:target="_blank"}: A free two-hour introductory tutorial that allows you to learn and practice using MATLAB interactively.
+- [MATLAB Examples](https://www.mathworks.com/examples/matlab){:target="_blank"}: A collection of code examples for a variety of MATLAB functions.

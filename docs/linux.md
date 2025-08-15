@@ -4,7 +4,7 @@
 For many people, using a compute cluster is their first exposure to the Linux operating system.
 This can produce some shellshock (quite literally, as the Linux command line is referred to as the “shell”) as it can be vastly different from the Windows or Mac operating systems that most people are used to.
 
-[Linux](https://github.com/torvalds/linux) is an open source (meaning anyone can go in and view/modify the code behind it) operating system widely used all over the tech world.
+[Linux](https://github.com/torvalds/linux){:target="_blank"} is an open source (meaning anyone can go in and view/modify the code behind it) operating system widely used all over the tech world.
 Tons of different systems (TVs, Internet routers, all of the top 500 most powerful supercomputers in the world, many servers, etc.) run Linux – you probably interact with it in some way every day and just don’t realize it.
 Relating to clusters, Linux is highly modifiable and extensible for system administration tasks, with robust and well-documented systems for scripting, installing/deploying software, managing users and user permissions, etc.
 
@@ -38,44 +38,44 @@ If the script was in the parent directory, `../myscript.sh` could be used.
 
 Here’s a list of useful shell commands:
 
-[pwd](https://man7.org/linux/man-pages/man1/pwd.1.html) – Prints the absolute path to the directory the shell is currently in – stands for “**p**rint **w**orking **d**irectory.”
+[pwd](https://man7.org/linux/man-pages/man1/pwd.1.html){:target="_blank"} – Prints the absolute path to the directory the shell is currently in – stands for “**p**rint **w**orking **d**irectory.”
 
 Usage: `pwd`
 
-[ls](https://man7.org/linux/man-pages/man1/ls.1.html) – Lists the contents of the current directory – stands for “**l**i**s**t.”
+[ls](https://man7.org/linux/man-pages/man1/ls.1.html){:target="_blank"} – Lists the contents of the current directory – stands for “**l**i**s**t.”
 
 Usage: `ls`
 
-[mkdir](https://man7.org/linux/man-pages/man1/mkdir.1.html) – Makes a new directory – stands for “**m**a**k**e **dir**ectory.”
+[mkdir](https://man7.org/linux/man-pages/man1/mkdir.1.html){:target="_blank"} – Makes a new directory – stands for “**m**a**k**e **dir**ectory.”
 
 Usage: `mkdir (path to and/or name of new directory)`
 
-[touch](https://man7.org/linux/man-pages/man1/touch.1.html) – Makes a new, empty file.
+[touch](https://man7.org/linux/man-pages/man1/touch.1.html){:target="_blank"} – Makes a new, empty file.
 
 Usage: `touch (path to and/or name of new file)`
 
-[cd](https://man7.org/linux/man-pages/man1/cd.1p.html) - Changes the directory the shell is currently in – stands for “**c**hange **d**irectory.”
+[cd](https://man7.org/linux/man-pages/man1/cd.1p.html){:target="_blank"} - Changes the directory the shell is currently in – stands for “**c**hange **d**irectory.”
 
 Usage: `cd (path to and/or name of directory)`, or just `cd` to bring you back to your home directory.
 
-[man](https://man7.org/linux/man-pages/man1/man.1.html) – Pulls up the manual page for a given command – stands for “**man**ual page.”
+[man](https://man7.org/linux/man-pages/man1/man.1.html){:target="_blank"} – Pulls up the manual page for a given command – stands for “**man**ual page.”
 
 Usage: `man (command name)`
 
-[cat](https://man7.org/linux/man-pages/man1/cat.1.html) – Prints the contents of a file to the command line – stands for “con**cat**enate.”
+[cat](https://man7.org/linux/man-pages/man1/cat.1.html){:target="_blank"} – Prints the contents of a file to the command line – stands for “con**cat**enate.”
 
 Usage: `cat (name of file)`
 
-[mv](https://man7.org/linux/man-pages/man1/mv.1.html) – Moves files and directories around system and also used for renaming – stands for “**m**o**v**e.”
+[mv](https://man7.org/linux/man-pages/man1/mv.1.html){:target="_blank"} – Moves files and directories around system and also used for renaming – stands for “**m**o**v**e.”
 
 Usage: `mv (path to and/or name of file to be moved and/or renamed) (new path to and/or name of file)`
 
-[echo](https://man7.org/linux/man-pages/man1/echo.1.html) – Prints out text to the terminal.
+[echo](https://man7.org/linux/man-pages/man1/echo.1.html){:target="_blank"} – Prints out text to the terminal.
 Used a lot in scripts to write text to the terminal.
 
 Usage: `echo`
 
-[exit](https://man7.org/linux/man-pages/man3/exit.3.html) – Exits the cluster and closes your connection to it, bringing you back to your local machine.
+[exit](https://man7.org/linux/man-pages/man3/exit.3.html){:target="_blank"} – Exits the cluster and closes your connection to it, bringing you back to your local machine.
 
 Usage: `exit`
 
@@ -86,7 +86,7 @@ If you can think of a task, there’s probably a command (or a combination of ot
 ### A Note About Vim
 Vim is a command line text editor preinstalled Borah.
 While very powerful and useful for work on the command line, the interface and commands used in Vim are not particularly intuitive, and sometimes downright esoteric.
-[The Stack Overflow question for how to close Vim has over two million views](https://stackoverflow.com/questions/11828270/how-do-i-exit-the-vim-editor), which should say something.
+[The Stack Overflow question for how to close Vim has over two million views](https://stackoverflow.com/questions/11828270/how-do-i-exit-the-vim-editor){:target="_blank"}, which should say something.
 
 That said, Vim is extremely useful if you need to write a script, edit a configuration file, read a longer text file, etc.
 Despite its perceived difficulty, there are only a few things you need to know about Vim to use it successfully.

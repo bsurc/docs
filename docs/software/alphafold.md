@@ -59,15 +59,15 @@ sbatch alphafold-slurm.sh
     After the job is finished, you can find the results in new directory called
     "query"--(the directory will have the same name as the input fasta).
     More information about the output can be found in the
-    [AlphaFold README](https://github.com/google-deepmind/alphafold?tab=readme-ov-file#alphafold-output).
+    [AlphaFold README](https://github.com/google-deepmind/alphafold?tab=readme-ov-file#alphafold-output){:target="_blank"}.
     Below is the highest confidence predicted structure (ranked_0.pdb) rendered
-    using the [RCSB PDB viewer](https://www.rcsb.org/3d-view):
+    using the [RCSB PDB viewer](https://www.rcsb.org/3d-view){:target="_blank"}:
 
     ![ranked_0.pdb](../images/RANKED_0.PDB.png "Highest ranked PDB output rendered with RCSB PDB viewer"){ width=60% }
 
 ## Further Learning
 
-1. **Official Documentation**: The official [AlphaFold Documentation](https://www.alphafold.ebi.ac.uk/) is a comprehensive resource that covers all aspects of AlphaFold.
-2. **GitHub Repository**: The [AlphaFold GitHub Repository](https://github.com/deepmind/alphafold) provides the latest version of AlphaFold, including source code, release notes, and additional documentation.
+1. **Official Documentation**: The official [AlphaFold Documentation](https://www.alphafold.ebi.ac.uk/){:target="_blank"} is a comprehensive resource that covers all aspects of AlphaFold.
+2. **GitHub Repository**: The [AlphaFold GitHub Repository](https://github.com/deepmind/alphafold){:target="_blank"} provides the latest version of AlphaFold, including source code, release notes, and additional documentation.
 3. **Research Papers**: The original paper introducing AlphaFold, "Highly accurate protein structure prediction for the human proteome", was published in 2021 and provides detailed information about the techniques used in AlphaFold. Many other papers have since cited and expanded upon this work. These can be found in scientific databases like PubMed.
-4. **Online Forums and Communities**: Online resources such as [Bioinformatics Stack Exchange](https://bioinformatics.stackexchange.com/) and [Biostars](https://www.biostars.org/) often have threads discussing issues, solutions, and best practices related to AlphaFold and other bioinformatics tools.
+4. **Online Forums and Communities**: Online resources such as [Bioinformatics Stack Exchange](https://bioinformatics.stackexchange.com/){:target="_blank"} and [Biostars](https://www.biostars.org/){:target="_blank"} often have threads discussing issues, solutions, and best practices related to AlphaFold and other bioinformatics tools.

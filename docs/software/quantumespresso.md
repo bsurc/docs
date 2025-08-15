@@ -9,7 +9,7 @@ structures.
 To download pseudopotentials:
 
     - Visit: [Quantum ESPRESSO Pseudopotentials](
-        https://pseudopotentials.quantum-espresso.org/legacy_tables) to get a
+        https://pseudopotentials.quantum-espresso.org/legacy_tables){:target="_blank"} to get a
     link to download the pseudopotential for your atom(s) of interest.
     - Use `wget` to download the pseudopotential via the command line:
         ```bash
@@ -76,10 +76,10 @@ your calculation.
 desired output file's name.
 
 ## Resources
-- [Quantum ESPRESSO Documentation](https://www.quantum-espresso.org/resources/users-manual):
+- [Quantum ESPRESSO Documentation](https://www.quantum-espresso.org/resources/users-manual){:target="_blank"}:
 Official user manual.
-- [Quantum ESPRESSO Tutorials](https://www.quantum-espresso.org/resources/tutorials):
+- [Quantum ESPRESSO Tutorials](https://www.quantum-espresso.org/resources/tutorials){:target="_blank"}:
 Step-by-step guides and example calculations.
-- [Quantum ESPRESSO Google Group](https://groups.google.com/g/quantum-environ-users):
+- [Quantum ESPRESSO Google Group](https://groups.google.com/g/quantum-environ-users){:target="_blank"}:
 Community support and discussions.
 

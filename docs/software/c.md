@@ -1,6 +1,6 @@
 # C
 
-The information in this guide has been cherry picked from Wes Kendall's *[MPI Hello World](https://mpitutorial.com/tutorials/mpi-hello-world/)* and refined to suit our Borah cluster. We will focus more compiling using the modules on Borah. Please refer to Kendall's article for an explanation of how the code is working.
+The information in this guide has been cherry picked from Wes Kendall's *[MPI Hello World](https://mpitutorial.com/tutorials/mpi-hello-world/){:target="_blank"}* and refined to suit our Borah cluster. We will focus more compiling using the modules on Borah. Please refer to Kendall's article for an explanation of how the code is working.
 ## Hello World Example
 ```C
 #include <mpi.h>
