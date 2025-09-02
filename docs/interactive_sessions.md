@@ -7,11 +7,13 @@
     Resource-intensive processes on the login node degrade performance for everyone, so we run a service that will kill processes if they use too much memory or CPU.
 
 
-If you need an environment to test code or job submissions, there are three commands available: `dev-session`, `gpu-session`, and `debug-session`.
-Running either of the two former commands will put you into a 4-hour long session on a CPU (`dev-session`) or GPU (`gpu-session`) node, while running the latter (`debug-session`) will place you into a half-hour long session on a CPU node.
+If you need an environment to test code or job submissions, we provide the aliases `dev-session` and `gpu-session`.
+These commands will put you into a 4-hour long session on a CPU (`dev-session`) or GPU (`gpu-session`) node.
 While in a session, you can freely run jobs directly from the command line (without using Slurm) in order to test and optimize them.
 
 !!! info
 
-    If you are waiting in the queue for an interactive session, please consider using [https://borah-ondemand.boisestate.edu](https://borah-ondemand.boisestate.edu) as an alternative to an interactive session.
-    [More info about Borah-OnDemand](open_ondemand.md)
+    If you are waiting in the queue for an interactive session, please consider
+    using [ondemand.boisestate.edu](https://ondemand.boisestate.edu){:target="_blank"}
+    as an alternative to an interactive session.
+    [More info about OnDemand](open_ondemand.md)

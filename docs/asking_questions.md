@@ -67,7 +67,7 @@ Please start a new email for each issue you encounter.
 ## The XY problem
 
 This is a classic problem.
-Please read more about the XY problem [here](https://xyproblem.info/).
+Please read more about the XY problem [here](https://xyproblem.info/){:target="_blank"}.
 Often we know the solution but sometimes we don't know the problem.
 
 In short (quoting from the previous website):
@@ -112,4 +112,4 @@ Often when isolating the problem, the problem and solution crystallize before ev
 Explain the steps and commands you've given before the problem and all output and errors that are produced.
 Be specific, see above.
 
-Adapted from ["How to write good support requests"](https://docs.csc.fi/support/support-howto) from the CSC – IT CENTER FOR SCIENCE LTD.
+Adapted from ["How to write good support requests"](https://docs.csc.fi/support/support-howto){:target="_blank"} from the CSC – IT CENTER FOR SCIENCE LTD.

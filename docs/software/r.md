@@ -4,8 +4,8 @@ R is a free software environment for statistical computing and graphics.
 
 ## Using R in a Jupyter notebook
 
-Through [Borah-OnDemand](https://borah-ondemand.boisestate.edu) you can access a Jupyter notebook running on Borah.
-(More info about [Borah-OnDemand](../open_ondemand.md).)
+Through [ondemand.boisestate.edu](https://ondemand.boisestate.edu){:target="_blank"} you can access a Jupyter notebook running on Borah.
+(More info about [OnDemand](../open_ondemand.md).)
 Jupyter notebooks can be used to run R, but first you'll need to create a conda environment and install the R-kernel.
 
 0. Before we can do any of the next steps, we'll need to install a conda/mamba distribution. We recommend miniforge: [Installing miniforge](conda.md#installing-condamamba).
@@ -29,7 +29,7 @@ Jupyter notebooks can be used to run R, but first you'll need to create a conda 
     ```
 
 And that concludes the installation!
-To use the newly-installed R-kernel, navigate to [Borah-OnDemand](https://borah-ondemand.boisestate.edu) and request a Jupyter Notebook session through the Interactive Apps tab.
+To use the newly-installed R-kernel, navigate to [ondemand.boisestate.edu](https://ondemand.boisestate.edu){:target="_blank"} and request a Jupyter Notebook session through the Interactive Apps tab.
 On the notebook screen, open the dropdown for a "New" notebook and select "R".
 
 ## Installing R packages
@@ -42,7 +42,7 @@ Here are a couple ways you can install packages in R:
 Many R packages are hosted on the conda-forge channel using the naming
 convention `r-PACKAGENAME` where `PACKAGENAME` is the name of the R package, e.g., `r-tidyverse`.
 If you want to check if an R package is available via conda or check what
-builds/versions are available, try searching `r-PACKAGENAME` with the name of the package you're looking for) on [anaconda.org](https://anaconda.org).
+builds/versions are available, try searching `r-PACKAGENAME` with the name of the package you're looking for) on [anaconda.org](https://anaconda.org){:target="_blank"}.
 
 - To install an R package into an existing environment:
     ```bash

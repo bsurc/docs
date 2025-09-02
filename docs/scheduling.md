@@ -28,7 +28,7 @@ including shell commands, running scripts through other programs like R or
 Python, or calling specific software.
 Here we will discuss the slurm parameters and provide some basic options to help
 you get started, but please see the
-[Slurm sbatch documentation](https://slurm.schedmd.com/sbatch.html) for a
+[Slurm sbatch documentation](https://slurm.schedmd.com/sbatch.html){:target="_blank"} for a
 full list of options.
 
 ## Queues
@@ -118,13 +118,13 @@ understand a little about the different resources.
 
     A **CPU**, generally, is the processing unit of a computer, but slurm kind
     of fudges this definition to be the sockets, cores, or threads of a CPU.
-    [This Slurm resource](https://slurm.schedmd.com/cpu_management.html) provides
+    [This Slurm resource](https://slurm.schedmd.com/cpu_management.html){:target="_blank"} provides
     more information.
 
     A **task** is a part of a job parallelized using a distributed memory model,
     e.g., using MPI.
     For an overview of shared and distributed memory models, please check out
-    [Cornell Virtual Workshop: Memory Access](https://cvw.cac.cornell.edu/parallel/memory-access/index).
+    [Cornell Virtual Workshop: Memory Access](https://cvw.cac.cornell.edu/parallel/memory-access/index){:target="_blank"}.
 
 If you are not sure how many resources to request, in general,  we recommend
 requesting 1 node, 1 task, and a full node's worth of cores working on that
