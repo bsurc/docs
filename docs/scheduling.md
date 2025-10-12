@@ -71,7 +71,7 @@ The following table provides information about the queues on Borah:
 
     The default queue on Borah is `bsudfq`. Each node in this queue has 48 CPU
     cores and 192GB of memory. See
-    [Borah's Specifications](hpc_resources#specifications) for more information.
+    [Borah's Specifications](/hpc_resources#specifications) for more information.
 
 !!! note "Note about the gpu and shortgpu queues"
 
@@ -215,7 +215,7 @@ The final component of an sbatch script is the set of commands that will be run
 after the slurm parameters are parsed.
 These can be any shell command, e.g., loading modules, setting environment
 variables, or calling executables.
-Let's say you've created an [MPI executable](software/c_cpp.md); you could
+Let's say you've created an [MPI executable](/software/c/); you could
 use the following script to submit this job to the scheduler requesting 48 cores
 on a single CPU node:
 
