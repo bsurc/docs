@@ -99,7 +99,12 @@ whether you already have SSH keys by listing the contents of the `.ssh` director
         To exit nano, press ++control++ + ++x++, press ++y++ for yes when asked
         if you want to save, and hit ++enter++ when it prompts for the filename.
 
-7. And that's it--your key is added! To test if it is working, in your local
+7. Modify the file's permission so that it will be read correctly by ssh:
+    ```bash
+    chmod 600 ~/.ssh/authorized_keys
+    ```
+
+8. And that's it--your key is added! To test if it is working, in your local
     terminal try to SSH to Borah:
     ```bash
     ssh -XC (your Borah username)@borah-login.boisestate.edu
