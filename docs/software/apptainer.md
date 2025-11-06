@@ -1,7 +1,7 @@
 # Apptainer
 
 [Apptainer](https://apptainer.org){:target="_blank"} is a containerization tool specifically
-designed for HPC systems.  The HPC adminstrators can build a container if it is
+designed for HPC systems.  The HPC administrators can build a container if it is
 the right fit for your software stack.  This is typically the case if your
 software has complex dependencies, or requires very specific versions of tools
 or dependencies.
@@ -34,7 +34,7 @@ command, but the trailing arguments are the command that you'd like to run:
 
 In order to read/write data to your scratch directory, you _must_ bind the path
 to the container via the command line.  This is done by providing the `-B`
-argument to apptainer:
+argument to Apptainer:
 
     apptainer exec -B /bsuscratch mycontainer.sif ./myscript.sh
 
