@@ -145,7 +145,7 @@ We recommend scaling multi-node jobs in increments of the number of cores per
 node; e.g., request a number of cores that can be evenly divided by the number
 of cores per node ($n_{cores/node} \times N$).
 
-In addtion to nodes and cores, you can also request that your job run on a GPU.
+In addition to nodes and cores, you can also request that your job run on a GPU.
 To request a GPU, add the following to your submission script:
 ```
 #SBATCH --gres=gpu:(number of GPUs requested)
@@ -153,7 +153,7 @@ To request a GPU, add the following to your submission script:
 
 ## Timing, Output, and Naming
 
-The scheduler relies on the the submission script to estimate how long a job
+The scheduler relies on the submission script to estimate how long a job
 will take. You can set a time limit for your job with the following line:
 ```
 #SBATCH -t DD-HH:MM:SS
@@ -287,11 +287,11 @@ Anytime you find yourself repeating the same job with minor tweaks, this is
 when you should think "Job Array".
 
 In the following example, we need to run a python workflow
-(`my_python_workflow.py`) using some variety of parameters including sample ID,
+(`my_python_workflow.py`) using a variety of parameters including sample ID,
 threshold, number of steps, and whether or not the run is a "dry run" or not.
 
-First we collect all the necessary parameters for each run in a csv file--if you
-were analyzing different files, this file could contain the path to those files:
+All the necessary parameters for each run are collected in a csv file--one row
+per job:
 ```bash title="parameters.csv"
 sampleA,0.10,128,true
 sampleB,0.20,256,false
@@ -299,10 +299,9 @@ sampleC,0.05,064,true
 sampleD,0.50,032,false
 sampleE,0.75,512,true
 ```
-
-Then we can use the following slurm submission script to parse through that csv
-file and run the analysis for each array job--the environment variable
-`$SLURM_ARRAY_TASK_ID` will update for each array job:
+Then the following slurm submission script can be used to parse that file and
+run each job—the environment variable `$SLURM_ARRAY_TASK_ID` will update for
+each array job:
 ```bash title="array-slurm.sh"
 #!/bin/bash
 #SBATCH -p bsudfq
@@ -334,6 +333,9 @@ array jobs as follows:
 sbatch --array=1-5 array-slurm.sh
 ```
 
+This is just an example of how a job array can be constructed. If you running an
+analysis on many different input files, this parameter csv could contain the
+path to those files.
 
 ## Useful Slurm Commands
 
