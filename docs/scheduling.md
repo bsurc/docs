@@ -278,7 +278,64 @@ sbatch (job script filename)
 You will get an output message saying `Submitted batch job (job number)`, which
 tells you that your job was successfully submitted.
 
-## Other Useful Slurm Commands
+## Job Arrays
+
+A common task on an HPC system is to run some piece of code many times: this
+could be a parameter sweep or running an analysis on a large number of input
+files.
+Anytime you find yourself repeating the same job with minor tweaks, this is
+when you should think "Job Array".
+
+In the following example, we need to run a python workflow
+(`my_python_workflow.py`) using some variety of parameters including sample ID,
+threshold, number of steps, and whether or not the run is a "dry run" or not.
+
+First we collect all the necessary parameters for each run in a csv file--if you
+were analyzing different files, this file could contain the path to those files:
+```bash title="parameters.csv"
+sampleA,0.10,128,true
+sampleB,0.20,256,false
+sampleC,0.05,064,true
+sampleD,0.50,032,false
+sampleE,0.75,512,true
+```
+
+Then we can use the following slurm submission script to parse through that csv
+file and run the analysis for each array job--the environment variable
+`$SLURM_ARRAY_TASK_ID` will update for each array job:
+```bash title="array-slurm.sh"
+#!/bin/bash
+#SBATCH -p bsudfq
+#SBATCH -J myarray
+#SBATCH -t 12:00:00
+#SBATCH -N 1
+#SBATCH -c 1
+
+# Parse one row of CSV for each array job
+ROW="$(sed -n "${SLURM_ARRAY_TASK_ID}p" parameters.csv)"
+
+# Signifiy the delimiter, put the values into the bash shell $ENV
+IFS=',' read -r ID THRESHOLD STEPS DRYRUN <<<"$ROW"
+
+# Check how it is interpreted as new bash variables
+echo "task=${SLURM_ARRAY_TASK_ID} id=${ID} thr=${THRESHOLD} steps=${STEPS} dry=${DRYRUN}"
+
+# Run one command with one set of parameters, repeated n times for each --array value
+python3 my_python_workflow.py \
+    --id "${ID}" \
+    --threshold "${THRESHOLD}" \
+    --steps "${STEPS}" \
+    --dry-run "${DRYRUN}
+```
+
+Finally, since there are 5 samples in the `parameters.csv`, we can submit all 5
+array jobs as follows:
+```bash
+sbatch --array=1-5 array-slurm.sh
+```
+
+
+## Useful Slurm Commands
 
 `scancel (job number)` : cancels a job; you can only cancel your own jobs.
 
