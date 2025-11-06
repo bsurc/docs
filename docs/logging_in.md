@@ -104,7 +104,7 @@ whether you already have SSH keys by listing the contents of the `.ssh` director
     chmod 600 ~/.ssh/authorized_keys
     ```
 
-8. And that's it--your key is added! To test if it is working, in your local
+8. And that's it—your key is added! To test if it is working, in your local
     terminal try to SSH to Borah:
     ```bash
     ssh -XC (your Borah username)@borah-login.boisestate.edu

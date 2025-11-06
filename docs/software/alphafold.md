@@ -57,7 +57,7 @@ sbatch alphafold-slurm.sh
 4. Check the Output
 
     After the job is finished, you can find the results in new directory called
-    "query"--(the directory will have the same name as the input fasta).
+    "query"—(the directory will have the same name as the input fasta).
     More information about the output can be found in the
     [AlphaFold README](https://github.com/google-deepmind/alphafold?tab=readme-ov-file#alphafold-output){:target="_blank"}.
     Below is the highest confidence predicted structure (ranked_0.pdb) rendered

@@ -75,7 +75,7 @@ mamba activate r-env
     install.packages("PACKAGENAME")
     ```
     where `PACKAGENAME` is the name of the package you want to install.
-    It will ask if you want to install into a personal library in your home directory--say yes--and ask you to select a mirror--you can just choose the geographically closest one.
+    It will ask if you want to install into a personal library in your home directory—say yes—and ask you to select a mirror—you can just choose the geographically closest one.
 
 Once the package is finished installing, you're ready to go.
 If you run into issues installing a package, please contact [researchcomputing@boisestate.edu](mailto:researchccomputing@boisestate.edu).

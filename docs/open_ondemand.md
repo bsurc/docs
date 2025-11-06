@@ -25,7 +25,7 @@ There is even a graphical text editor to modify files:
 
 ![Ondemand dashboard with Jobs tab highlighted](images/ood-dash-jobs.png "Ondemand dashboard with Jobs tab highlighted")
 
-The Jobs tab gives access to the Active job display which will allow you to see all the current jobs submitted to the cluster--similar to the `squeue` command.
+The Jobs tab gives access to the Active job display which will allow you to see all the current jobs submitted to the cluster—similar to the `squeue` command.
 
 The Job Composer will let you create and submit a slurm job from a template.
 

@@ -198,7 +198,7 @@ output, you can do so by adding the following line to your script:
 ```
 
 Finally, if you want to make sure that your job has exclusive access to an
-entire node--regardless of how many resources it is using--you can add the
+entire node—regardless of how many resources it is using—you can add the
 following line to your submission script:
 ```
 #SBATCH --exclusive
@@ -269,7 +269,7 @@ nvidia-smi
 
 These commands will differ from job to job.
 If you need any help setting up a submission script, please don't hesitate to
-email us at ResearchComputing@boisestate.edu--we're happy to help!
+email us at ResearchComputing@boisestate.edu—we're happy to help!
 
 Once your script is ready, you can submit it using
 ```
@@ -290,7 +290,7 @@ In the following example, we need to run a python workflow
 (`my_python_workflow.py`) using a variety of parameters including sample ID,
 threshold, number of steps, and whether or not the run is a "dry run" or not.
 
-All the necessary parameters for each run are collected in a csv file--one row
+All the necessary parameters for each run are collected in a csv file—one row
 per job:
 ```bash title="parameters.csv"
 sampleA,0.10,128,true
