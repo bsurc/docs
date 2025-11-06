@@ -91,7 +91,7 @@ Below is an example submission script if you are using R from a module:
 #!/bin/bash
 #SBATCH -J R_job       		# job name
 #SBATCH -o log_slurm.o%j    # output and error file name (%j expands to jobID)
-#SBATCH -n 48 			    # total number of tasks requested
+#SBATCH -c 1 			    # number of CPU cores requested
 #SBATCH -N 1 			    # number of nodes you want to run on
 #SBATCH -p bsudfq			# queue (partition)
 #SBATCH -t 12:00:00 		# run time (hh:mm:ss)
