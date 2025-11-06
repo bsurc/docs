@@ -11,7 +11,7 @@ Home directories are backed up each night, so we can recover files from your
 home if they are deleted accidentally.
 The home space for each user on Borah is located at `/bsuhome/(Borah username)`.
 **Home directories are limited to 75 GB.** If you hit this limit, you will
-recieve an email notification letting you know you have 4 weeks to get below
+receive an email notification letting you know you have 4 weeks to get below
 the limit before your home directory is locked and you will no longer be able
 to write to it. There is also a hard limit at 100 GB which will immediately
 prevent you from writing to your home directory.

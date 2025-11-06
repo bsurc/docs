@@ -27,7 +27,7 @@ Your terminal application varies depending on your operating system:
 There are many options, but we recommend MobaXTerm for terminal access on Windows.
 Go to the [MobaXTerm download page](https://mobaxterm.mobatek.net/download.html){:target="_blank"} and download the “Home” edition of MobaXTerm.
 This software is an emulator for a Linux shell that will allow you to utilize a Linux shell on Windows.
-There’s a tutorial available on the [MobaXterm demo page](https://mobaxterm.mobatek.net/demo.html){:target="_blank"}.
+There’s a tutorial available on the [MobaXTerm demo page](https://mobaxterm.mobatek.net/demo.html){:target="_blank"}.
 
 #### Mac and Linux:
 
