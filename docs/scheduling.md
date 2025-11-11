@@ -290,8 +290,8 @@ In the following example, we need to run a python workflow
 (`my_python_workflow.py`) using a variety of parameters including sample ID,
 threshold, number of steps, and whether or not the run is a "dry run" or not.
 
-All the necessary parameters for each run are collected in a csv file—one row
-per job:
+First, all the necessary parameters for each run are collected in a csv
+file—one row per job:
 ```bash title="parameters.csv"
 sampleA,0.10,128,true
 sampleB,0.20,256,false
@@ -299,9 +299,9 @@ sampleC,0.05,064,true
 sampleD,0.50,032,false
 sampleE,0.75,512,true
 ```
-Then the following slurm submission script can be used to parse that file and
-run each job—the environment variable `$SLURM_ARRAY_TASK_ID` will update for
-each array job:
+Then the following slurm submission script can be used to parse that csv file
+and run each job—the environment variable `$SLURM_ARRAY_TASK_ID` will update
+for each array job:
 ```bash title="array-slurm.sh"
 #!/bin/bash
 #SBATCH -p bsudfq
@@ -310,16 +310,16 @@ each array job:
 #SBATCH -N 1
 #SBATCH -c 1
 
-# Parse one row of CSV for each array job
+# Grab one row of CSV for each array job
 ROW="$(sed -n "${SLURM_ARRAY_TASK_ID}p" parameters.csv)"
 
-# Signifiy the delimiter, put the values into the bash shell $ENV
+# Signifiy the delimiter and parse the values into environment variables
 IFS=',' read -r ID THRESHOLD STEPS DRYRUN <<<"$ROW"
 
-# Check how it is interpreted as new bash variables
+# Check how the variables are interpreted
 echo "task=${SLURM_ARRAY_TASK_ID} id=${ID} thr=${THRESHOLD} steps=${STEPS} dry=${DRYRUN}"
 
-# Run one command with one set of parameters, repeated n times for each --array value
+# Run the python script with this set of parameters
 python3 my_python_workflow.py \
     --id "${ID}" \
     --threshold "${THRESHOLD}" \
@@ -328,14 +328,14 @@ python3 my_python_workflow.py \
 ```
 
 Finally, since there are 5 samples in the `parameters.csv`, we can submit all 5
-array jobs as follows:
+array jobs at once using the following command:
 ```bash
 sbatch --array=1-5 array-slurm.sh
 ```
 
-This is just an example of how a job array can be constructed. If you running an
-analysis on many different input files, this parameter csv could contain the
-path to those files.
+This is just an example of how a job array can be constructed. If you are
+running an analysis on many different input files, this parameter csv file
+could contain the path to those files.
 
 ## Useful Slurm Commands
 
