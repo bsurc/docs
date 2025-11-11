@@ -145,7 +145,7 @@ We recommend scaling multi-node jobs in increments of the number of cores per
 node; e.g., request a number of cores that can be evenly divided by the number
 of cores per node ($n_{cores/node} \times N$).
 
-In addtion to nodes and cores, you can also request that your job run on a GPU.
+In addition to nodes and cores, you can also request that your job run on a GPU.
 To request a GPU, add the following to your submission script:
 ```
 #SBATCH --gres=gpu:(number of GPUs requested)
@@ -153,7 +153,7 @@ To request a GPU, add the following to your submission script:
 
 ## Timing, Output, and Naming
 
-The scheduler relies on the the submission script to estimate how long a job
+The scheduler relies on the submission script to estimate how long a job
 will take. You can set a time limit for your job with the following line:
 ```
 #SBATCH -t DD-HH:MM:SS
@@ -198,7 +198,7 @@ output, you can do so by adding the following line to your script:
 ```
 
 Finally, if you want to make sure that your job has exclusive access to an
-entire node--regardless of how many resources it is using--you can add the
+entire node—regardless of how many resources it is using—you can add the
 following line to your submission script:
 ```
 #SBATCH --exclusive
@@ -215,7 +215,7 @@ The final component of an sbatch script is the set of commands that will be run
 after the slurm parameters are parsed.
 These can be any shell command, e.g., loading modules, setting environment
 variables, or calling executables.
-Let's say you've created an [MPI executable](software/c_cpp.md); you could
+Let's say you've created an [MPI executable](software/c.md); you could
 use the following script to submit this job to the scheduler requesting 48 cores
 on a single CPU node:
 
@@ -269,7 +269,7 @@ nvidia-smi
 
 These commands will differ from job to job.
 If you need any help setting up a submission script, please don't hesitate to
-email us at ResearchComputing@boisestate.edu--we're happy to help!
+email us at ResearchComputing@boisestate.edu—we're happy to help!
 
 Once your script is ready, you can submit it using
 ```
@@ -278,7 +278,66 @@ sbatch (job script filename)
 You will get an output message saying `Submitted batch job (job number)`, which
 tells you that your job was successfully submitted.
 
-## Other Useful Slurm Commands
+## Job Arrays
+
+A common task on an HPC system is to run some piece of code many times: this
+could be a parameter sweep or running an analysis on a large number of input
+files.
+Anytime you find yourself repeating the same job with minor tweaks, this is
+when you should think "Job Array".
+
+In the following example, we need to run a python workflow
+(`my_python_workflow.py`) using a variety of parameters including sample ID,
+threshold, number of steps, and whether or not the run is a "dry run" or not.
+
+First, all the necessary parameters for each run are collected in a csv
+file—one row per job:
+```bash title="parameters.csv"
+sampleA,0.10,128,true
+sampleB,0.20,256,false
+sampleC,0.05,064,true
+sampleD,0.50,032,false
+sampleE,0.75,512,true
+```
+Then the following slurm submission script can be used to parse that csv file
+and run each job—the environment variable `$SLURM_ARRAY_TASK_ID` will update
+for each array job:
+```bash title="array-slurm.sh"
+#!/bin/bash
+#SBATCH -p bsudfq
+#SBATCH -J myarray
+#SBATCH -t 12:00:00
+#SBATCH -N 1
+#SBATCH -c 1
+
+# Grab one row of CSV for each array job
+ROW="$(sed -n "${SLURM_ARRAY_TASK_ID}p" parameters.csv)"
+
+# Signifiy the delimiter and parse the values into environment variables
+IFS=',' read -r ID THRESHOLD STEPS DRYRUN <<<"$ROW"
+
+# Check how the variables are interpreted
+echo "task=${SLURM_ARRAY_TASK_ID} id=${ID} thr=${THRESHOLD} steps=${STEPS} dry=${DRYRUN}"
+
+# Run the python script with this set of parameters
+python3 my_python_workflow.py \
+    --id "${ID}" \
+    --threshold "${THRESHOLD}" \
+    --steps "${STEPS}" \
+    --dry-run "${DRYRUN}
+```
+
+Finally, since there are 5 samples in the `parameters.csv`, we can submit all 5
+array jobs at once using the following command:
+```bash
+sbatch --array=1-5 array-slurm.sh
+```
+
+This is just an example of how a job array can be constructed. If you are
+running an analysis on many different input files, this parameter csv file
+could contain the path to those files.
+
+## Useful Slurm Commands
 
 `scancel (job number)` : cancels a job; you can only cancel your own jobs.
 

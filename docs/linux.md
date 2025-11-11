@@ -2,7 +2,7 @@
 
 ### Linux Basics
 For many people, using a compute cluster is their first exposure to the Linux operating system.
-This can produce some shellshock (quite literally, as the Linux command line is referred to as the “shell”) as it can be vastly different from the Windows or Mac operating systems that most people are used to.
+This can produce some shell shock (quite literally, as the Linux command line is referred to as the “shell”) as it can be vastly different from the Windows or Mac operating systems that most people are used to.
 
 [Linux](https://github.com/torvalds/linux){:target="_blank"} is an open source (meaning anyone can go in and view/modify the code behind it) operating system widely used all over the tech world.
 Tons of different systems (TVs, Internet routers, all of the top 500 most powerful supercomputers in the world, many servers, etc.) run Linux – you probably interact with it in some way every day and just don’t realize it.

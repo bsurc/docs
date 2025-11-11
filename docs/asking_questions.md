@@ -29,7 +29,7 @@ The subjects are the first thing that we see and a good subject will speed up th
 
 ## Be specific
 
-“X didn’t work” is not specific.
+“X didn't work” is not specific.
 Give the exact commands you ran, environment (see above), and output error messages.
 The actual error messages mean a lot - include all the output, you can just copy and paste it.
 

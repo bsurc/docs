@@ -166,4 +166,4 @@ rm -rf ~/miniforge3
 ln -s ~/scratch/miniforge3 ~/miniforge3
 ```
 
-And that's it--you can continue using conda as before!
+And that's it—you can continue using conda as before!

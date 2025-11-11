@@ -62,7 +62,7 @@ And the resulting MATLAB GUI will open in a new window as shown here:
 
 ## Resources
 
-- [MATLAB Documentation](https://www.mathworks.com/help/matlab/){:target="_blank"}: Official documentaion
+- [MATLAB Documentation](https://www.mathworks.com/help/matlab/){:target="_blank"}: Official documentation
 - [MATLAB Central](https://www.mathworks.com/matlabcentral/){:target="_blank"}: Forum to ask questions and learn from other MATLAB users and experts.
 - [MATLAB Onramp](https://www.mathworks.com/learn/tutorials/matlab-onramp.html){:target="_blank"}: A free two-hour introductory tutorial that allows you to learn and practice using MATLAB interactively.
 - [MATLAB Examples](https://www.mathworks.com/examples/matlab){:target="_blank"}: A collection of code examples for a variety of MATLAB functions.

@@ -27,7 +27,7 @@ Your terminal application varies depending on your operating system:
 There are many options, but we recommend MobaXTerm for terminal access on Windows.
 Go to the [MobaXTerm download page](https://mobaxterm.mobatek.net/download.html){:target="_blank"} and download the “Home” edition of MobaXTerm.
 This software is an emulator for a Linux shell that will allow you to utilize a Linux shell on Windows.
-There’s a tutorial available on the [MobaXterm demo page](https://mobaxterm.mobatek.net/demo.html){:target="_blank"}.
+There’s a tutorial available on the [MobaXTerm demo page](https://mobaxterm.mobatek.net/demo.html){:target="_blank"}.
 
 #### Mac and Linux:
 
@@ -104,7 +104,7 @@ whether you already have SSH keys by listing the contents of the `.ssh` director
     chmod 600 ~/.ssh/authorized_keys
     ```
 
-8. And that's it--your key is added! To test if it is working, in your local
+8. And that's it—your key is added! To test if it is working, in your local
     terminal try to SSH to Borah:
     ```bash
     ssh -XC (your Borah username)@borah-login.boisestate.edu

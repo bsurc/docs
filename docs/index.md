@@ -12,7 +12,7 @@ To best resolve your issue, we also recommend reading [How to ask for help effec
 ## Office Hours
 
 Puzzled about python? Big data too big? HPC feeling like a hassle?
-Come to Research Computing Services office hours!
+Come to Research Computing office hours!
 Our staff will be available to help with any questions, issues, or errors.
 
 Please see the calendar below for information about office hours:
