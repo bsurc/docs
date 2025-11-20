@@ -154,7 +154,7 @@ mkdir ~/scratch/miniforge3
 2. Copy over your existing data. (This may take several minutes if your
         `miniforge3` directory is large.):
 ```bash
-rsync -aAvP ~/miniforge3/* ~/scratch/miniforge3
+rsync -aAvP ~/miniforge3/ ~/scratch/miniforge3
 ```
 
 3. Remove your current `miniforge3` directory:
