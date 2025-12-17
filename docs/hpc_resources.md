@@ -11,7 +11,7 @@ The cluster is located at the Idaho National Laboratory’s Collaborative Comput
 | CPU | Intel Xeon E-2146G 3.5GHz | Intel Xeon Gold 6252 2.1GHz | Intel Xeon Gold 6252 2.1GHz | Intel Xeon Gold 6252 2.1GHz | Intel Xeon Platinum 8562Y+ 2.8GHz | Intel Xeon E5-2680 v4 2.40GHz | Intel Xeon Gold 6252 2.1GHz |
 | Memory | 64 GB | 64 GB | 192 GB | 384 GB | 512 GB | 256 GB | 768 GB |
 | GPU | N/A | N/A | N/A | NVIDIA Tesla V100 (x2) | NVIDIA L40 (x4) | NVIDIA P100 (x2) | N/A |
-| Interconnect | Mellanox Non-Blocking HDR200/HDR100 Infiniband | Mellanox Non-Blocking HDR200/HDR100 Infiniband | Mellanox Non-Blocking HDR200/HDR100 Infiniband | Mellanox Non-Blocking HDR200/HDR100 Infiniband | Mellanox Non-Blocking HDR200/HDR100 Infiniband | Mellanox Non-Blocking HDR200/HDR100 Infiniband | Mellanox Non-Blocking HDR200/HDR100 Infiniband |
+| Interconnect | Mellanox Non-Blocking HDR200/HDR100 Infiniband {: colspan=7}|
 | Cores | 6 | 48 | 48 | 5,120 CUDA/GPU + 48 CPU/node | 18,176 CUDA/GPU + 64 CPU/node | 3584 CUDA/GPU + 28 CPU/node | 48 |
 
 In addition to the above infrastructure, the Borah system also has another 68 CPU nodes owned by our industry partner, Idaho Power. When not in use by Idaho Power, Boise State researchers have access to up to 34 Idaho Power CPU nodes for their research. Borah also has various condo nodes, which are available through the short queues.
