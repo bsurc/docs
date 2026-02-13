@@ -54,38 +54,99 @@ The environment name can be whatever you like, the channel is one from
 bioconda), and the package names are whatever packages you want in that
 environment. For example:
 
-The following command creates an environment called "climate" that pulls from the conda-forge channel with the packages matplotlib and numpy:
+The following command creates an environment called "my-env" that pulls from the conda-forge channel with the packages matplotlib and numpy:
 ```bash
-mamba create -n climate -c conda-forge matplotlib numpy
+mamba create -n my-env -c conda-forge matplotlib numpy
 ```
 
 Once this environment is created, it can be activated using the following command:
 ```bash
-mamba activate climate
+mamba activate my-env
 ```
 
 Conda/Mamba are powerful tools with many different options, to learn more check out the [conda user guide](https://docs.conda.io/projects/conda/en/latest/user-guide/index.html){:target="_blank"}.
 
 ## Creating an environment to work with the GPU
+### Notes about conda builds and virtual packages
 
-Many python packages distribute builds which can make use of the GPU through CUDA.
-In order to build an environment which can use the GPU, we'll need to load these modules so that conda will detect CUDA to download the correct python package build.
-Conda does this detection through [virtual packages](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-virtual.html){:target="_blank"}, and you can see what virtual packages conda sees by running `conda info`.
+Many python packages distribute builds which can make use of the GPU through
+the CUDA api.
+In order to build an environment which can use the GPU, conda either needs to
+be able to detect the CUDA version on the system or to be manually instructed
+what CUDA version to use so that it can download the correct python package build.
+Conda does this detection through
+[virtual packages](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-virtual.html){:target="_blank"}.
+You can see what virtual packages conda has by running `conda info`.
 
-First, check out a GPU node to prevent the conda environment creation step from getting killed on the login node and load CUDA module.
-You can see all the available CUDA modules by running `module av cud`.
-For machine learning applications (e.g., tensorflow or pytorch) you will want to use one of the "cudnn" modules, for other applications you may only need CUDA toolkit.
+For example if we run `conda info` on a GPU node:
+```bash
+conda info
+```
+```output hl_lines="7"
+     active environment : base
+
+     ...
+
+       virtual packages : __archspec=1=cascadelake
+                          __conda=24.11.3=0
+                          __cuda=12.4=0
+                          __glibc=2.17=0
+                          __linux=3.10.0=0
+                          __unix=0=0
+```
+We can see in the output (highlighted above) that conda detects a virtual CUDA
+package.
+
+It is also helpful to understand a little about the structure of a conda
+package. When you pull a package from a conda channel, the naming convention is
+`PACKAGENAME-VERSION-BUILD` for example `numpy-2.4.2-py313hfc84e54_1` is
+the package, NumPy, version 2.4.2 built for Python 3.13 (we can ignore the rest
+of the build string).
+
+A GPU-capable build will often have "gpu" or "cuda" in the build tag.
+For example, you might see the following output during the environment creation
+process if you are pulling tensorflow or pytorch built with CUDA:
+```output
+pytorch                         2.5.1  cuda126_mkl_py313_h33c0e77_310
+...
+tensorflow                     2.17.0  cuda120py312h02ad488_203
+```
+### Building a GPU-capable environment
+
+1. First, check out an interactive session to prevent the conda environment
+creation step from getting killed on the login node:
 ```bash
 gpu-session
-module load cudnn8.0-cuda11.0/8.0.5.39
 ```
+If this command is taking a while, it might mean all the available nodes are in
+use, so you can also try `gpu-session-l40` or `dev-session`.
 
-Next, create your new environment using a create command as shown above.
-You can verify that the package you've installed in the environment is built with GPU support by running `conda list` with the environment active.
-An appropriate build will often have "gpu" or the CUDA version in the build tag.
-For example the following output is from a pytorch environment built with CUDA11.2 support:
-![pytorch package output showing cuda in build](../images/pytorch-cuda.png "pytorch package output showing cuda in build")
+    !!! info
+        If you use `dev-session`, which starts an interactive session on a node
+        without GPU, you'll need to run `export CONDA_OVERRIDE_CUDA="12.4"` before
+        creating your environment.
 
+2. Create your new environment specifying a "cuda" or "gpu" build:
+```bash
+mamba create -n my-gpu-env "tensorflow=*=cuda*"
+```
+The above command tells conda to grab the package "tensorflow", any version, and
+any build that starts with "cuda".
+
+3. Activate your environment and confirm that your package was installed
+   correctly:
+```bash
+mamba activate my-gpu-env
+```
+To check if PyTorch can use the GPU:
+```bash
+python -c "import torch; print(torch.cuda.is_available())
+```
+To check if TensorFlow can use the GPU:
+```bash
+python -c "import tensorflow as tf; print(tf.test.is_built_with_cuda())"
+```
+And that's it! Your python environment is ready to use the GPU.
 
 ## Submitting jobs that use python in an environment
 
