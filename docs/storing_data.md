@@ -23,8 +23,10 @@ While scratch space can accommodate much larger data sets, it is meant for
 short-term storage and we ask that you watch utilization.
 Scratch space is not backed up and is subject to clean-up if it gets close
 to capacity.
-If the scratch space approaches its useful capacity, the automated process will start removing files that have not been accessed for 4 weeks.
-If the system exceeds its useful capacity, there is risk of failure.
+There is risk of failure if the filesystem exceeds its useful capacity.
+As such, we reserve the right to delete data without notice if /bsuscratch
+reaches 90% capacity or higher.
+
 The scratch space for each user on Borah is located at `/bsuscratch/(Borah username)`.
 There’s also a symbolic link (a file that represents a “shortcut” to another spot on the file system) to scratch space placed in your home directory, so scratch can be accessed by running `cd scratch` from your home directory.
 
