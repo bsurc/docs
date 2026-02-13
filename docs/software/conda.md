@@ -87,7 +87,7 @@ conda info
 
      ...
 
-       virtual packages : __archspec=1=broadwell
+       virtual packages : __archspec=1=cascadelake
                           __conda=24.11.3=0
                           __cuda=12.4=0
                           __glibc=2.17=0
