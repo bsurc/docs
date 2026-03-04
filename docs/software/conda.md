@@ -140,12 +140,14 @@ mamba activate my-gpu-env
 ```
 To check if PyTorch can use the GPU:
 ```bash
-python -c "import torch; print(torch.cuda.is_available())
+python -c "import torch; print(torch.cuda.is_available())"
 ```
 To check if TensorFlow can use the GPU:
 ```bash
 python -c "import tensorflow as tf; print(tf.test.is_built_with_cuda())"
 ```
+If your pytorch/tensorflow installation is built with cuda, both of those lines
+should print "True".
 And that's it! Your python environment is ready to use the GPU.
 
 ## Submitting jobs that use python in an environment
