@@ -190,6 +190,7 @@ mamba install ipykernel
 Then run ipykernel to create the custom Jupyter kernel: (replace
         `ENVIRONMENT_NAME` with the environment name and `PYTHON ENV NAME` with
         the name you will select for the kernel)
+
 ```bash
 python -m ipykernel install --user --name ENVIRONMENT_NAME --display-name "PYTHON ENV NAME"
 ```
