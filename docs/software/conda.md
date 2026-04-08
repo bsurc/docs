@@ -131,50 +131,51 @@ tensorflow                     2.17.0  cuda120py312h02ad488_203
 ### Building a GPU-capable environment
 
 1. First, check out an interactive session to prevent the conda environment
-creation step from getting killed on the login node:
+    creation step from getting killed on the login node:
 
-```bash
-gpu-session
-```
+    ```bash
+    gpu-session
+    ```
 
-If this command is taking a while, it might mean all the available nodes are in
-use, so you can also try `gpu-session-l40` or `dev-session`.
+    If this command is taking a while, it might mean all the available nodes
+    are in use, so you can also try `gpu-session-l40` or `dev-session`.
 
-!!! info
-    If you use `dev-session`, which starts an interactive session on a node
-    without GPU, you'll need to run `export CONDA_OVERRIDE_CUDA="12.4"` before
-    creating your environment.
+    !!! info
+        If you use `dev-session`, which starts an interactive session on a node
+        without GPU, you'll need to run `export CONDA_OVERRIDE_CUDA="12.4"` before
+        creating your environment.
 
 2. Create your new environment specifying a "cuda" or "gpu" build:
 
-```bash
-mamba create -n my-gpu-env "tensorflow=*=cuda*"
-```
+    ```bash
+    mamba create -n my-gpu-env "tensorflow=*=cuda*"
+    ```
 
-The above command tells conda to grab the package "tensorflow", any version, and
-any build that starts with "cuda".
+    The above command tells conda to grab the package "tensorflow", any
+    version, and any build that starts with "cuda".
 
 3. Activate your environment and confirm that your package was installed
    correctly:
 
-```bash
-mamba activate my-gpu-env
-```
+    ```bash
+    mamba activate my-gpu-env
+    ```
 
-To check if PyTorch can use the GPU:
+    To check if PyTorch can use the GPU:
 
-```bash
-python -c "import torch; print(torch.cuda.is_available())"
-```
+    ```bash
+    python -c "import torch; print(torch.cuda.is_available())"
+    ```
 
-To check if TensorFlow can use the GPU:
+    To check if TensorFlow can use the GPU:
 
-```bash
-python -c "import tensorflow as tf; print(tf.test.is_built_with_cuda())"
-```
+    ```bash
+    python -c "import tensorflow as tf; print(tf.test.is_built_with_cuda())"
+    ```
 
-If your pytorch/tensorflow installation is built with cuda, both of those lines
-should print "True".
+    If your pytorch/tensorflow installation is built with cuda, both of those
+    lines should print "True".
+
 And that's it! Your python environment is ready to use the GPU.
 
 ## Submitting jobs that use python in an environment
@@ -242,28 +243,27 @@ following steps:
 
 1. Make a `miniforge3` directory in your scratch space:
 
-```bash
-mkdir ~/scratch/miniforge3
-```
-
+    ```bash
+    mkdir ~/scratch/miniforge3
+    ```
 
 2. Copy over your existing data. (This may take several minutes if your
-        `miniforge3` directory is large.):
+    `miniforge3` directory is large.):
 
-```bash
-rsync -aAvP ~/miniforge3/ ~/scratch/miniforge3
-```
+    ```bash
+    rsync -aAvP ~/miniforge3/ ~/scratch/miniforge3
+    ```
 
 3. Remove your current `miniforge3` directory:
 
-```bash
-rm -rf ~/miniforge3
-```
+    ```bash
+    rm -rf ~/miniforge3
+    ```
 
 4. Create a link to your new `miniforge3` directory:
 
-```bash
-ln -s ~/scratch/miniforge3 ~/miniforge3
-```
+    ```bash
+    ln -s ~/scratch/miniforge3 ~/miniforge3
+    ```
 
 And that's it—you can continue using conda as before!
