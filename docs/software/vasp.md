@@ -48,8 +48,8 @@ scheduler.
 
 3. Submit the Job
 
-    In the dirctory containing your job script and input files submit the job to
-the scheduler:
+    In the dirctory containing your job script and input files submit the job
+    to the scheduler:
 
     ```bash
     sbatch vasp-slurm.sh

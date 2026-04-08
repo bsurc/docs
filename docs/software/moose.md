@@ -7,8 +7,9 @@ MOOSE (Multiphysics Object-Oriented Simulation Environment) is a powerful simula
 We recommend following the [Conda MOOSE Environment](https://mooseframework.inl.gov/getting_started/installation/conda.html){:target="_blank"} instructions provided by INL.
 
 You will need to request an interactive session on a compute node to complete the MOOSE installation. You can do this using
+
 ```bash
-dev-session-bsu
+dev-session
 ```
 
 When you are ready to submit a MOOSE job, here is an example submission script to get you started:
