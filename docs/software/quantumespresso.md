@@ -9,9 +9,11 @@ structures.
 To download pseudopotentials:
 
     - Visit: [Quantum ESPRESSO Pseudopotentials](
-        https://pseudopotentials.quantum-espresso.org/legacy_tables){:target="_blank"} to get a
+        https://pseudopotentials.quantum-espresso.org/legacy_tables
+        ){:target="_blank"} to get a
     link to download the pseudopotential for your atom(s) of interest.
     - Use `wget` to download the pseudopotential via the command line:
+
         ```bash
         wget [pseudopotential_url]
         ```
