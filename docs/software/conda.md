@@ -11,16 +11,21 @@ In the following tutorial, we will demonstrate how to install and use Mamba, but
 ## Installing Conda/Mamba
 
 For managing python environments on the cluster, we recommend following the install instruction for Unix-like platforms provided by [Miniforge](https://github.com/conda-forge/miniforge#install){:target="_blank"}:
+
 ```bash
 wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 bash Miniforge3-$(uname)-$(uname -m).sh
 ```
+
 The following prompt will ask whether you accept the license, if the default installation location (typically in your home directory) is alright (it is), and whether you want to initialize conda each time you log in (generally a good idea).
 Once the install is finished, re-sourcing your bashrc will add the conda/mamba commands to your path:
+
 ```bash
 . ~/.bashrc
 ```
+
 At this point you should see the environment, `(base)`, appear at the front of your terminal prompt:
+
 ```
 (base)[yourusername@borah-login ~]$
 ```
@@ -29,9 +34,12 @@ This lets you know that your "base" environment is active.
 
 !!! info
 
-    Using `mamba install` while your base environment is active will install packages into the base environment.
+    Using `mamba install` while your base environment is active will install
+    packages into the base environment.
 
-    It is good practice to *not* install any packages in your base environment but instead to create separate environments.
+    It is good practice to *not* install any packages in your base environment
+    but instead to create separate environments.
+
 
 ## Creating an environment
 
@@ -46,20 +54,24 @@ Now that you've installed mamba/conda, let's create an environment.
     using the command `dev-session` before installing.
 
 The general command to create an environment is as follows:
+
 ```bash
 mamba create -n ENVIRONMENTNAME -c CHANNEL PACKAGE1 PACKAGE2
 ```
+
 The environment name can be whatever you like, the channel is one from
 [Anaconda.org](https://anaconda.org/){:target="_blank"} (common channels are conda-forge or
 bioconda), and the package names are whatever packages you want in that
 environment. For example:
 
 The following command creates an environment called "my-env" that pulls from the conda-forge channel with the packages matplotlib and numpy:
+
 ```bash
 mamba create -n my-env -c conda-forge matplotlib numpy
 ```
 
 Once this environment is created, it can be activated using the following command:
+
 ```bash
 mamba activate my-env
 ```
@@ -79,9 +91,11 @@ Conda does this detection through
 You can see what virtual packages conda has by running `conda info`.
 
 For example if we run `conda info` on a GPU node:
+
 ```bash
 conda info
 ```
+
 ```output hl_lines="7"
      active environment : base
 
@@ -94,6 +108,7 @@ conda info
                           __linux=3.10.0=0
                           __unix=0=0
 ```
+
 We can see in the output (highlighted above) that conda detects a virtual CUDA
 package.
 
@@ -106,46 +121,58 @@ of the build string).
 A GPU-capable build will often have "gpu" or "cuda" in the build tag.
 For example, you might see the following output during the environment creation
 process if you are pulling tensorflow or pytorch built with CUDA:
+
 ```output
 pytorch                         2.5.1  cuda126_mkl_py313_h33c0e77_310
 ...
 tensorflow                     2.17.0  cuda120py312h02ad488_203
 ```
+
 ### Building a GPU-capable environment
 
 1. First, check out an interactive session to prevent the conda environment
 creation step from getting killed on the login node:
+
 ```bash
 gpu-session
 ```
+
 If this command is taking a while, it might mean all the available nodes are in
 use, so you can also try `gpu-session-l40` or `dev-session`.
 
-    !!! info
-        If you use `dev-session`, which starts an interactive session on a node
-        without GPU, you'll need to run `export CONDA_OVERRIDE_CUDA="12.4"` before
-        creating your environment.
+!!! info
+    If you use `dev-session`, which starts an interactive session on a node
+    without GPU, you'll need to run `export CONDA_OVERRIDE_CUDA="12.4"` before
+    creating your environment.
 
 2. Create your new environment specifying a "cuda" or "gpu" build:
+
 ```bash
 mamba create -n my-gpu-env "tensorflow=*=cuda*"
 ```
+
 The above command tells conda to grab the package "tensorflow", any version, and
 any build that starts with "cuda".
 
 3. Activate your environment and confirm that your package was installed
    correctly:
+
 ```bash
 mamba activate my-gpu-env
 ```
+
 To check if PyTorch can use the GPU:
+
 ```bash
 python -c "import torch; print(torch.cuda.is_available())"
 ```
+
 To check if TensorFlow can use the GPU:
+
 ```bash
 python -c "import tensorflow as tf; print(tf.test.is_built_with_cuda())"
 ```
+
 If your pytorch/tensorflow installation is built with cuda, both of those lines
 should print "True".
 And that's it! Your python environment is ready to use the GPU.
@@ -153,6 +180,7 @@ And that's it! Your python environment is ready to use the GPU.
 ## Submitting jobs that use python in an environment
 
 Following is an example script to submit a python job to the scheduler.
+
 
 ```bash title="conda-slurm.sh"
 #!/bin/bash
@@ -183,13 +211,15 @@ The OnDemand interface for Borah can be accessed at [ondemand.boisestate.edu](ht
 In order to use your environment in a Jupyter Notebook through OnDemand, you'll
 need to install some additional packages.
 *With the environment you want to use activated*, install `ipykernel`:
+
 ```bash
 mamba install ipykernel
 ```
 
+
 Then run ipykernel to create the custom Jupyter kernel: (replace
-        `ENVIRONMENT_NAME` with the environment name and `PYTHON ENV NAME` with
-        the name you will select for the kernel)
+`ENVIRONMENT_NAME` with the environment name and `PYTHON ENV NAME` with
+the name you will select for the kernel)
 
 ```bash
 python -m ipykernel install --user --name ENVIRONMENT_NAME --display-name "PYTHON ENV NAME"
@@ -211,21 +241,27 @@ You can relocate your `miniforge3` directory to your scratch space using the
 following steps:
 
 1. Make a `miniforge3` directory in your scratch space:
+
 ```bash
 mkdir ~/scratch/miniforge3
 ```
 
+
 2. Copy over your existing data. (This may take several minutes if your
         `miniforge3` directory is large.):
+
 ```bash
 rsync -aAvP ~/miniforge3/ ~/scratch/miniforge3
 ```
 
 3. Remove your current `miniforge3` directory:
+
 ```bash
 rm -rf ~/miniforge3
 ```
+
 4. Create a link to your new `miniforge3` directory:
+
 ```bash
 ln -s ~/scratch/miniforge3 ~/miniforge3
 ```
