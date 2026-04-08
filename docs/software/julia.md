@@ -12,19 +12,25 @@ In order to use Julia in a Jupyter Notebook through OnDemand, you'll first need 
 First, load any of the available Julia modules.
 You can see the available modules using `module avail -i julia` and load the module using `module load julia/<version number here>`.
 Next, load the Julia module, and open a Julia terminal:
+
 ```bash
 module load julia
 julia
 ```
+
 After these commands, you'll see your prompt change to the Julia terminal:
+
 ```bash
 julia>
 ```
+
 Then in the Julia terminal, install the IJulia kernel:
+
 ```julia
 using Pkg
 Pkg.add("IJulia")
 ```
+
 After this, the Julia kernel is installed for you.
 (You'll only need to add the IJulia package once.)
 
@@ -38,7 +44,8 @@ Once your Jupyter session starts, select the Julia kernel:
 
 ## Julia Batch Script Example
 
-Once you've developed and refined your Julia code, you may want to submit it as a batch submission to the scheduler.
+Once you've developed and refined your Julia code, you may want to submit it as
+a batch submission to the scheduler.
 Following is an example of how to do just that.
 
 1. Create your script. The example below is called `hello_world.jl`:
@@ -66,9 +73,9 @@ julia hello_world.jl
 ```
 
 3. Submit to the scheduler
-```bash
-sbatch julia-slurm.sh
-```
+    ```bash
+    sbatch julia-slurm.sh
+    ```
 
 ## Resources
 - [Julia Documentation](https://docs.julialang.org/){:target="_blank"}: Comprehensive guides, tutorials, and references.

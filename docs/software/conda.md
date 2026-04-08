@@ -97,16 +97,16 @@ conda info
 ```
 
 ```output hl_lines="7"
-     active environment : base
+active environment : base
 
-     ...
+...
 
-       virtual packages : __archspec=1=cascadelake
-                          __conda=24.11.3=0
-                          __cuda=12.4=0
-                          __glibc=2.17=0
-                          __linux=3.10.0=0
-                          __unix=0=0
+virtual packages : __archspec=1=cascadelake
+                   __conda=24.11.3=0
+                   __cuda=12.4=0
+                   __glibc=2.17=0
+                   __linux=3.10.0=0
+                   __unix=0=0
 ```
 
 We can see in the output (highlighted above) that conda detects a virtual CUDA
