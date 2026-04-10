@@ -43,7 +43,7 @@ ls -l my_assembly*
 
 ## Resources
 
-- [ABySS Documentation](https://www.bcgsc.ca/abyss){:target="_blank"}: Official documentation.
+- [ABySS Documentation](https://www.bcgsc.ca/resources/software/abyss){:target="_blank"}: Official documentation.
 - [ABySS GitHub Repository](https://github.com/bcgsc/abyss){:target="_blank"}: Provides the latest version of ABySS, including source code, release notes, and additional documentation.
 - [ABySS: A parallel assembler for short read sequence data](https://genome.cshlp.org/content/19/6/1117){:target="_blank"}: Paper introducing ABySS.
 - [SeqAnswers](http://seqanswers.com/){:target="_blank"} and [Biostars](https://www.biostars.org/){:target="_blank"}: Bioinformatics forums.
