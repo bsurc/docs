@@ -78,10 +78,8 @@ your calculation.
 desired output file's name.
 
 ## Resources
-- [Quantum ESPRESSO Documentation](https://www.quantum-espresso.org/resources/users-manual){:target="_blank"}:
-Official user manual.
-- [Quantum ESPRESSO Tutorials](https://www.quantum-espresso.org/resources/tutorials){:target="_blank"}:
-Step-by-step guides and example calculations.
+- [Quantum ESPRESSO Documentation](https://www.quantum-espresso.org/documentation){:target="_blank"}:
+Official Documentation.
 - [Quantum ESPRESSO Google Group](https://groups.google.com/g/quantum-environ-users){:target="_blank"}:
 Community support and discussions.
 
