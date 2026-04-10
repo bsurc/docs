@@ -43,8 +43,3 @@ In these guides, the terms "compute cluster," "cluster," and "supercomputer" are
 ## Why use a compute cluster?
 The advantage to utilizing a cluster comes in the form of parallel computing, or the ability to run computational jobs over many CPUs or GPUs at once.
 This can improve the performance of a job and decrease the amount of time it takes to normally run by orders of magnitude.
-Parallel computing is applicable to many different fields, including
-[education](https://www.boisestate.edu/news/2019/05/22/days-to-hours-researcher-speeds-up-data-simulation-process-with-help-of-research-computing/){:target="_blank"},
-[raptor biology](https://www.boisestate.edu/news/2020/04/21/peregrine-funds-raptor-research-enhanced-by-partnership-with-research-computing/){:target="_blank"},
-[environmental science](https://www.boisestate.edu/news/2019/09/05/how-a-study-of-idahos-drylands-could-impact-future-nasa-studies/){:target="_blank"}, and
-[genetics](https://www.boisestate.edu/news/2021/03/04/research-highlight-computing-the-tree-of-life/){:target="_blank"} - researchers all across campus have had success utilizing our resources to improve the efficiency of their research.
