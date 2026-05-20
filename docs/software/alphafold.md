@@ -4,6 +4,8 @@ AlphaFold is a protein structure prediction system developed by DeepMind.
 It uses machine learning techniques to accurately predict protein structures,
 which is an important task in computational biology.
 
+Version 2
+
 ## How to use
 
 1. Prepare Directories
