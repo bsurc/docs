@@ -1,3 +1,0 @@
-properdocs==1.6.7
-mkdocs-materialx==9.7.6
-Pygments==2.21.0

@@ -2,13 +2,14 @@
 authors = ["Jenny Fothergill <jennyfothergill@boisestate.edu>"]
 channels = ["conda-forge"]
 name = "docs"
-platforms = ["osx-arm64"]
+platforms = ["osx-arm64", "linux-64"]
 version = "0.1.0"
 
 [tasks]
 
 [dependencies]
 python = ">=3.14.7,<3.15"
+pygments = ">=2.21.0,<3"
 
 [pypi-dependencies]
 mkdocs-materialx = ">=10.2.0, <11"
