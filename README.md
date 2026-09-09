@@ -2,16 +2,20 @@
 
 Hosted on [Read the docs](https://bsu-docs.readthedocs.io/en/latest/)
 
-Built using [MkDocs](https://www.mkdocs.org/)
+Built using [Properdocs](https://properdocs.org")
 
-Uses [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme
+Uses [MaterialX](https://jaywhj.github.io/mkdocs-materialx/) theme
 
 ## To build locally
 
-1. Create a python environment containing the packages in requirements.txt.
-We recommend using [pixi](https://pixi.prefix.dev/latest/)
+1. Install [pixi](https://pixi.prefix.dev/latest/)
 
-2. Build the site and start the docs server:
+2. Create the python environment described in `pixi.toml`:
+```bash
+pixi install
+```
+
+3. Build the site and start the docs server:
 
 ```bash
 pixi run properdocs serve -o
