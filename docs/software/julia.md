@@ -14,8 +14,8 @@ You can see the available modules using `module avail -i julia` and load the mod
 Next, load the Julia module, and open a Julia terminal:
 
 ```bash
-module load julia
-julia
+$ module load julia
+$ julia
 ```
 
 After these commands, you'll see your prompt change to the Julia terminal:
@@ -74,7 +74,7 @@ julia hello_world.jl
 
 3. Submit to the scheduler
     ```bash
-    sbatch julia-slurm.sh
+    $ sbatch julia-slurm.sh
     ```
 
 ## Resources

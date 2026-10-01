@@ -43,7 +43,7 @@ However, you only need to add keys once for each machine.
 1. Open your terminal (on MobaXTerm select "Start Local Terminal") and check
 whether you already have SSH keys by listing the contents of the `.ssh` directory:
     ```bash
-    ls ~/.ssh
+    $ ls ~/.ssh
     ```
     If you see something like `id_rsa` (private key) and `id_rsa.pub` (public
     key) in that that folder, you already have SSH keys and don't need to
@@ -51,7 +51,7 @@ whether you already have SSH keys by listing the contents of the `.ssh` director
 
 2. Generate SSH keys for your local machine:
     ```bash
-    ssh-keygen
+    $ ssh-keygen
     ```
     This command has many options, including supplying a passphrase to protect
     your private key, but it is not mandatory. To accept the default settings,
@@ -68,7 +68,7 @@ whether you already have SSH keys by listing the contents of the `.ssh` director
 
 3. Copy your public key. Print the contents of your public key:
     ```bash
-    cat ~/.ssh/id_rsa.pub
+    $ cat ~/.ssh/id_rsa.pub
     ```
     The output will look something like this:
     ```
@@ -89,8 +89,8 @@ whether you already have SSH keys by listing the contents of the `.ssh` director
 6. On Borah, make a directory in your home called `.ssh` and open a
     file called `authorized_keys`:
     ```bash
-    mkdir -p ~/.ssh
-    nano ~/.ssh/authorized_keys
+    $ mkdir -p ~/.ssh
+    $ nano ~/.ssh/authorized_keys
     ```
     Paste the public key you copied from your local computer into this file.
 
@@ -101,14 +101,14 @@ whether you already have SSH keys by listing the contents of the `.ssh` director
 
 7. Modify the file and directory permissions so they will be read correctly by ssh:
     ```bash
-    chmod 600 ~/.ssh/authorized_keys
-    chmod 0700 ~/.ssh
+    $ chmod 600 ~/.ssh/authorized_keys
+    $ chmod 0700 ~/.ssh
     ```
 
 8. And that's it—your key is added! To test if it is working, in your local
     terminal try to SSH to Borah:
     ```bash
-    ssh -XC (your Borah username)@borah-login.boisestate.edu
+    $ ssh -XC (your Borah username)@borah-login.boisestate.edu
     ```
 
     !!! note "Reminder"

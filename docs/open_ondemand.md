@@ -62,8 +62,8 @@ The terminal icon is shown here in the taskbar at the bottom of the desktop:
 
 After opening the terminal application on the desktop, here is an example of the commands to open MATLAB:
 ```bash
-module load matlab
-matlab
+$ module load matlab
+$ matlab
 ```
 And the resulting MATLAB GUI will open in a new window as shown here:
 ![Ondemand desktop with MATLAB GUI open](images/ood-desktop-matlab.png "Ondemand desktop with MATLAB GUI open")

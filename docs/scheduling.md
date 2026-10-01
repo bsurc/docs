@@ -101,7 +101,7 @@ command-line using sinfo.
 The following example queries the node name, CPU cores, memory, and resources
 of all the nodes in the `shortgpu` queue:
 ```bash
-sinfo -p shortgpu -o "%n %c %m %G"
+$ sinfo -p shortgpu -o "%n %c %m %G"
 ```
 
 ## Requesting Resources
@@ -167,7 +167,7 @@ your job to run.
 If no time limit is specified, a default of twelve hours will be set.
 You can update the job's time limit by running:
 ```bash
-scontrol update job JOBID timelimit=NEWTIMELIMIT
+$ scontrol update job JOBID timelimit=NEWTIMELIMIT
 ```
 where `JOBID` is the job id of the job you want to update and `NEWTIMELIMIT` is
 the new time limit.
@@ -273,7 +273,7 @@ email us at ResearchComputing@boisestate.edu—we're happy to help!
 
 Once your script is ready, you can submit it using
 ```
-sbatch (job script filename)
+$ sbatch (job script filename)
 ```
 You will get an output message saying `Submitted batch job (job number)`, which
 tells you that your job was successfully submitted.
@@ -330,7 +330,7 @@ python3 my_python_workflow.py \
 Finally, since there are 5 samples in the `parameters.csv`, we can submit all 5
 array jobs at once using the following command:
 ```bash
-sbatch --array=1-5 array-slurm.sh
+$ sbatch --array=1-5 array-slurm.sh
 ```
 
 This is just an example of how a job array can be constructed. If you are
