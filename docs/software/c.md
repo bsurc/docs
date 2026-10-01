@@ -42,9 +42,9 @@ To compile the MPI code on Borah, you must first load the appropriate compiler a
 Log into Borah and load the modules you need. For example:
 
 ```bash
-module purge
-module load borah-base
-module load openmpi/4.1.3/gcc/12.1.0
+$ module purge
+$ module load borah-base
+$ module load openmpi/4.1.3/gcc/12.1.0
 ```
 
 !!! Tip "You can check available modules using `module avail`."
@@ -54,7 +54,7 @@ module load openmpi/4.1.3/gcc/12.1.0
 Assuming your code is saved in a file called `hello_world.c`, compile it using `mpicc`, which is the MPI C compiler wrapper:
 
 ```bash
-mpicc -o hello_world hello_world.c
+$ mpicc -o hello_world hello_world.c
 ```
 
 This will produce an executable named `hello_world`. You can use this executable to [schedule a job](../scheduling.md#example-submission-scripts), and run it across multiple nodes.

@@ -16,7 +16,7 @@ Jupyter notebooks can be used to run R, but first you'll need to create a conda 
 1. Once mamba/conda is installed, we'll use it to create a new environment:
 
     ```bash
-    mamba create -n r-env -c conda-forge r-recommended r-irkernel jupyter
+    $ mamba create -n r-env -c conda-forge r-recommended r-irkernel jupyter
     ```
     In this example, we're creating an environment called `r-env` and pulling
     the packages `r-recommended`, `r-irkernel`, and `jupyter` from the
@@ -30,8 +30,8 @@ Jupyter notebooks can be used to run R, but first you'll need to create a conda 
     interactive R kernel:
 
     ```bash
-    mamba activate r-env
-    R -e 'IRkernel::installspec()'
+    $ mamba activate r-env
+    $ R -e 'IRkernel::installspec()'
     ```
 
 And that concludes the installation!
@@ -59,8 +59,8 @@ the package you're looking for) on
 - To install an R package into an existing environment:
 
     ```bash
-    mamba activate r-env
-    mamba install -c conda-forge r-PACKAGENAME
+    $ mamba activate r-env
+    $ mamba install -c conda-forge r-PACKAGENAME
     ```
 
     (See [above](#using-r-in-a-jupyter-notebook) for how to install R in a
@@ -69,27 +69,27 @@ the package you're looking for) on
 - To create a new environment containing your R package:
 
     ```bash
-    mamba create -n r-env -c conda-forge r-recommended r-PACKAGENAME
+    $ mamba create -n r-env -c conda-forge r-recommended r-PACKAGENAME
     ```
 
 For both methods, you'll need to activate the environment each time before
 calling R:
 
 ```bash
-mamba activate r-env
+$ mamba activate r-env
 ```
 
 ### Using a module
 1. Load an R module:
 
     ```bash
-    module load borah-misc r/4.2.2
+    $ module load borah-misc r/4.2.2
     ```
 
 2. Start an R terminal and install your desired package:
 
     ```bash
-    R
+    $ R
     ```
 
     ```r
@@ -132,7 +132,7 @@ Rscript myscript.R
 This script can be submitted using `sbatch`:
 
 ```bash
-sbatch r-slurm.sh
+$ sbatch r-slurm.sh
 ```
 
 If you are using R from a conda environment, just replace lines 9 and 10 in the
@@ -141,5 +141,5 @@ above script (highlighted) with the following:
 ```bash title="r-slurm.sh" linenums="9"
 # Activate your environment
 . ~/.bashrc
-conda activate r-env
+$ conda activate r-env
 ```

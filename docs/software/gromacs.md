@@ -66,7 +66,7 @@ GROMACS is a package to perform molecular dynamics simulations, i.e., compute th
 
     Submit the job
 ```bash
-sbatch gromacs-slurm.sh
+$ sbatch gromacs-slurm.sh
 ```
 
 ## Resources

@@ -49,8 +49,8 @@ First, load the meta-module to see which builds are available. On **Borah**, the
 
 For example, to find GROMACS on **Borah**, you might run:
 ```bash
-module load borah-applications
-module avail gromacs
+$ module load borah-applications
+$ module avail gromacs
 ```
 You then see:
 ```
@@ -61,11 +61,11 @@ gromacs/2022.3/mpich/3.4.3/gcc/12.1.0
 ```
 Choose the newest build with the OpenMPI stack:
 ```bash
-module load gromacs/2022.3/openmpi/4.1.3/gcc/12.1.0
+$ module load gromacs/2022.3/openmpi/4.1.3/gcc/12.1.0
 ```
 If you want to see the path, run:
 ```bash
-which gmx_mpi
+$ which gmx_mpi
 ```
 Which might return something like:
 ```
@@ -73,6 +73,6 @@ Which might return something like:
 ```
 If you want to see library dependencies, run:
 ```bash
-ldd $(which gmx_mpi)
+$ ldd $(which gmx_mpi)
 ```
 This command lists the libraries that satisfy GROMACS’s dependencies, including those from the `borah-libraries` module.

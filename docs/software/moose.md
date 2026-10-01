@@ -9,7 +9,7 @@ We recommend following the [Conda MOOSE Environment](https://mooseframework.inl.
 You will need to request an interactive session on a compute node to complete the MOOSE installation. You can do this using
 
 ```bash
-dev-session
+$ dev-session
 ```
 
 When you are ready to submit a MOOSE job, here is an example submission script to get you started:
