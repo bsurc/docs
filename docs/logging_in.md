@@ -101,8 +101,8 @@ whether you already have SSH keys by listing the contents of the `.ssh` director
 
 7. Modify the file and directory permissions so they will be read correctly by ssh:
     ```bash
-    chmod 600 ~/.ssh/authorized_keys
-    chmod 0700 ~/.ssh
+    $ chmod 600 ~/.ssh/authorized_keys
+    $ chmod 0700 ~/.ssh
     ```
 
 8. And that's it—your key is added! To test if it is working, in your local

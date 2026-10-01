@@ -141,5 +141,5 @@ above script (highlighted) with the following:
 ```bash title="r-slurm.sh" linenums="9"
 # Activate your environment
 . ~/.bashrc
-$ conda activate r-env
+conda activate r-env
 ```

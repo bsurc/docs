@@ -273,7 +273,7 @@ email us at ResearchComputing@boisestate.edu—we're happy to help!
 
 Once your script is ready, you can submit it using
 ```
-sbatch (job script filename)
+$ sbatch (job script filename)
 ```
 You will get an output message saying `Submitted batch job (job number)`, which
 tells you that your job was successfully submitted.
