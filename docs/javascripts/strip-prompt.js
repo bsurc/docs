@@ -28,3 +28,18 @@ document.addEventListener("DOMContentLoaded", function () {
     true
   );
 });
+
+// Block drag/triple click highlighting from copying $
+document.addEventListener("copy", function (event) {
+  const selection = document.getSelection();
+  if (!selection || selection.isCollapsed) return;
+
+  // Only act if selection is inside code block
+  const node = selection.anchorNode;
+  const element = node.nodeType === Node.ELEMENT_NODE ? node : node.parentElement;
+  if (!element || !element.closest(".highlight, .codehilite, pre")) return;
+
+  const cleanedText = selection.toString().replace(/^\$\s*/gm, "");
+  event.clipboardData.setData("text/plain", cleanedText);
+  event.preventDefault();
+});
