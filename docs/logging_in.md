@@ -88,7 +88,7 @@ directory:
         Your private key (the key that does not end in ".pub") should be treated
         like a password and kept private--never share it with anyone. If you
         think someone has seen or gained access to your private key, please
-        remove the key and regenerate it.
+        delete the key pair and regenerate it.
 
     By default, the key files will be stored in `~/.ssh/id_<ALGORITHM>` and
     `~/.ssh/id_<ALGORITHM>.pub` on your local machine.
