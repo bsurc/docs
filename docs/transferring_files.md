@@ -15,14 +15,14 @@ This method should not be used for file transfers in excess of 50 GB – please 
 method that can be used if on Mac or Linux.
 It’s a built in command with the syntax:
 ```bash
-scp <source file> <dest file>
+$ scp <source file> <dest file>
 ```
 where the source and destination are located on different servers.
 For example, to download a file called myfile.txt from Borah to your current
 directory on your local machine, you would use:
 
 ```bash
-scp (Borah username)@borah-login.boisestate.edu:~/myfile.txt .
+$ scp (Borah username)@borah-login.boisestate.edu:~/myfile.txt .
 ```
 
 **Be aware that this process is destructive and will overwrite anything on the destination machine with the same name as the uploaded file.**
@@ -91,7 +91,7 @@ Here's a simple example of how `rclone` could be used to synchronize a local dir
 
     First, you would configure a connection to Google Drive by running:
    ```bash
-   rclone config
+   $ rclone config
    ```
 
     This interactive process guides you through setting up the connection.
@@ -100,7 +100,7 @@ Here's a simple example of how `rclone` could be used to synchronize a local dir
 
     Once configured, you can sync a local directory (e.g., `my_folder`) with a remote Google Drive folder (e.g., `my_drive`) using:
    ```bash
-   rclone sync /path/to/my_folder my_drive:/path/in/drive
+   $ rclone sync /path/to/my_folder my_drive:/path/in/drive
    ```
 
     This command will ensure that the contents of the local directory and the remote Google Drive folder are identical, copying any new or modified files as needed.

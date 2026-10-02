@@ -10,10 +10,10 @@ which is an important task in computational biology.
 
     Create a new directory for running AlphaFold in your scratch directory.
 ```bash
-cd /bsuscratch/${USER}
-mkdir alphafold_test
+$ cd /bsuscratch/${USER}
+$ mkdir alphafold_test
 
-cd alphafold_test
+$ cd alphafold_test
 ```
 
 2. Prepare Input Files
@@ -51,7 +51,7 @@ run_alphafold.sh -d $DATA_DIR -o $OUTPUT_DIR -m monomer -f query.fasta -t 2020-0
 
     Submit the job using:
 ```bash
-sbatch alphafold-slurm.sh
+$ sbatch alphafold-slurm.sh
 ```
 
 4. Check the Output

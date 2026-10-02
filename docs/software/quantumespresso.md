@@ -15,7 +15,7 @@ To download pseudopotentials:
     - Use `wget` to download the pseudopotential via the command line:
 
         ```bash
-        wget [pseudopotential_url]
+        $ wget [pseudopotential_url]
         ```
 
     Replace `[pseudopotential_url]` with the actual pseudopotential link.

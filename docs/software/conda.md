@@ -13,15 +13,15 @@ In the following tutorial, we will demonstrate how to install and use Mamba, but
 For managing python environments on the cluster, we recommend following the install instruction for Unix-like platforms provided by [Miniforge](https://github.com/conda-forge/miniforge#install){:target="_blank"}:
 
 ```bash
-wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
-bash Miniforge3-$(uname)-$(uname -m).sh
+$ wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+$ bash Miniforge3-$(uname)-$(uname -m).sh
 ```
 
 The following prompt will ask whether you accept the license, if the default installation location (typically in your home directory) is alright (it is), and whether you want to initialize conda each time you log in (generally a good idea).
 Once the install is finished, re-sourcing your bashrc will add the conda/mamba commands to your path:
 
 ```bash
-. ~/.bashrc
+$ . ~/.bashrc
 ```
 
 At this point you should see the environment, `(base)`, appear at the front of your terminal prompt:
@@ -56,7 +56,7 @@ Now that you've installed mamba/conda, let's create an environment.
 The general command to create an environment is as follows:
 
 ```bash
-mamba create -n ENVIRONMENTNAME -c CHANNEL PACKAGE1 PACKAGE2
+$ mamba create -n ENVIRONMENTNAME -c CHANNEL PACKAGE1 PACKAGE2
 ```
 
 The environment name can be whatever you like, the channel is one from
@@ -67,13 +67,13 @@ environment. For example:
 The following command creates an environment called "my-env" that pulls from the conda-forge channel with the packages matplotlib and numpy:
 
 ```bash
-mamba create -n my-env -c conda-forge matplotlib numpy
+$ mamba create -n my-env -c conda-forge matplotlib numpy
 ```
 
 Once this environment is created, it can be activated using the following command:
 
 ```bash
-mamba activate my-env
+$ mamba activate my-env
 ```
 
 Conda/Mamba are powerful tools with many different options, to learn more check out the [conda user guide](https://docs.conda.io/projects/conda/en/latest/user-guide/index.html){:target="_blank"}.
@@ -93,7 +93,7 @@ You can see what virtual packages conda has by running `conda info`.
 For example if we run `conda info` on a GPU node:
 
 ```bash
-conda info
+$ conda info
 ```
 
 ```output hl_lines="7"
@@ -134,7 +134,7 @@ tensorflow                     2.17.0  cuda120py312h02ad488_203
     creation step from getting killed on the login node:
 
     ```bash
-    gpu-session
+    $ gpu-session
     ```
 
     If this command is taking a while, it might mean all the available nodes
@@ -148,7 +148,7 @@ tensorflow                     2.17.0  cuda120py312h02ad488_203
 2. Create your new environment specifying a "cuda" or "gpu" build:
 
     ```bash
-    mamba create -n my-gpu-env "tensorflow=*=cuda*"
+    $ mamba create -n my-gpu-env "tensorflow=*=cuda*"
     ```
 
     The above command tells conda to grab the package "tensorflow", any
@@ -158,19 +158,19 @@ tensorflow                     2.17.0  cuda120py312h02ad488_203
    correctly:
 
     ```bash
-    mamba activate my-gpu-env
+    $ mamba activate my-gpu-env
     ```
 
     To check if PyTorch can use the GPU:
 
     ```bash
-    python -c "import torch; print(torch.cuda.is_available())"
+    $ python -c "import torch; print(torch.cuda.is_available())"
     ```
 
     To check if TensorFlow can use the GPU:
 
     ```bash
-    python -c "import tensorflow as tf; print(tf.test.is_built_with_cuda())"
+    $ python -c "import tensorflow as tf; print(tf.test.is_built_with_cuda())"
     ```
 
     If your pytorch/tensorflow installation is built with cuda, both of those
@@ -214,7 +214,7 @@ need to install some additional packages.
 *With the environment you want to use activated*, install `ipykernel`:
 
 ```bash
-mamba install ipykernel
+$ mamba install ipykernel
 ```
 
 
@@ -223,7 +223,7 @@ Then run ipykernel to create the custom Jupyter kernel: (replace
 the name you will select for the kernel)
 
 ```bash
-python -m ipykernel install --user --name ENVIRONMENT_NAME --display-name "PYTHON ENV NAME"
+$ python -m ipykernel install --user --name ENVIRONMENT_NAME --display-name "PYTHON ENV NAME"
 ```
 
 Then navigate to the Jupyter Notebook App on [ondemand.boisestate.edu](https://ondemand.boisestate.edu){:target="_blank"}:
@@ -244,26 +244,26 @@ following steps:
 1. Make a `miniforge3` directory in your scratch space:
 
     ```bash
-    mkdir ~/scratch/miniforge3
+    $ mkdir ~/scratch/miniforge3
     ```
 
 2. Copy over your existing data. (This may take several minutes if your
     `miniforge3` directory is large.):
 
     ```bash
-    rsync -aAvP ~/miniforge3/ ~/scratch/miniforge3
+    $ rsync -aAvP ~/miniforge3/ ~/scratch/miniforge3
     ```
 
 3. Remove your current `miniforge3` directory:
 
     ```bash
-    rm -rf ~/miniforge3
+    $ rm -rf ~/miniforge3
     ```
 
 4. Create a link to your new `miniforge3` directory:
 
     ```bash
-    ln -s ~/scratch/miniforge3 ~/miniforge3
+    $ ln -s ~/scratch/miniforge3 ~/miniforge3
     ```
 
 And that's it—you can continue using conda as before!
