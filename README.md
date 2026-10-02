@@ -17,3 +17,9 @@ We recommend using [mambaforge](https://mamba.readthedocs.io/en/latest/installat
 mkdocs build
 mkdocs serve
 ```
+
+## To install pre-commit hooks
+
+``bash
+pre-commit install
+```
