@@ -69,7 +69,7 @@ whether you already have SSH keys by listing the contents of the `.ssh` director
         access to your computer could SSH to your account on Borah.
         Do not set up SSH keys on shared computers.
 
-        Your private key (the key that does not end in ".pub" should be treated
+        Your private key (the key that does not end in ".pub") should be treated
         like a password and kept private--never share it with anyone. If you 
         think someone has seen or gained access to your private key, please 
         remove the key and regenerate it.
