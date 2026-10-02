@@ -45,9 +45,15 @@ whether you already have SSH keys by listing the contents of the `.ssh` director
     ```bash
     ls ~/.ssh
     ```
-    If you see something like `id_rsa` (private key) and `id_rsa.pub` (public
+    If you see something like `id_ALGORITHM` (private key) and `id_ALGORITHM.pub` (public
     key) in that that folder, you already have SSH keys and don't need to
-    regenerate the keys.
+    regenerate the keys. 
+
+    !!! note
+
+        `ALGORITHM` can be any of the following: rsa, ecdsa, ed25519, etc. For 
+        the rest of this example please replace `ALGORITHM` with whatever SSH 
+        key exchange algorithm you are using.
 
 2. Generate SSH keys for your local machine:
     ```bash
@@ -57,22 +63,27 @@ whether you already have SSH keys by listing the contents of the `.ssh` director
     your private key, but it is not mandatory. To accept the default settings,
     press ++enter++ without specifying a filename.
 
-    !!! warning "Security Warning"
+    !!! warning "Security Warnings"
 
         If you do not protect your private key with a passphrase, anyone with
         access to your computer could SSH to your account on Borah.
         Do not set up SSH keys on shared computers.
 
-    By default, the key files will be stored in `~/.ssh/id_rsa` and
-    `~/.ssh/id_rsa.pub` on your local machine.
+        Your private key (the key that does not end in ".pub" should be treated
+        like a password and kept private--never share it with anyone. If you 
+        think someone has seen or gained access to your private key, please 
+        remove the key and regenerate it.
+
+    By default, the key files will be stored in `~/.ssh/id_ALGORITHM` and
+    `~/.ssh/id_ALGORITHM.pub` on your local machine.
 
 3. Copy your public key. Print the contents of your public key:
     ```bash
-    cat ~/.ssh/id_rsa.pub
+    cat ~/.ssh/id_ALGORITHM.pub
     ```
     The output will look something like this:
     ```
-    ssh-rsa XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    ssh-ALGORITHM XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -93,6 +104,15 @@ whether you already have SSH keys by listing the contents of the `.ssh` director
     nano ~/.ssh/authorized_keys
     ```
     Paste the public key you copied from your local computer into this file.
+
+    !!! warning "Don't delete your cluster key"
+
+        You will see an existing key in your `authorized_keys` file that starts
+        with `ecdsa-sha2-nistp256`, don't delete it. This is your cluster key 
+        which allows you to log in to cluster nodes. If you do accidentally
+        delete this key, please reach out to 
+        [researchcomputing@boisestate.edu](mailto:researchcomputing@boisestate.edu)
+        and we can restore it.
 
     !!! note "Navigating Nano"
 
