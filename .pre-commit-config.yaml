@@ -12,5 +12,5 @@ repos:
     rev: v0.11.0
     hooks:
       - id: markdownlint
-        args: [--line_length=80]
+        args: [--fix]
 
