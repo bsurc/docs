@@ -37,7 +37,7 @@ matlab -nodisplay -nosplash -nodesktop -r "run('myscript.m'); exit;"
 
     And submit this script using
 ```bash
-sbatch matlab-slurm.sh
+$ sbatch matlab-slurm.sh
 ```
 
 3. Check Output
@@ -53,8 +53,8 @@ Hello, World!
 The OnDemand interface for Borah is available at [ondemand.boisestate.edu](https://ondemand.boisestate.edu){:target="_blank"}
 After opening the terminal application on the desktop, here is an example of the commands to open MATLAB:
 ```bash
-module load matlab
-matlab
+$ module load matlab
+$ matlab
 ```
 
 And the resulting MATLAB GUI will open in a new window as shown here:

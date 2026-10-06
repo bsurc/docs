@@ -52,7 +52,7 @@ scheduler.
     to the scheduler:
 
     ```bash
-    sbatch vasp-slurm.sh
+    $ sbatch vasp-slurm.sh
     ```
 
 4. Analyze the Output

@@ -20,3 +20,9 @@ pixi install
 ```bash
 pixi run properdocs serve -o
 ```
+
+## To install pre-commit hooks
+
+``bash
+pre-commit install
+```

@@ -19,7 +19,7 @@ The `shell` mode is used for testing and interacting with the container software
 interactively, for example to enter into a `bash` shell in a container that has
 `bash`:
 
-    apptainer shell mycontainer.sif
+    $ apptainer shell mycontainer.sif
 
 will drop you into a shell in the container environment:
 
@@ -28,7 +28,7 @@ will drop you into a shell in the container environment:
 The batch mode, usually used to run scripts or jobs, is similar to the shell
 command, but the trailing arguments are the command that you'd like to run:
 
-    apptainer exec mycontainer.sif ./myscript.sh
+    $ apptainer exec mycontainer.sif ./myscript.sh
 
 ## Accessing Scratch
 
@@ -36,7 +36,7 @@ In order to read/write data to your scratch directory, you _must_ bind the path
 to the container via the command line.  This is done by providing the `-B`
 argument to Apptainer:
 
-    apptainer exec -B /bsuscratch mycontainer.sif ./myscript.sh
+    $ apptainer exec -B /bsuscratch mycontainer.sif ./myscript.sh
 
 ## Further Reading
 

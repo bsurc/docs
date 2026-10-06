@@ -31,14 +31,14 @@ abyss-pe k=64 name=my_assembly in='reads1.fastq reads2.fastq'
 
     Then submit your job to the scheduler:
 ```bash
-sbatch abyss-slurm.sh
+$ sbatch abyss-slurm.sh
 ```
 
 3. Check Output
 
     ABySS will create several output files. The main output is a FASTA file containing the assembled sequences, which will have the name you specified (e.g., `my_assembly-contigs.fa`).
 ```bash
-ls -l my_assembly*
+$ ls -l my_assembly*
 ```
 
 ## Resources
