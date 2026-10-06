@@ -36,6 +36,7 @@ theme:
   features:
     - content.code.copy
     - navigation.instant
+    - navigation.expand
     # - navigation.sections
     - toc.integrate
   name: materialx
