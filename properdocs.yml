@@ -36,11 +36,13 @@ theme:
   features:
     - content.code.copy
     - navigation.instant
-    - navigation.sections
+    - navigation.expand
+    # - navigation.sections
     - toc.integrate
-  name: material
+  name: materialx
   logo: images/boisestate-B-1color-orange-rgb.png
   favicon: images/boisestate-B-1color-orange-rgb.png
+  topbar_style: primary
   palette:
   - scheme: default
     toggle:
