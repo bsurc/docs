@@ -9,6 +9,7 @@ To learn more, we recommend this [Pixi tutorial](https://pixi.prefix.dev/latest/
 or this [conda tutorial](https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/){:target="_blank"}.
 
 In the following tutorial, we will demonstrate how to install and use Pixi, but if you prefer a different python package manager (e.g., miniforge, micromamba), you are welcome to install that into your home directory and use it.
+Here is a link to our previous [miniforge documentation](conda.md).
 
 ## Installing Pixi
 
