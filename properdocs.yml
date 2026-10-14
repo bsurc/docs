@@ -14,7 +14,7 @@ nav:
     - 'faq.md'
     - 'hpc_resources.md'
   - 'Software Specific Guides':
-    - 'software/conda.md'
+    - 'software/python.md'
     - 'software/julia.md'
     - 'software/r.md'
     - 'software/vscode.md'
